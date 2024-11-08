@@ -1,0 +1,32 @@
+Summary of the Paper:
+This paper proposes IAPEK (Instance-level Adaptive Propulsion of External Knowledge), a method to selectively augment pre-trained language models (PTLMs) with external knowledge only when necessary.
+The authors introduce a novel metric called Thrust which scores each instance based on whether the PTLM needs external knowledge to answer it.
+Thrust leverages the distribution of training instances in the PTLM's representation space.
+Experiments on a range of classification and QA tasks show that using Thrust to adaptively inject external knowledge leads to significant performance improvements while being more cost-efficient than always using external knowledge.
+The findings shed light on how to effectively use knowledge in real-world applications of LMs with limited knowledge-seeking budgets.
+Strengths and Weaknesses:
+Strengths:
+- The paper addresses an important problem - how to efficiently and effectively augment PTLMs with external knowledge only when needed.
+This is critical for real-world applications.
+- The Thrust metric is simple yet effective at identifying instances that require external knowledge.
+It is a novel contribution.
+- Extensive experiments convincingly demonstrate the effectiveness of the IAPEK approach using Thrust, leading to performance gains while being more cost-efficient.
+- The work provides valuable insights into the judicious use of external knowledge in LMs to balance performance and efficiency.
+Weaknesses:
+- While the Thrust metric is evaluated on various tasks and datasets, it would be good to see even more comprehensive experiments, e.g.
+on additional benchmarks and knowledge sources.
+- Some details on Thrust could be explained further, e.g.
+how hyperparameters like number of clusters are chosen, runtime cost of computing Thrust.
+- Qualitative examples illustrating when Thrust decides to seek external knowledge would provide additional insights.
+- Theoretical analysis or justification of why Thrust is an effective scoring function would strengthen the work.
+Clarity, Quality, Novelty, and Reproducibility:
+The paper is clearly written and the proposed method is well-explained.
+The overall quality of research is high, with the authors performing comprehensive experiments.
+The Thrust metric and overall IAPEK approach are novel contributions.
+Key details are provided to allow reproducibility, though the code is not open-sourced yet (but the authors intend to release it).
+Summary of the Review:
+This paper makes a valuable contribution by proposing IAPEK and the Thrust metric to adaptively augment LMs with external knowledge.
+Thrust effectively identifies instances needing knowledge, enabling IAPEK to outperform baselines while being more efficient.
+Extensive experiments highlight the benefits.
+Some additional details, analysis and even more comprehensive evaluation could further strengthen this already solid work.
+Overall, this paper proposes a novel and impactful method to address an important problem.

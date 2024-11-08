@@ -1,0 +1,17 @@
+Summary Of The Paper:
+In this paper, the paper investigate language model pipeline to see which modifications improve performance in the scaled-down scenario ( a single GPU for 24 hours).
+Strength And Weaknesses:
+Strength:
+In this paper, several modifications (architecture, training setup and datasets) are explored to check whether there is any improvement.
+All of these aspects are important and interesting.
+These can give good insights for the community.
+Some interesting conclusion are got, for example, training recipe and data setup lead to decent downstream performance on GLUE.
+Weaknesses:
+The investigation of modifications lack convincing experiments. For example, only one task performance (MNLI) is reported for when studying the impact of training hyper-parameters. Other tasks can have a different trend.
+And when exploring the effect of the architecture, only MLM loss is report.
+The performance of downstream tasks can be also important.
+The technical novelty of this paper is a little limit. The total contributions are also limit.
+Clarity, Quality, Novelty And Reproducibility:
+Clarity is clear, however, novelty is limit.
+Summary Of The Review:
+This paper does a lot of Interesting investigations.

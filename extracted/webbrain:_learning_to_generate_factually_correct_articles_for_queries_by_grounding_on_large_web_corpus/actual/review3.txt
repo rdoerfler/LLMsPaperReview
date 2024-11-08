@@ -1,0 +1,39 @@
+Summary Of The Paper:
+This paper introduces a new task called Web-Brain which aims to generate short factual articles for queries by mining supporting evidence from Web.
+The paper also proposes a new large scale dataset with English Wikipedia.
+The paper also provides a new framework called ReGen based on SPLADE and FiD.
+The model is evaluated with both n-gram overlapping metrics and factual correctness metrics.
+The paper analyze the impact of retrieval, number of references in a quantitative way.
+The paper also did both human and automatic evaluation.
+Strength And Weaknesses:
+Strength
+The paper introduces WebBrain, which lets the model retrieve supporting evidence and generate factual articles given a factual query.
+The proposed dataset is somewhat similar to the Wizard of Wikipedia (Dinan et al., 2018).
+The newly proposed dataset is interesting and large-scale.
+The authors crawled and cleaned Wikipedia.
+The proposed task and corresponding dataset are very interesting and worthy of future research.
+The paper proposes a new retrieval-augmented generation framework based on SPLADE and FiD.
+The proposed methods achieve the best results over automatic and human evaluation.
+The experiment section is very comprehensive.
+The authors conduct an ablation study with different retrieval models and show the impact of the different numbers of retrieved references.
+The paper also checks the impact of a number of references.
+Those results are clearly represented in tables or charts with detailed explanations.
+The paper shows the case study, human evaluation, and reference mark correction strategy in the appendix.
+Weaknesses
+The paper uses n-gram overlapping metrics for automatic evaluation.
+The paper needs to include some newer metrics such as BERTscore (Zhang et al., 2019), and BARTScore (Yuan et al., 2021) which can check semantic similarity.
+Most of the experiment analyses are in quantitative way.
+I would like to see more qualitative analysis.
+Zhang, T., Kishore, V., Wu, F., Weinberger, K. Q., & Artzi, Y. (2019). Bertscore: Evaluating text generation with bert. arXiv preprint arXiv:1904.09675.
+Yuan, W., Neubig, G., & Liu, P. (2021). Bartscore: Evaluating generated text as text generation. Advances in Neural Information Processing Systems, 34, 27263-27277.
+Dinan, E., Roller, S., Shuster, K., Fan, A., Auli, M., & Weston, J. (2018). Wizard of Wikipedia: Knowledge-powered conversational agents. arXiv preprint arXiv:1811.01241.
+Clarity, Quality, Novelty And Reproducibility:
+Some parts of the paper are not very clear.
+The steps to create WebBrain-R and WebBrain-G is unclear.
+The paper attached the implementation details in the appendix.
+It also provides examples from the dataset for readers to check.
+However, it does not provide any code for reproduction.
+It shows the limitation and system demonstration in the Appendix.
+Summary Of The Review:
+Overall, the paper proposes a new interesting task with a corresponding large-scale Wikipedia-based dataset.
+The experiment part is quite comprehensive.

@@ -1,0 +1,24 @@
+Summary of the Paper:
+This paper presents an innovative approach, titled "THRUST: Adaptively Propels Large Language Models with External Knowledge," focusing on enhancing the efficiency and effectiveness of large pre-trained language models (PTLMs) by selectively utilizing external knowledge.
+The core of this approach is the Instance-Level Adaptive Propulsion of External Knowledge (IAPEK), which evaluates the necessity of external knowledge for each instance using a novel metric called Thrust.
+Thrust is based on estimating the distribution of seen instances and deciding on the use of external knowledge accordingly.
+The study demonstrates that this method significantly improves cost-efficiency in knowledge retrieval and utilization across a variety of NLP tasks, achieving an average performance improvement of 26% on 88% of evaluated tasks.
+Strengths and Weaknesses:
+Strengths:
+Innovation and Relevance: The methodology addresses a crucial limitation of PTLMs, which is the opaque and static nature of their encoded knowledge.
+By introducing a selective approach to external knowledge utilization, it paves the way for more efficient and effective NLP solutions.
+Empirical Evidence: Extensive experimentation validates the approach's effectiveness, showcasing significant improvements in performance across diverse tasks.
+Reproducibility: The promise to release code and data after acceptance encourages reproducibility and further research.
+Weaknesses:
+Lack of Comparison: The paper does not thoroughly compare its approach with existing methods in the domain of external knowledge utilization, which could have strengthened the argument for its novelty and effectiveness.
+Potential for Bias: The reliance on the novel metric Thrust for determining the necessity of external knowledge could introduce bias if the metric itself is not universally applicable across different types of tasks and domains.
+Clarity, Quality, Novelty, and Reproducibility:
+The paper is well-written, presenting a novel approach to a significant problem in NLP.
+The research is of high quality, supported by rigorous experimentation.
+However, the novelty is somewhat diminished by the lack of comparison with existing methods.
+The commitment to releasing code and data post-acceptance is commendable and will aid in reproducibility.
+Summary of the Review:
+This paper introduces a novel and impactful approach to optimizing the use of external knowledge in large language models, addressing a critical issue of efficiency and effectiveness.
+The proposed method, supported by extensive empirical evidence, marks a significant advancement in the field.
+However, a more comprehensive comparison with existing methods could have further highlighted its novelty and superiority.
+The commitment to open-source principles enhances the paper's value to the research community.

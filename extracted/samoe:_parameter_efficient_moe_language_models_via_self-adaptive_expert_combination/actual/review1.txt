@@ -1,0 +1,30 @@
+Summary Of The Paper:
+SaMoE is a novel routing algorithm for mixture of experts (MoE) that allows different MoE layers select experts from a global shared pool.
+Well designed experiments and scaling law studies are reported in the evaluation section.
+Strength And Weaknesses:
+Strengths:
+I think the authors found the right critical bottlenecks for the MoE models, which are the trainability (model quality aspect) and the total number of parameter count (system performance aspect).
+The proposed solution with the empirical results shows it's on the promising direction, although it's still far from completely addressing those foundational limitations of MoE,
+The ablation and scaling laws section are very helpful to the research community to understand how to set the hyperparameters.
+Weaknesses:
+How the speedup in table 1 is evaluated?
+The gains in the downstream tasks are marginal.
+It's better to report the variation of zero-shot results at nearby checkpoints as well.
+I feel it's important to report the inference step time during autoregressive decoding to best demonstrate the gains from a smaller number of parameters.
+Because during decoding on accelerators, it's more often memory bound instead of compute bound.
+When decoding a single token given the prefix, the flops to compute each token is relatively small.
+However, the whole model parameters (in billions or even trillions) needs to send more HBM to the actual compute units during each decoded step.
+This HBM-cache communication is usually the dominant factor in the inference cost.
+Double check the multi-rc results?
+It's a big jump from 1+ to 70+.
+Clarity, Quality, Novelty And Reproducibility:
+The flow of this paper is crystal clear.
+The authors first identified the bottlenecks of an existing algorithm, found the root cause, proposed a solution, and finally demonstrated the effectiveness of the proposed solution with well prepared experimental evaluations.
+The text, tables, and figures are all of high quality.
+Summary Of The Review:
+This paper worked on an important research topic: how to reduce the training and serving costs for large language models.
+The proposed algorithm is only marginally novel but empirically significant.
+The 5x reduction in the number of total parameters would improve the serving speed for MoE models by a lot.
+However, the gains in the downstream tasks are only marginal.
+So it would be better if the authors clearly demonstrated why the large reduction in the parameter count matters using the metrics people care about: the serving latency, the step time, etc.
+Alternatively, the authors can show the quality difference when matching the inference cost.

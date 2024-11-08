@@ -1,0 +1,55 @@
+Summary Of The Paper:
+This paper addresses the problem of robustness for extracting factual information from large language models.
+It first describes and motivates the problem of inconsistent predictions of large language models on fact-seeking prompts when these prompts are perturbed or rephrased.
+It then proposes a few different methods for addressing this inconsistency that operate on the same portion of the language-model, namely, between the input token embeddings and the first hidden layer of the language model.
+The work evaluates the performance of the variants using a pooled collection of fact-seeking prompts (e.g., LAMA, LPAQA and ParaSel).
+The results employ a consistency metric and show that different interventions in the input embeddings cause large differences in inter-prompt consistency.
+Main Review:
+Strengths of the paper:
+The problem of extracting factual and consistent information from large language models is of high interest to the NLP community.
+Given how LLMs dominate NLP at the moment, making sure these models are robust and consistent is a timely problem, The paper is overall well written, with only a couple of confusing parts (see below),
+The proposed architecture for intervening between the input embeddings and the first hidden layer of the language model is quite comprehensive.
+I enjoyed seeing the different options, and in particular, thought the use of the MoE for relation classification to be quite insightful,
+The experimental analysis of the work is well executed, and demonstrated convincingly which interventions were most useful in make predictions more accurate and consistent,
+I liked the analysis in Figure 6, showing the importance of the subject entity on the precision of the fact extraction task,
+Weaknesses of the paper:
+The main weakness in this work is one that relates to the overall goal of fact extraction from language models.
+The “Oracle'' results from Table 1 are thought provoking: with perfect knowledge regarding the predicate/relation of test examples, and a subsequent 100% consistent response, the LLM is only able to obtain ~50% correct responses from T-Rex, which is an admittedly limited evaluation (41 “head” predicates, mostly of well known entities).
+While I understand that this work is clearly focused on the consistency issue, not necessarily correctness, it puts into question whether fact extraction from LMs is a worthwhile pursuit.
+I would have liked for the paper to dig a little deeper into this headroom question from the previous point.
+Would it be possible to conduct a sampled qualitative evaluation of errors of the Oracle model in the ID cases?
+Are the errors due to unseen triples during training time (e.g., not in Wikipedia), or maybe there are issues with model capacity (maybe a 10x version of the LM would be able to recall the prompted fact)?
+In terms of writing, the most confusing section in the paper is Section 4.1.
+After re-reading it twice, I was still not able to ascertain: (1) what data was used to train the models, and (2) what data was used to evaluate the models.
+The section makes reference to LAMA’s T-REX, LPAQA, ParaRel, as well as augmentations using BERT lexical replacements, as well as data from “Shin et al, 2020”.
+The section also talks about examples from these sources as well as templates (presumably filled in with WikiData triples?).
+I really think this section needs to be rewritten and the training, eval and test datasets should be much more precisely described.
+I would also encourage authors to release the exact datasets and splits to allow others to reproduce/improve on this work.
+But even with a data release, a precise description of how this data was constructed is very important.
+For the MoE and Oracle layers, the description in the paper is insufficient to determine the outputs presented to the first layer of the model.
+The depiction in Figure 2 hints that the entire sequence is rewritten using the fixed-length learned embeddings, and perhaps the subject or MASK embeddings are preserved?
+But actually sub-section 4.2 never formally describes how the embeddings are used to create the continuous prompts?
+Are they prepended/appended to the original inputs?
+Or do they rewrite the original inputs?
+Do either the MASK or subject tokens get copied?
+The LAMA benchmarks have one unfortunate characteristic: since it was constructed for BERT-style single token prediction, it has stripped down the original datasets (see the original version of T-Rex, which contains over 600 unique predicates vs. the 41 from LAMA: https://hadyelsahar.github.io/t-rex/ and https://aclanthology.org/L18-1544.pdf ).
+I wonder if a more comprehensive version of this would be to evaluate on a larger sequence-to-sequence model like BART https://arxiv.org/abs/1910.13461 or T5 https://arxiv.org/abs/1910.10683 (both available as HuggingFace models).
+Given that this work leverages frozen LLMs, it seems that training and evaluation could be done relatively cheaply even for larger models with proper decoders.
+Other comments:
+With respect to the MoE solution, the paper claims that the model does not use a weighted combination and opts to use the top-1 predicted relation.
+I wonder if authors have tried using a weighted combination instead?
+If the relation classifier is trained with cross-entropy softmax loss, most of the weights will be close to one-hot (similar to top-1) except when the model is uncertain.
+Therefore combining prompt embeddings may yield some benefit over top-1.
+Does this make sense?
+Note sure this is a good idea, but: given that the LLM is frozen, it seems plausible that the continuous prompt embeddings learned in some of the models resemble existing embeddings from the original vocabulary.
+As such, would it make sense to attempt to “decode” the continuous prompt embeddings into the existing vocabulary?
+One could use a greedy decoding strategy of extracting the nearest neighbor (via dot product or cosine distance) from each continuous prompt embedding to the vocabulary input embedding table.
+Have the authors tried inspecting the continuous prompts in this way?
+I wonder if the output is informative or whether these prompts are modeling purely latent variables.
+Typo in Figure 1 “Canada si” -> “Canada is”,
+Typo in page 6: “Cannonical” -> “canonical”
+Summary Of The Review:
+The problem of extracting factual and consistent information from large language models is of high interest to the NLP community, and this work in particular should be of interest to the ICLR community.
+Overall, this work was well-written throughout (easy to follow in most places except for a few rough parts detailed above).
+The experimentation work was also of high quality, with interesting results.
+To highlight a few findings: (1) the use of a relation-classification MoE and its consistently high performance on consistency metric seems promising, (2) the analysis demonstrating the importance of the “subject” is correct fact prediction, and (3) analysis demonstrating the negatives effects of uniformizing objects in train/test sets, which is strong indication that LLMs still do not generalize well to unseen objects.

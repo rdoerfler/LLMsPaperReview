@@ -1,0 +1,37 @@
+Summary Of The Paper:
+This paper proposes a new MoE model Architecture to improve the parameter efficiency of MoE by learning a soft combination of a global set of expert layers.
+Strength And Weaknesses:
+Weaknesses:
+(1).This paper carried out analysis first and listed three challenges from analysis.
+However, I did not know which MoE model does this paper study. In Figure 1, it shows “MoE” but I don’t know which MoE model is used to carry out experiments.
+There are plenty of MoE models such as Gshard (Lepikhin et al., 2020), Switch Transformer (Fedus et al., 2021), Base Layers (Lewis et al., 2021), HASH Layers (Roller et al., 2021), and etc.
+Different MoE models may lead to different conclusions.
+The author needs to announce which model they used for analysis and add citations.
+(2).This article used only one MoE model to draw analysis conclusions, which I cannot agree with.
+Because different MoE models may have different performance, analysis conclusions need to conduct experiments with at least two representative MoE models when talking about common challenges with MoE models.
+(3).I am very suspicious about the expert pool method proposed in this article.
+How to choose the size of the expert pool. I speculate that the amount of experts required by a MoE model may be related to the diversity of the dataset.
+Table 1 in BASE layers paper [1] shows similar words usually gathered to the same expert unit.
+However, this article only uses one dataset for pretraining, and does not use multiple datasets to test the required expert pool size.
+(4).Followed by the third problem, this paper selected the Pile dataset as the pre-training dataset.
+However, the Pile dataset is full of duplicate documents (see [2] page 2), and this paper does not perform additional de-duplication processing.
+Because the dataset selected in the article has a lot of repetition and the tokens are not diverse, the size of the expert pool does not need to be large.
+The conclusion is likely to change when changing to a different (diverse) pre-training dataset.
+(5).As a MoE model, it is basically necessary to control the number of flos and compare it with the dense models and sparse models with the same number of flops, but this paper does not report total training flops number and total train computer (PF-days).
+In addition, this paper doesn’t compare it with a dense model with the same amount of flops in table 1.
+(6).I also have some questions about the experimental results of table 2.
+When we compared SaMoE (350M-128E) with dense model (350M), SaMoE should have more flops since it needs additional all2all communication cost.
+However, I notice usually a dense model (350M) could get a score of 70.2 on piqa.
+This SaMoE with more flops achieves a score 68.9.
+(7).Minor suggestion: usually we reported pretraining perplexity instead of validation loss in figure 3.
+References:
+[1]. Lewis, Mike, et al. "Base layers: Simplifying training of large, sparse models." International Conference on Machine Learning. PMLR, 2021.
+[2]. Zhang, Susan, et al. "Opt: Open pre-trained transformer language models." arXiv preprint arXiv:2205.01068 (2022).
+Clarity, Quality, Novelty And Reproducibility:
+Quality:
+Due to the above weaknesses, this paper does not have a high quality.
+Summary Of The Review:
+This paper proposes a new MoE model.
+However, in the analysis part, it only carried out analysis experiments with one MoE model, which is hard to tell if findings applied to all MoE models.
+In addition, this paper proposes to have a fixed number of global MoE layers, which is probably not suitable when a pre-training dataset has very diverse tokens.
+It happens that this paper selects the Pile as the pretraining dataset, and Pile is widely considered to contain many repeated sentences. (see [2] page 2).

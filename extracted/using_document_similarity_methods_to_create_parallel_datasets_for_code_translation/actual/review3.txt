@@ -1,0 +1,22 @@
+Summary Of The Paper:
+This paper proposes to use similarity metric to generate pseudo alignments between source/target program pairs.
+Generated pairs are utilized to train program translation model.
+The paper described a simple greedy method to align both codes, and experimented 5 types of similarity metric as its inner measure.
+According to the experiments, the word mover's distance works notably well for this purpose, but other metric can also improve the translation accuracy significantly against random selection.
+The other experiment investigating a performance curve by changing noise ratio in the ground-truth parallel corpus hypothesized that certain amount of alignment errors can be acceptable since the actual performance can be maintained.
+The paper also challenged to construct translation systems between arbitrary pairs in 10 programming languages using the proposed framework and observed that the trained system works with certain accuracies.
+Main Review:
+Although I recognized that the main contribution of this paper is not proposing a sophisticated method to align samples, I thought the paper need more attention to design efficient strategy.
+The entire alignment algorithm takes O(D*f(D')) where f(D') is the complexity of GetSimilarDocuments().
+Unless any assumption this takes O(DD') meaning that it tends to be infeasible by increasing the data.
+Also, the algorithm seems a simple greedy method and may be heavily affected by the sampling order.
+According to Table 2 and 3, I observed that the pseudo-match accuracy introduced here does not reasonably reflect the real characteristics needed to be considered in code translation models since the BLEU of several systems compete with each other.
+I recognized that Figure 1 shows every range of noise ratio, except around 100%, has certain gradient against the accuracy, and got the opposite conclusion "the less noise the better" against that the paper concluded "we expect a certain amount of noise, we can expect the models to perform reasonably well."
+The root cause of this is that the paper did not provide a reasonable criterion about acceptance of this experiment first.
+As far as I saw the Figure 2 and 3, the accuracy is heavily reflected by the amount data available during training and some normalization should be needed to compare these metrics each other without biases. Figure 3 also show some remarkable characteristics in translating only into C++, but the paper did not mention about this point.
+The motivation of the paper includes "modernizing legacy applications," but the experiments does not reflect this perspective.
+For example, the first section repeatedly referred to the COBOL applications, but we maybe not be able to reflect the experiments into this application due to large discrepancy between languages.
+Summary Of The Review:
+The alignment algorithm need to be improved.
+This is not critical: this is still acceptable for the first observation.
+Conclusion sounds sometimes not reasonable according to experiments. Some results are hard to discuss due to unnormalized data.

@@ -1,0 +1,28 @@
+Summary Of The Paper:
+This paper addresses the issue of pre-training loss cannot fully explain downstream performance, they instead claim that the flatness of the model is well-correlated with downstream performance.
+The author showed that at the same level of pretraining loss, large models have better downstream performance, because of the flatness of large models.
+The authors conducted experiments with PCFG/HMM/OPT-generated data as downstream tasks.
+The authors also provided theories to support their claims.
+Strength And Weaknesses:
+Strength:
+The paper is well-written and easy to follow.
+The paper is supported by many experiments to verify the claims that the authors proposed.
+Besides empirical results, the author also provided theoretical points of view to support their claim.
+Weaknesses:
+The claim that flatness can decide the downstream performance is not well-supported.
+There are many factors that can affect the downstream performance, for example, the model size.
+One possible explanation is that the flatness could be a consequence of scaling up the model size, and the good performance is brought by the large model size, too.
+If that is the case, then flatness is not the reason for good downstream performance.
+The authors need to have more evidence to prove that flatness is the main reason that leads to good performance, otherwise, they may be both the consequence of another factor (like model size).
+When computing Hessian, I assume that you are using the loss of pretraining datasets, not downstream datasets.
+Then how can the flatness on the pretraining task reflect the situation on downstream tasks?
+This claim is not very intuitive.
+It may need more explanations.
+Clarity, Quality, Novelty And Reproducibility:
+Clarity&Quality: The paper is clear, well-written and easy to follow.
+Novelty: As far as I know, there is no existing paper discussing the same topic.
+Reproducibility: The authors didn't provide the code. I think it's hard to reproduce the results by ourselves.
+Summary Of The Review:
+The paper is good in terms of its qualities, but there are some problems that need to be answered to further prove the correctness of their claims.
+I would tend to accept this paper if they can give good answers to my questions.
+For now, I will give a borderline score.

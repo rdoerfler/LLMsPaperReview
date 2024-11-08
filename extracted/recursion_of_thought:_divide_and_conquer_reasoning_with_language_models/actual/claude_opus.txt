@@ -1,0 +1,29 @@
+Summary of the Paper:
+This paper introduces Recursion of Thought (RoT), a model-agnostic framework that enables language models to solve complex multi-step reasoning problems by recursively dividing them into smaller subproblems and solving each subproblem in a separate context.
+RoT grants language models the ability to control the recursion process by introducing special tokens that trigger the creation and utilization of multiple contexts.
+On arithmetic and algorithmic reasoning tasks, the authors demonstrate that RoT dramatically improves the reasoning capabilities of language models like GPT-3, allowing them to solve extremely complex problems requiring hundreds of thousands of tokens, which would exceed the maximum context size of a single context.
+Moreover, RoT enables even tiny randomly initialized Transformers or LSTMs to perform complex reasoning.
+Strengths and Weaknesses:
+Strengths:
+- RoT provides an effective and scalable approach to enable language models to perform multi-step reasoning on problems that would otherwise exceed the maximum context size.
+- The idea of recursively dividing problems and solving subproblems in separate contexts is well-motivated and aligns with how humans approach complex problems through abstraction and recursion.
+- The paper demonstrates the generality and effectiveness of RoT on a diverse set of arithmetic and algorithmic reasoning tasks.
+- RoT leads to dramatic improvements in reasoning capabilities, not just for large pre-trained models like GPT-3, but also for small randomly initialized Transformers and LSTMs.
+Weaknesses:
+- RoT currently requires supervision in the form of ground truth intermediate reasoning steps for each task.
+Reducing this expensive supervision could make RoT more widely applicable.
+- The paper does not explore how RoT might facilitate length generalization, e.g. training on shorter problems and generalizing to longer ones.
+- Some additional analysis on the limitations of RoT and failure cases could provide further insights.
+Clarity, Quality, Novelty and Reproducibility:
+- The paper is generally well-written and the key ideas of RoT are clearly explained.
+- The extensive experiments on multiple reasoning tasks demonstrate the effectiveness and versatility of the proposed approach.
+The results convincingly show that RoT leads to significant improvements in reasoning capabilities.
+- Recursively combining language models with multiple contexts for reasoning is a novel paradigm that addresses a key limitation of existing approaches constrained by a single context length.
+- The authors plan to release source code which would facilitate reproducibility.
+Some of the experimental details could be elaborated further.
+Summary of the Review:
+This paper makes a significant contribution by introducing Recursion of Thought (RoT), a novel framework that enables language models to perform complex multi-step reasoning by recursively dividing problems and utilizing multiple contexts.
+RoT dramatically improves the reasoning capabilities of language models and allows them to solve problems that are infeasible with a single context.
+The experiments demonstrate the effectiveness of RoT on a range of arithmetic and algorithmic reasoning tasks.
+Overall, this is a high-quality paper that proposes a novel and impactful approach to language model reasoning.
+The key limitation is the need for expensive supervision which could be a useful direction for future work.

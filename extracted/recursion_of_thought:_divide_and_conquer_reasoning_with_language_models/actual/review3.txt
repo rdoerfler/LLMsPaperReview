@@ -1,0 +1,35 @@
+Summary Of The Paper:
+This work proposed a model-agnostic framework, Recursion of Thought (RoT), to release the capacity constraint by the maximum size of a single context in language models.
+RoT teaches a language model to divide and conquer complex problems by recursively creating multiple contexts; therefore, a complex problem could be solved by utilizing multiple contexts.
+This work also conducts extensive experiments on arithmetic and algorithmic reasoning tasks to show the power of RoT in helping language models solve problems that require hundreds of thousands of tokens.
+Overall, the proposed framework (RoT) is novel and well-motivated, and the authors have conducted multiple experiments which demonstrate the great power of RoT on much more complex arithmetic and algorithmic reasoning problems.
+One important point missing from this work is how to systematically construct subproblems given any problem in order to teach the model learn the recursion of thoughts.
+Still, I think this work has great potential to allow language models to achieve better reasoning abilities.
+Strength And Weaknesses:
+Strength:
+[+] The proposed framework (RoT) is novel and well-motivated.
+[+] The work has conducted multiple experiments which demonstrate the great power of RoT on much more complex arithmetic and algorithmic reasoning problems.
+Weakness:
+[-] The training of RoT requires (non-trivial) human inputs to design proper subproblems.
+More specifically, I wonder
+what is the limitation of the problems that RoT could solve: for example,
+Does RoT have the ability to learn backtrack?
+Some problems may require people to modify the earlier part of the answer based on the new observed information.
+Does RoT have the ability to learn a problem where its subproblems have different structures (as recursion usually requires the same structure in the subproblems)?
+What is the performance of RoT on (maybe small-scale) NP-hard algorithmic problems that may not have the divide-and-conquer structure such as TSP？
+how to design proper subproblems in order to use RoT to train the models?
+What are the criteria of the subproblems for RoT?
+What kinds of structures do they need to have？
+Are there systematic approaches to design subproblems for reasoning tasks in general?
+Clarity, Quality, Novelty And Reproducibility:
+This work has a good and clear presentation of its idea, its specific methodology, and its experiment settings.
+The quality and originality of the work should meet or exceed the conference standard.
+My main concern is on how to properly train the RoT framework as it requires people to feed it with hand-designed subproblems.
+Therefore, it would be great if the authors could explain the limitation of the problems that RoT could solve and how to design proper subproblems in order to use RoT to train the models.
+Summary Of The Review:
+This work proposed a novel model-agnostic framework, Recursion of Thought (RoT), to release the capacity constraint by the maximum size of a single context in language models.
+RoT teaches a language model to divide and conquer complex problems by recursively creating multiple contexts; therefore, a complex problem could be solved by utilizing multiple contexts.
+It then conducts extensive experiments on arithmetic and algorithmic reasoning tasks to show the power of RoT in helping language models solve problems that require hundreds of thousands of tokens.
+The proposed framework (RoT) is novel and well-motivated, and this work has a good and clear presentation of its idea, its specific methodology, and its experiment settings. The quality and originality of the work should meet or exceed the conference standard.
+My main concern is on how to properly train the RoT framework as the training of RoT requires (non-trivial) human inputs to design proper subproblems.
+Still, I think this work has great potential to allow language models to achieve better reasoning abilities.

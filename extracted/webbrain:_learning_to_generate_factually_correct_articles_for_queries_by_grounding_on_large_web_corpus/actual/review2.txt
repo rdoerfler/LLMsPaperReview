@@ -1,0 +1,36 @@
+Summary Of The Paper:
+The paper proposes a new task called “WebBrain”.
+The objective of the task is to learn to generate a fluent, informative and factually correct short article from a query given some search results.
+The task is essentially a combination of 2 components:
+1. retrieval of evidence passages given a wikipedia page title,
+2. multi document summarization of the retrieved evidence with the first paragraph of the wikipedia page as target.
+The authors contribute a dataset "WebBrain-Raw", comprised of English wikipedia plus all crawlable references.
+The dataset is cleaned with an interesting set of heuristics.
+The authors additionally propose a baseline system called "ReGen".
+ReGen combines several modeling choices:
+training a SPLADE retriever for this task with hard negatives are mined,
+tuning sparsity in document representations for retrieval,
+filtering retrieved documents trading off consistency and diversity,
+fusion-in-decoder for generation,
+making generation more grounded in the references, by pre-training the generation component to generate individual sentences from a reference passage at time.
+The authors finally present analysis showing the usefulness of these modeling choices, compared to more vanilla choices.
+Strength And Weaknesses:
+Strengths:
+The task examined in this paper (retrieval + multi-document summarization) is important.
+The dataset released by this paper is much larger than comparable datasets and could be useful for furthering work on this topic.
+The authors describe in detail many technical details of ReGen.
+These details can be useful to practitioners for reproducing ReGen’s results and in their own work.
+Weaknesses:
+Limiting the generation to only the first passage of wikipedia pages is a pretty strong limitation, also making this work very close to existing multi-document summarization works.
+The authors do acknowledge this similarity though.
+In “Reference Passage Selection” and “Dataset Generation”, the authors select input passages for training with simple word overlap or BM25.
+It seems like this could be easily improved by using an entailment model, a dense retriever or even SPLADE.
+The proposed "WebBrain-Raw" dataset would be more interesting if it was multilingual instead of English-only.
+Clarity, Quality, Novelty And Reproducibility:
+The paper is clear and good quality.
+The system is described in detail and should be reproducible.
+The novelty of the approach is mainly in the size of the released corpus and in including retrieval as part of the task, together with multi-document summarization.
+The techniques proposed by the authors are very interesting, but they are only applied to the dataset they created, so it's not totally clear how their modeling choices would stack up against other methods on a more competitive benchmark.
+Summary Of The Review:
+This looks like a useful dataset+baseline contribution for the important task of multi-document summarization.
+The techniques used by the authors seem solid.

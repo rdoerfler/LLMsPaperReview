@@ -1,0 +1,31 @@
+Summary of the Paper:
+This paper investigates the relationship between pre-training loss and downstream performance in language models.
+The authors find that models with the same pre-training loss can exhibit different downstream performance, contrary to the common assumption that pre-training loss is well-correlated with downstream performance.
+They identify three ways to produce models with the same optimal pre-training loss but different downstream performance: (1) continuing pre-training after loss convergence, (2) increasing model size, and (3) changing the training algorithm.
+This suggests an implicit bias in the pre-training algorithms that selects more transferable models among those with the same minimal loss.
+Theoretically, the authors prove that SGD with mini-batch noise implicitly prefers flatter minima in the pre-training loss landscape.
+Empirically, they observe a strong correlation between flatness (measured by trace of Hessian) and downstream performance for models with the same minimal pre-training loss.
+They also prove in a synthetic language setting that among models minimizing the pre-training loss, the flattest one transfers best to downstream tasks.
+Strengths and Weaknesses:
+Strengths:
+- The paper challenges the common assumption about the correlation between pre-training loss and downstream performance, providing both empirical evidence and theoretical analysis.
+- It identifies implicit bias as an important factor affecting the transferability of language models with the same architecture and pre-training loss.
+- The authors provide theoretical results showing SGD's implicit bias towards flatter minima in language modeling, cleanly adapting tools from supervised learning.
+- Empirical results on simplified datasets convincingly demonstrate the phenomenon of models with same loss but different downstream performance.
+Weaknesses:
+- The main limitation is that the empirical evaluation focuses on simplified datasets due to computational constraints.
+It's unclear how well the results generalize to more complex real-world datasets and larger models.
+- The theoretical result in the synthetic language setting has limited applicability and the assumptions may not hold in practice.
+- The paper lacks experiments comparing flatness measures other than trace of Hessian.
+Clarity, Quality, Novelty, and Reproducibility:
+The paper is clearly written and easy to follow.
+The authors provide sufficient details of the experimental setup and theoretical derivations.
+The phenomenon of implicit bias affecting downstream performance is a novel finding and the theoretical analysis connecting flatness to downstream performance is original.
+The empirical methodology and datasets are described in enough detail to enable reproducibility.
+However, the code for the experiments is not provided which somewhat limits reproducibility.
+Overall, this is a high-quality paper making novel contributions.
+Summary of the Review:
+This paper makes important contributions in highlighting the role of implicit bias in the transferability of language models, going beyond just the pre-training loss.
+It provides convincing empirical evidence of the phenomenon and backs it up with novel theoretical analysis connecting flatness to downstream performance.
+The main weakness is the focus on simplified datasets.
+But overall, this is an impactful paper that advances our understanding of what makes language models adaptable to downstream tasks.

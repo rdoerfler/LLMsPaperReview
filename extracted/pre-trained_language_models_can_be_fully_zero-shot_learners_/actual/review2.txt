@@ -1,0 +1,19 @@
+Summary Of The Paper:
+This paper studies how to effectively transfer pretrained language models to natural language understanding (NLU) tasks in a zero-shot manner.
+The proposed method, NPPrompt, does not require any labeled sample or rely on humans to construct prompt label words.
+NPPrompt generates the label words by searching the related words from the initial word embedding of the pre-trained language model.
+Then, it aggregates logits from the label words and predicts the category with the largest score.
+Experiments show that the proposed method is effective and outperforms strong baselines with a large margin.
+Strength And Weaknesses:
+Strength
+Proposed method is simple, intuitive and effective.
+Conduct extensive experiments on a wide range of NLU tasks.
+Weaknesses
+The proposed method is not very novel. Generalizing LMs to NLU tasks by checking the vocabulary distribution over the masked token is a common practice. The method which leverages related words to label category does not look very novel to me.
+Clarity, Quality, Novelty And Reproducibility:
+This paper is well-written.
+The work is original, but the proposed method is kind of similar to many existing works, which makes it less novel.
+Summary Of The Review:
+This paper proposed NPPrompt, which aims to enable LMs' zero-shot ability to NLU tasks without requiring any labeled sample or relying on humans to construct prompt label words.
+Results show that NNPrompt outperforms strong baselines with a large margin.
+However, the overall novelty of this paper is limited.

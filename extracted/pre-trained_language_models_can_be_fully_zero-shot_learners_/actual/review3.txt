@@ -1,0 +1,14 @@
+Summary Of The Paper:
+The authors propose a new language model named non parametric prompting PLM for natural language understanding specially for zero-shot learning.
+It is an important topic because these days many word-class associations are being produced by end users and previous models heavily depend on unlabeled data and human effort.
+The authors showed that the proposed method outperforms state-of-the-art in terms of text classification accuracy and GLUE benchmarks on four different datasets including AG news, DBPedia, IMDB. and Amazon.
+Strength And Weaknesses:
+The authors put significant effort on proving effectiveness of their method in a variety of NLP tasks.
+However, I wanted to see significant test results to make sure that the improvements are not random.
+Clarity, Quality, Novelty And Reproducibility:
+The paper was well written and easy to follow.
+I would require authors to add the github link for the code.
+Summary Of The Review:
+Overall, zero shot learning is an interesting topic in natural language processing as so many new categories and topics are being produced on the web.
+The authors proposed a simple and easy to implement method for pre trained language models to minimize human effort in terms of labeling and building training data.
+Overall I am satisfied with the current draft of the paper and request to move forward with discussion.

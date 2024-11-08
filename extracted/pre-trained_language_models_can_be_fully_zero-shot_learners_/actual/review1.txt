@@ -1,0 +1,33 @@
+Summary Of The Paper:
+The paper presents a novel method for zero-shot inference with masked language models (MLMs) such as BERT and RoBERTa for classification problems.
+The key idea is to use the encoders of the MLMs themselves to find relevant words for a given label name.
+For example, if the target label is "SPORTS", then the proposed method will first find the words by searching k-nearest neighbors with embedding distance.
+The embeddings are induced by the MLM itself.
+Finally, they aggregate the logits of these k words (for filling the masked positions).
+The authors argue that this new method (named NPPrompt) is a fully zero-shot classification method because it does not need any other information about labels.
+The empirical comparisons show that the proposed method has a comparable performance with other zero-shot methods (that needs some additional info such as KB or the unlabeled data).
+Strength And Weaknesses:
+Strengths
+The proposed NPPrompt method is simple and effective.
+It only requires the label strings for doing zero-shot classification.
+The empirical results show that it is on the same level as other methods that need more information about the labels.
+Weakness
+The proposed method is pretty limited to the classification tasks, particularly for news classification, where the label names are informative and have many semantic relevant words in the vocabulary.
+It is also limited when the label names are multi-word expressions or phrases.
+It does not support the cases where the label names are not informative enough and additional label description is needed.
+The title and narrative can be misleading and an overclaim.
+As mentioned before, it is limited to masked LMs and the advantage is mainly for tasks like news classification.
+Suggestion:
+I suggest the authors extend the proposed method to multi-label classification settings where an example can have multiple acceptable news.
+A major limitation is the multi-word expression and out-of-vocabluary label names.
+How do you generalize the method to support that?
+Also, I suggest the authors try some multiple-choice QA problems.
+Clarity, Quality, Novelty And Reproducibility:
+The paper is mostly clear and the novelty is incremental.
+I think the reproducibility should be okay since the method is pretty naive.
+Can you show the kNN results for sentiment analysis tasks and NLI tasks?
+I don't find them in the paper but they are quite important for qualitative analysis.
+Summary Of The Review:
+Overall, I think the paper presents a novel zero-shot classification paper but the limitations are there and the performance is not that significant.
+I think if the authors can extend the paper with my suggestions in the above section, the paper will be more suitable to the ICLR community.
+Otherwise, it will have much less impact to the field.

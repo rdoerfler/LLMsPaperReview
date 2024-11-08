@@ -1,0 +1,23 @@
+Summary Of The Paper:
+The premise of the paper is that example train instances with the corresponding label can be an effective explanation of the model's prediction rather than post-hoc explanation which is not deterministic.
+The framework jointly trains label prediction and prototype clustering.
+Then, the framework computes the similarity between input and prototypes to retrieve the most similar prototype as an explanation while predicting the label as well.
+Moreover, the framework can reflect human-in-the-loop feedback on the prototype.
+The primary result of the paper is that their framework can show the proper explanation by a similar example while preserving the performance.
+Main Review:
+Strengths
+S1 - The idea of choosing a similar example from the train data as an explanation is an interesting idea.
+Weaknesses and Questions:
+W1 - I'm quite unsure about the set of prototypes. It seems not described in the main contents.
+I checked examples of prototypes in the appendix but the 1:1 label distribution (positive vs. negative) seems to me they are human-picked.
+W1-Q1 - If the set of prototypes pre-defined, do we really need to train the prototype?
+what if we just compute sentence similarity between input and the prototype?
+W2 - The main table is not clear, especially on faithfulness.
+What if we just consider the random prototype as a prototype?
+what is the faithfulness of that random prototype then?
+Q2 - Just curious, in the introduction, why the post-hoc explanation is potentially reporting-bias?
+Isn't this method also potentially reporting-bias since it only uses samples from train data as prototypes?
+Summary Of The Review:
+My overall disposition towards the paper is indifferent although the paper proposes an interesting idea.
+It is a bit difficult to follow the method due to a lack of information.
+More details are needed especially on experimental settings, and methods.

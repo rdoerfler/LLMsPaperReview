@@ -1,0 +1,36 @@
+Summary Of The Paper:
+This paper addresses the difference between multiple-choice prompting and standard prompting (so called cloze prompting), clarifying major reasons why LLM underperforms on Multiple Choice Question Answering (MCQA) problems.
+First, what LLM tries to predict in terms of “more likely” does not always mean “more correctly”.
+This conflation often happens when the tokens in the answer sequence is less common or less grammatical.
+Second, LLM must rely on normalization schemes to compare candidate answers with different lengths or different frequencies.
+But this yields additional dependency on tokenizer.
+Third, standard prompting compares different options only indirectly via the (normalized) likelihood without direct comparison.
+Obviously, such standard prompting is expensive comparing to generating one option token.
+To make LLM solve MCQA problems with order-invariance, the authors propose Multiple Choice Symbol Binding (MCSB) capability that could be model-agnostically testable by recording the answer with the highest probability for each ordering of question (so called PPA).
+The experimental results show that training on code data (especially by multi-staging) is useful for MCSB.
+Providing more shots as few-shot examples also help boosting the performance.
+Strength And Weaknesses:
+(Strengths)
+Reveals problematic ingredients for likelihood-based answering.
+Introduce the concept of MCSB and measure it by PPA.
+Concentrated results that significantly improves QA performance by using multiple-choice prompting.
+(Weaknesses)
+Individual problematic ingredients are neither being theoretically-proven nor empirically-proven.
+No novel/brand new ideas.
+Mostly empirical analysis based on OpenAI playground.
+Some major arguments are less supported.
+Clarity, Quality, Novelty And Reproducibility:
+The submission is an analysis paper rather than finding something new.
+Summary Of The Review:
+(Major concerns) How to make sure Codex model clearly outperforms Instruct model?
+This is a critical question as the authors measures the main experiments (Table 2) that compare Multiple Chocie Prompting (MCP) and Cloze Prompting (CP) only with Codex model.
+The capability to perform MCSB could be due to human feedback alignment by Reinforcement Learning rather than other points indicated by the authors.
+Are the PPA difference between Codex and Instruct (in Figure 2) statistically significant?
+While no statistical test has been provided, it seems not easy to decline null hypothesis that says the difference is a random effect.
+Only Codex tested on OpenBookQA shows strong performance gain when using MCP, whereas Instruct outperforms Codex on the other two tasks in Table 1.
+More detailed experiments are necessary to convince how Codex achieve such higher accuracy.
+(Minor concerns)
+Any reason to choose OpenBookQA which also matters the performance of retriever?
+Do you know how Codex model is exactly trained?
+Codex model that you used could be first based on Instruct, then being further trained on code data.
+Equally likely, Codex model might perform it's own alignment similar to Instruct but based on the preference of generated codes.

@@ -1,0 +1,20 @@
+Summary Of The Paper:
+Practitioners tend to gauge the downstream performance of large language models by comparing their pretraining losses.
+However, this paper shows that when the pretraining loss is near convergence, downstream performance can vary depending on the training methods, despite near identical pretraining loss.
+While there isn’t necessarily a correlation between the pretraining loss and downstream performance, the “flatness” of the solution, as characterized by the trace of the Hessian, does correlate with downstream performance.
+This observation is then formalized and proved on a synthetic language task.
+Strength And Weaknesses:
+This work seeks to better understand an important question in representation learning: how does pretraining performance correlate with downstream performance?
+This question is adequately answered in controlled settings where we observe the non-correlation between pretraining loss and downstream performance and the correlation between solution flatness and downstream performance.
+The investigation is both well-motivated and nicely executed.
+In addition, a theoretical result is provided in support of the empirical observations.
+It is, however, unclear what the practical implications of this work are.
+First of all, current large language models are not in the saturation regime, and it is hard to estimate when they will be as datasets grow with model size in tandem.
+Second, while this paper points that pretraining loss is not a reliable indicator of downstream performance, a simple remedy is to evaluate on downstream tasks during pretraining and compare models accordingly, which is likely already done in practice.
+Finally, this paper does not demonstrate if the insight gleaned in this work can lead to additional “flatness regularization” that induces better downstream performance on real datasets.
+It is understandable that large-scale experiments are expensive and are not expected, but given the rather empirical motivation of the paper, some validation on real data seems desirable.
+Clarity, Quality, Novelty And Reproducibility:
+The paper is well-written and presents novel results.
+Summary Of The Review:
+Interesting empirical observations and theoretical result.
+However, more empirical results on real data, especially on how the discovered insight can enable better downstream performance, would strength this work given the rather empirical motivation.

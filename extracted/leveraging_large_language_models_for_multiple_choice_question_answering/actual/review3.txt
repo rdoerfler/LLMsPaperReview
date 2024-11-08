@@ -1,0 +1,21 @@
+Summary Of The Paper:
+The authors identify a better method to prompt LLMs for multiple-choice question answering.
+Instead of (the usual) comparing the probability of producing each answer, they present all options to the model and then identify the right option by producing just the letter that identifies the answer.
+Strength And Weaknesses:
+Strengths: The authors explain their approach well.
+They also discuss the (somewhat surprising) variance between different models in their ability to separate the letter from the answer.
+(They call this Multiple Choice Symbol Binding.)
+The approach is evaluated on a wide range of (20) datasets.
+Weaknesses: The approach is not new, just discussed and evaluated.
+The authors differentiate their suggested prompting from “prompt engineering”, which they seem to define as fine-tuning of prompts to increase model performance.
+However, I’m not convinced that these are fundamentally different, and would include research such as theirs in the general domain of prompt engineering.
+Clarity, Quality, Novelty And Reproducibility:
+The paper is well written and I believe the experiments are verifiable with the given information, i.e.
+it should be possible to reproduce them.
+Regarding novelty, I am less convinced.
+The authors mention others having used the MCP approach.
+So the main addition here is the systematic discussion and wide range of experiments.
+Summary Of The Review:
+The authors discuss an alternative (but not novel) way to prompt LLMs for better results on multiple-choice tasks.
+The prompt is well-motivated and thoroughly discussed with a good range of experiments that support the author's arguments.
+However, it is not novel: it is a fairly obvious way to prompt and has been tried before.

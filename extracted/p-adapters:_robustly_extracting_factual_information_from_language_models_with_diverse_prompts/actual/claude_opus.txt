@@ -1,0 +1,29 @@
+Summary of the Paper:
+This paper proposes P-Adapters, lightweight models that sit between the embedding layer and first attention layer of large language models (LLMs).
+P-Adapters take the LLM embeddings of natural language prompts as input and output continuous prompts that are fed into the LLM to extract factual information.
+The goal is to make the LLM's factual predictions more accurate and consistent across diverse phrasings of the input prompt.
+The authors also investigate mixture of experts (MoE) models that map the prompt to a learned continuous prompt, but these require additional annotations.
+Experiments on the LAMA dataset show that P-Adapters substantially improve the precision and consistency of factual extraction compared to using the natural language prompts directly.
+Ablation studies demonstrate that preserving access to the LLM's original embeddings of the subject in the prompt is important for P-Adapter performance.
+Strengths and Weaknesses:
+Strengths:
+- Addresses an important problem of extracting factual knowledge consistently from LLMs
+- P-Adapters are lightweight and require no additional prompt annotations at inference time
+- Substantial improvements in precision and consistency over the baseline
+- Insightful ablation studies on what makes P-Adapters effective
+Weaknesses:
+- Overall precision is still modest, with the best models only correctly predicting 50% of facts
+- Analysis of what embeddings to keep focuses on subject/object, overlooking other aspects of the prompt that could be important
+- No human evaluation of the interpretability of the continuous prompts
+- More complex tasks beyond factual extraction are not explored
+Clarity, Quality, Novelty, and Reproducibility:
+The paper is clearly written and the proposed P-Adapter approach is novel in aiming to adapt diverse natural language prompts into effective continuous prompts for factual extraction.
+The experiments cover multiple out-of-distribution settings to test robustness.
+Key implementation details, hyperparameters, and datasets are specified.
+Code is provided to aid reproducibility.
+Summary of the Review:
+This paper presents P-Adapters, a novel lightweight approach to adapt natural language prompts into continuous prompts for more accurate and consistent factual extraction from LLMs.
+P-Adapters demonstrate substantial improvements over baselines while requiring no additional annotations at inference time.
+Insightful ablations reveal the importance of preserving access to the original subject embeddings.
+While overall precision remains modest, this work is a promising step towards practical use of LLMs as knowledge bases.
+The paper is clear and technically sound.

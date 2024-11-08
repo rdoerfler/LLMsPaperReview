@@ -1,0 +1,23 @@
+Summary Of The Paper:
+The paper investigates whether LLMs can be applied to HTML understanding to produce better-performing, more sample-efficient HTML understanding models without the need for custom NN architecture design.
+To achieve this goal, the authors present a suite of three benchmarking tasks for HTML understanding: (1) Semantic Classification of HTML elements, (2) Description Generation for HTML inputs, and (3) Autonomous Web Navigation of HTML pages.
+The authors find that a) pretraining is critical for the performance and can reduce labeled data requirements / improve sample efficiency up to 200x; b) model architecture is the second most important factor, and T5 models with bi-directional attention and encoder-decoder architecture performs the best across the board; c) given a choice, model size should be evaluated in the context of the models training and inference performance, as the model size sub-linearly predicts its performance.
+Strength And Weaknesses:
+Strengths:
+The paper is well-written and easy to follow.
+The authors conduct comprehensive evaluations and analyses over a range of architectures, dataset sizes, and baselines to make the experimental conclusion convincing.
+The authors create and open-source a new dataset/benchmark for HTML understanding.
+Weaknesses:
+The novelty is primarily empirical, and the technical approach is essentially an application of known techniques (the standard pretrain-finetune paradigm of LLMs).
+I examined the supplementary material provided by the authors and only found the data files.
+It would be better if there were codes to prove its reproducibility.
+Clarity, Quality, Novelty And Reproducibility:
+Clarity: Most things are explained clearly either in the main paper or the appendix, except for the few points that are raised in the Weaknesses above.
+Quality: well-written work.
+Novelty: The novelty is primarily empirical, and the technical approach is essentially an application of known techniques (the standard pretrain-finetune paradigm of LLMs).
+Reproducibility: The Supplementary Material only provides the data file.
+It is better to make the codes available for reproducing these results.
+Summary Of The Review:
+In my opinion, the audience could gain insights from the thorough empirical analysis of HTML understanding from this paper.
+However, the lack of technical novelty & contribution makes this work slightly below the acceptance bar of the conference.
+Overall, I recommend a weak reject.

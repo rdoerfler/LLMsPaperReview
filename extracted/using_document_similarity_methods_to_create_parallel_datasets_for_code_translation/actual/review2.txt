@@ -1,0 +1,28 @@
+Summary Of The Paper:
+This paper mines noisy parallel datasets of code by calculating the similarity between two non-parallel sets of documents.
+The authors first show that the document similarity methods can indeed align parallel documents and find that the word movers distance (WMD) is the most effective one.
+Then, the authors show the high tolerance of models trained with noisy datasets.
+Based on the two findings, the authors finally apply the proposed method to a large, non-parallel code dataset, and observe a performance boost of using a noisy parallel dataset compared to randomly paired datasets.
+Main Review:
+Strengths
+The paper is easy to follow.
+Although I am not super familiar with code translation, I can catch most of the points.
+The proposed method is simple and easy to use.
+The experiments are relatively thorough, covering different types of document similarity methods, programming languages, model architectures, and evaluation metrics.
+The results seem to be convincing.
+Weaknesses
+My main doubt is the results presented in "Section 5.3 RQ3: TRANSLATING BETWEEN A WIDER SET OF PROGRAMMING LANGUAGES".
+The authors report CA@5 scores here but in the other place, BLEU/CodeBLEU/EM is used.
+So, what is the intuition that uses different metrics?
+BLEU can also handle multi-reference evaluation.
+It would be nice if the authors could add these results in the author response.
+The research is somewhat superficial.
+The authors only show the models can tolerate certain noises but do not propose any simple heuristics to alleviate the impact of noises.
+For example, penalizing the noises (i.e., the targets not belonging to the source) during model training (fine-tuning). [1] might inspire the authors.
+[1] Wu, Lijun, Jinhua Zhu, Di He, Fei Gao, Tao Qin, Jianhuang Lai, and Tie-Yan Liu.
+Machine translation with weakly paired documents.
+In Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP), pp. 4375-4384. 2019.
+Typos
+Section 3 Proposed Method: curated -> created
+Summary Of The Review:
+This paper is interesting, but the research is somewhat superficial.

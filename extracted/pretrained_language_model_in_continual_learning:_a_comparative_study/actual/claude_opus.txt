@@ -1,0 +1,26 @@
+Summary of the Paper:
+This paper presents a comprehensive comparative study on continual learning (CL) performance using different combinations of pre-trained language models (PLMs) and CL methods.
+The study evaluates 5 PLMs (ALBERT, BERT, GPT2, RoBERTa, XLNET) and 4 types of CL methods (experience replay, regularization-based, dynamic architecture, and hybrid) on 3 benchmarks (CLINC150, Maven, WebRED) under 2 incremental settings (task-incremental and class-incremental).
+Through extensive experiments and probing analyses, the paper reveals interesting performance differences across PLMs and CL methods.
+It dives into analyzing why certain PLMs (e.g. BERT) are more robust and why replay-based methods outperform regularization-based ones by examining the layer-wise characteristics of PLMs during CL.
+The paper provides valuable insights and uncovers important open questions to guide future research on optimizing PLMs for CL and designing NLP-oriented CL methods.
+Strengths and Weaknesses:
+Strengths:
+- The paper conducts a thorough empirical study covering an extensive combination of representative PLMs, CL methods, benchmark datasets and CL settings. This helps provide a comprehensive understanding of the problem.
+- The layer-wise probing analyses offer an in-depth look into the idiosyncrasies of each PLM during CL, revealing useful insights on why certain PLMs and CL methods perform better.
+- The observations and open questions discussed can serve as valuable guidance for future research on improving CL with PLMs and designing NLP-specific CL techniques.
+Weaknesses:
+- While the paper experiments with an extensive combination of models and methods, the justification for choosing those particular PLMs, CL methods and datasets could be elaborated more.
+- The layer-wise probing reveals useful insights, but the underlying reasons why different layers in a PLM demonstrate different remembering/forgetting behavior remains unclear.
+A more theoretical analysis here could strengthen the paper.
+- More details can be provided on the practical costs (computation, memory) of applying different CL methods to the large PLMs to better inform real-world deployment.
+Clarity, Quality, Novelty, and Reproducibility:
+- The paper is overall well-motivated, clearly organized, and easy to follow.
+- The work is of good quality, conducting extensive experiments and analyses that provide empirical and qualitative understandings.
+- The focus on benchmarking CL with modern PLMs and the layer-wise analysis of PLMs during CL are novel explorations that contribute new insights to the community.
+- The paper provides many details of the experimental setup. Releasing the code and datasets will further facilitate reproducibility.
+Summary of the Review:
+This paper tackles the important problem of understanding continual learning with pre-trained language models through comprehensive experiments and insightful analyses.
+The extensive results reveal the performance differences across PLMs and CL methods, while the layer-wise probing provides a deep dive into a PLM's behavior during CL.
+Despite some room for more theoretical grounding and cost analysis, the work is a valuable contribution that can guide future research on optimizing PLM-based CL.
+I believe it will foster meaningful discussions and developments in the community.

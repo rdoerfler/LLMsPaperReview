@@ -1,0 +1,27 @@
+Summary Of The Paper:
+The authors perform a comprehensive study of how pretrained language models work in the continual learning setting.
+The authors study 5 relevant pretrained language models (masked and unmasked) and somewhere between 3 and 6 continual learning strategies depending on where in the paper they are counted.
+In addition to a thorough everything-by-everything evaluation, the authors hone in on the details of how the different models and CL approaches are reflected in the transformer layers.
+The authors find that the different language models studied perform relatively differently, both qualitatively and quantitatively, and these insights may provide useful for directing future improvements.
+Main Review:
+Strengths: Overall the study is very thorough covering both the correct range of options for each axis studied and a set of relevant cross-axis multiple variable experiments.
+The organization is good (but not perfect, see below), its strengths are that the different options considered along each axis are clearly laid out ahead of time, with the exception of the continual learning strategies.
+The layer-wise analysis in particular is interesting and tells a coherent story, despite the challenges of displayed complicated 3D data.
+Overall, it seems that recently many studies compare quantitatively against multiple PLMs, which ultimately appear similar due to only slightly different performance numbers.
+This study's most successful contribution in my opinion is an exploration of the qualitative differences among PLMs in the continual learning setting.
+Weaknesses:
+It would be really great to see how the insights after analysis can be used to improve performance.
+It's probably not absolutely required given the focus on probeing, but it would go a long way towards validating the insights.
+Adjusting the numbers to achieve the 5/4/3/2 cuteness gets slightly in the way of understanding, unfortunately.
+The main reason for this is that the "veins of CL methods" has a different number over the course of the paper, which makes it hard to identify when a given list of N things is a list of the "veins of CL methods".
+Specifically, in the abstract and intro this number is 4, in section 2.3 this number is 3, in section 3.1 this number is 6, in Table 1 this number is 5 (two different sets of 5), in Figure 1 this number is 6, and in Figure 2 this number is 4.
+For a paper that has so much going on and so many different lists of different sizes, keeping these consistent would make it much easier for the reader to understand at any point what exactly this given list of N items is referring to.
+Along the same lines, it would help to be consistent with the language around each set of N things.
+For example, the "veins of CL methods" are called at least "veins", "schemes," and "approaches" at different points.
+Section 3.2, Table 1, and Figure 1 are relatively weak in my opinion. What am I supposed to conclude? I can look at the table and see the different results, but so what? What should I be drawing my eye to in the table (bold would help)?
+The Figure here is too small to even attempt to parse.
+It would be very helpful to have a sentence that gives intuition about what's being measured with the accuracy metric.
+The definition is there, but it took me a second to realize that the intuitive idea is that it's measuring the accuracy of past tasks after the model has moved on to learning new tasks.
+Summary Of The Review:
+Overall the authors perform a quite deep study of using pretrained language models for continual learning.
+Despite some weak points in the analysis of the quantitative results and inconsistent organization/language around the CL approaches, the thoroughness of the study, in particular the analysis at a layer-by-layer level, is likely of interest to the broader community.

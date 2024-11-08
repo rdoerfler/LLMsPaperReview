@@ -1,0 +1,39 @@
+Summary Of The Paper:
+This paper proposes to use tensor decomposition to compress the multi-head attention (MHA) and FFN layers in transformer architecture.
+Premise:
+Drawing from previously published research and their own experiments using PCA, the paper shows that the MHA and FFN layers are over-parameterized and exist in a lower dimensional subspace.
+Further, the authors talk about where these redundancy might come from and point to the decomposability of FFN and MHA layers and how that can lead to different parts learning similar behavior.
+Using PCA the authors show that these layers exhibit both inter-matrix and intra-matrix redundancy.
+Inter-matrix redundancy calls for low dimensional representation of each matrix in the layer, while intra-matrix redundancy implies possibility of parameter sharing between matrices.
+Proposed Solution:
+Based on this observation, the authors discuss the merit of various methods for decomposition of MHA and FFN matrices.
+Specifically, they discuss matrix decomposition, tensor train decomposition and tucker decomposition.
+The last technique will have the largest impact on compression and also has the most marginal cost of adding a new layer.
+Results:
+Impressive accuracy/parameter pareto frontier.
+Can compress BERT-base by ~50x with 1.5 to 2% loss in accuracy (Table 4)
+Ablations on the need for 2 stage knowledge distillation - stage 1 to ensure attention maps and output of last layer are similar and stage two for task distillation
+Main Review:
+Strengths:
+The framework of decomposability and tensor decomposition allows this paper to encompass and explain the benefit of multiple previous work using a single viewpoint
+The results of compression are strong.
+Possibility of 50x compression, albeit at 1.5-2% accuracy loss opens a lot of possibilities for on device deployment
+Weakness:
+The use of tensor decomposition for compressing neural networks has been explored extensively for CNNs, RNNs and Embeddings.
+The use here to compress transformers is a natural extension of the idea
+Decomposability and low-rank nature of FFN and MHA layers has been discussed previously in the literature.
+The authors themselves refer to these prior works
+Cordonnier et al 2021, further discusses the use of tucker decomposition to express MHA layers, albeit in a slightly different context.
+In order to improve the paper, I recommend providing more insights into the workings of the method and the bias that the fixed structure like tucker decomposition can lead to.
+I also recommend exploring the systems impact of running training and inference using tucker decomposed layers and why say 50x reduction in parameter count, does not lead to a 50x improvement in RPS (Table 4).
+Further, I would encourage the authors to explore and understand why finetuning with KD in Table 6 leads to such large accuracy drop.
+GD+TD should lead to better accuracy, but improving accuracy by 40% is an interesting data point.
+Questions:
+1. In section 4.2, the authors say "During the inference phase, the terns that do not involve batch size b or seq length n could be calculated in an offline way...". Could you expand on what you were referring to?
+2. Table 4 should have comparisons to sparsified BERT, esp for data points with 2-3x parameter compression. Both structured sparsity and random sparsity could achieve said compression. Eg - https://arxiv.org/abs/2109.04838
+3. Tucker decomposition of matrices across layers forces common parameters between the matrices. A possible way this methodology could go wrong is if these matrices have different scales. Is the norm value across matrices similar for different layers? Have you looked at the problem from this point of view?
+Summary Of The Review:
+Overall, I think this paper is an incremental improvement to previous state-of-the-art.
+Tucker decomposition has been used extensively in NN to compress RNNs, CNNs and Embeddings.
+Thus use of tucker decomposition and its ability to compress BERT MHA and FFN layers is incremental improvement over the previous results, especially given the fact that prior work has also shown that MHA and FFN layers can be decomposed in a low rank structure and talked about the redundancy in the parameters in those layers.
+However, the results of the paper are interesting from an engineering point of view.

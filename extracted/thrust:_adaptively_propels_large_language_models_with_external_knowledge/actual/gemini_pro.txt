@@ -1,0 +1,33 @@
+Summary of the Paper:
+This paper proposes THRUST, a novel metric for instance-level adaptive propulsion of external knowledge (IAPEK) in large language models (LLMs).
+THRUST scores each instance based on its need for external knowledge, allowing the model to selectively utilize external knowledge only when necessary.
+This approach aims to address the challenges of time-consuming knowledge retrieval and potential noise introduced by irrelevant knowledge.
+The paper evaluates THRUST on a diverse benchmark of multiple-choice classification and open-domain question answering tasks, demonstrating improved cost-efficiency and performance compared to naive knowledge usage.
+Strengths and Weaknesses:
+Strengths:
+Novelty: The concept of IAPEK and the THRUST metric are novel and address the important challenges of efficiently utilizing external knowledge in LLMs.
+Motivation: The paper clearly motivates the need for IAPEK by highlighting the limitations of existing approaches that rely on indiscriminate knowledge usage.
+Empirical Results: Extensive experiments demonstrate the effectiveness of THRUST in improving cost-efficiency and performance across various tasks and model sizes.
+Benchmark: The paper introduces a comprehensive benchmark covering diverse tasks and knowledge sources, facilitating future research in this area.
+Weaknesses:
+Overclaiming: The paper's claim that the proposed model "internalizes" the task through distillation might be overstated, as it essentially boils down to improved fine-tuning.
+Missing Baseline: The evaluation lacks a crucial baseline - a student model instruction-tuned without distillation.
+This makes it difficult to isolate the gains specifically attributable to the distillation process.
+Inconsistency in Evaluation: The selection of datasets for evaluation in some experiments appears inconsistent and lacks clear justification.
+Limited Analysis of Failure Cases: While the paper acknowledges the failure case of ARC-C, a deeper analysis of why THRUST fails in such scenarios would be beneficial.
+Including the missing baseline of an instruction-tuned student model without distillation is crucial to accurately assess the effectiveness of the proposed distillation method.
+Providing a more detailed explanation for the selection of datasets in certain experiments would improve the clarity and consistency of the evaluation.
+A deeper analysis of the failure case of ARC-C would be valuable in understanding the limitations of THRUST and potentially guiding future improvements.
+Clarifying the details regarding model size, training/test data usage, and distillation on the test dataset would enhance the paper's clarity.
+Overall, THRUST is a valuable contribution to the field of LLM research.
+Addressing the outlined concerns and incorporating the suggested improvements would further strengthen the paper and increase its impact on the community.
+Clarity, Quality, Novelty, and Reproducibility:
+The paper is generally well-written and presents the core idea clearly.
+However, some experimental details could be elaborated upon for better clarity.
+The research quality is good, with a novel approach and extensive empirical evaluation.
+The authors mention releasing code upon acceptance, which will enable reproducibility.
+Summary of the Review:
+THRUST presents a novel and promising approach for selectively utilizing external knowledge in LLMs.
+The empirical results are encouraging, demonstrating improved cost-efficiency and performance.
+However, certain aspects like overclaiming, missing baselines, and inconsistent evaluation require further attention.
+Addressing these concerns and providing a deeper analysis of failure cases would strengthen the paper significantly.

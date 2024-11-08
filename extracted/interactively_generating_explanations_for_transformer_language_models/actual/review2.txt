@@ -1,0 +1,42 @@
+Summary Of The Paper:
+This paper aims to model explanation and task prediction such that task performances are not (or less) traded off for interpretability.
+It proposes a novel framework for transformer models where classification and explanation generation are based on shared prototype embeddings which are learnt from training data by a combination of losses.
+The framework is also compatible with settings that requires human in the loop for extra supervision on prototype learning.
+Experiment results show that adding the proposed ProtoTrex benefit task performances on 3 sentiment classification tasks.
+Main Review:
+This paper seems motivated by a prior NeurIPS 19 work "This Looks Like That..." in the sense that the architecture and loss designs are sourced from there.
+The nice thing about this paper is that it focuses on NLP tasks, so the framework could potentially benefit the explanation community.
+The early part of this paper is very straightforward and intuitive.
+Related works have limited coverage.
+The explanation generation part is vague.
+The experiment section is weak.
+Analysis on generated explanation is also weak.
+The architecture relies on using prototypes which are nicely discussed in this paper.
+The problem if improving interpretability without trading off downstream task F1 is interesting since the trade-off was common among prior works.
+However a couple confusing points still.
+There are many lines of explanation works, such as those use prompt engineering, information bottleneck, and purely generative approaches.
+This paper has limited coverage on these topics.
+Touching different approaches is important here since the way ProtoTrex handle explanation might not easily extend to all other cases.
+Even though this design was from the NeurIPS 19 paper, but in the task of NLP, how does the prototype embeddings compare against the label-wise weights in the final classification layer?
+This is to imagine that, without the use of the complicated loss in Eq 1, how does simply treating the label-wise embeddings as prototypes perform?
+The explanation generation (sec 3.5) needs elaboration.
+It seems this paper uses prototype embedding to find a training example as it nearest neighbor, and then use this data point as explanation to its prediction.
+This design has certain limitations: a) not context/example dependent; b) this is hardly generation, instead, it is more in line with salience-based explanation works.
+Tab2 indeed shows some examples with explanation that partially depends on the input example.
+But no idea how they were generated.
+Tab 1b is confusing.
+I don't understand what each number means.
+This paper very briefly went over some statements without getting into details.
+I don't see a solid explanation evaluation in this paper.
+Tab 1c shows rationale performances however these numbers are quite low compared with prior works (e.g. Paranjape's work at EMNLP 20).
+And not sure if rationale performances are based on token or sentence selection.
+Either way, this evaluation has nothing to do with generation.
+And when it comes to generative explanations, ideally, there should be some human-based evaluation over a subset of testing data.
+But no such thing in this paper.
+Summary Of The Review:
+I think the architecture has novelty when it comes to NLP tasks.
+And this work could benefit the explanation community.
+However, I found the experiment results are confusing.
+To the best degree, it offers marginal improvement over the best baselines in terms of task F1.
+When it comes performance of explanation, I only see confusing numbers, thus no conclusion can be made.
+Analysis on generated explanation is another weak point since it's absent.

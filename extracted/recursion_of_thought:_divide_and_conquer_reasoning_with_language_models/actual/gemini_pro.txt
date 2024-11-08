@@ -1,0 +1,27 @@
+Summary of the Paper:
+This paper proposes Recursion of Thought (RoT), a novel framework for improving the reasoning capabilities of language models (LMs) by overcoming the limitations imposed by context size.
+RoT introduces special tokens that allow the model to recursively divide complex problems into smaller subproblems, solve them in separate contexts, and combine the results.
+This divide-and-conquer approach is inspired by human reasoning and aims to address the issue of Chain of Thought (CoT) becoming impractical for highly complex problems due to context limitations.
+The paper demonstrates RoT's effectiveness on various arithmetic and algorithmic reasoning tasks, showing significant performance improvements even for small, randomly initialized LMs.
+Strengths and Weaknesses:
+Strengths:
+Novelty: RoT presents a novel approach to reasoning with LMs, addressing the critical issue of context limitations.
+Model-agnostic: RoT can be applied to any sequence model capable of autoregressive generation, making it widely applicable.
+Divide-and-conquer: The recursive approach allows for efficient and scalable reasoning, enabling LMs to tackle problems requiring extensive intermediate steps.
+Performance: RoT demonstrates significant performance improvements on various tasks, achieving near-perfect accuracy even for small LMs.
+Reproducibility: The paper provides the source code for full experiment reproduction.
+Weaknesses:
+Supervision: RoT currently requires supervised training data with ground truth intermediate steps, which can be expensive to obtain.
+Length generalization: RoT does not facilitate length generalization, meaning a model trained on a specific problem size might not generalize to larger sizes.
+Clarity: Some aspects of the paper, particularly the technical details of the recursive procedures, could benefit from improved clarity and elaboration. Providing more detailed explanations and examples of the recursive procedures would improve clarity.
+Exploring methods for reducing the reliance on supervised training data would be valuable for future work.
+Clarity, Quality, Novelty, and Reproducibility:
+Clarity: The paper is generally well-written, but some sections describing the recursive procedures and training data distribution could be made clearer.
+Quality: The research is well-motivated, presents a significant contribution, and is supported by extensive experiments.
+Novelty: RoT is a highly novel approach to reasoning with LMs, offering a unique solution to the context size limitation.
+Reproducibility: The paper provides the source code, allowing for full experiment reproduction and facilitating further research.
+Summary of the Review:
+This paper presents a novel and impactful approach to reasoning with LMs.
+RoT offers a promising solution to the context size limitation, enabling LMs to tackle complex problems that were previously intractable.
+The paper demonstrates significant performance improvements on various tasks, even for small models.
+While some aspects could benefit from improved clarity and the current reliance on supervised training data is a limitation, the overall contribution is highly significant and warrants acceptance.

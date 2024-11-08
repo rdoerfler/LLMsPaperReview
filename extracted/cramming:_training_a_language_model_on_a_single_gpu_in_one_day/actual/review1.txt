@@ -1,0 +1,27 @@
+Summary Of The Paper:
+In this paper, the authors study the performance of transformer models on downstream tasks as the total computational budget is decreased.
+This process, known as cramming in the paper, turns the problem of training these enormous language models in a new direction from the typical scenario used in industrial labs that train models on a seemingly endless supply of resources.
+The author's place and exception small limit on the total computation that is allowed to train a transformer model from scratch to the total FLOPs available on a single GPU in 24 hours.
+By considering the scaling laws of large model transformers the authors mainly investigate training setups that keep the total number of parameters in the model constant but reduce the cost of performing a gradient update.
+By enumerating a small number of interesting features of the transformer training design space the authors demonstrate that cramming can achieve interesting and sometimes comparable results with larger models using more computation in particular settings and for particular datasets.
+Strength And Weaknesses:
+Strengths:
+The motivation for the study proposed in the paper is interesting for a number of reasons.
+The volume of computation required by many modern transformer models has been prohibitively expensive and therefore out of reach for most researchers for quite a while.
+By studying the implications of constraining the computational resources on the ability of the model to perform well on certain tasks the authors could provide a way for researchers with limited budgets to participate and utilize these models in fundamentally new ways.
+The trend in the paper to consider modifications that mainly reduce the gradient update cost without significantly impacting the total number of parameters in the model, based on the scaling laws, provides an interesting and unifying theme throughout.
+The persistence of the scaling laws to influence the performance of the model on tasks is reinforced through empirical evidence throughout and yields interesting insights.
+Performance evaluation on a shoe-string budget of FLOPs compare to other prominent models is impressive.
+Weaknesses:
+Similar studies were conducted on a single node with 8 GPUs as noted by the authors. Though that setup had considerably more computational resources the total volume of computation was still a fraction of the amount used by many large research institutions. In light of that work, the scenario presented in this paper may seem somewhat derivative and only marginally interesting.
+It is not clear if or how the observations made in the cramming regime may be used to make more informed decisions regarding the training process in the normal training setting.
+Clarity, Quality, Novelty And Reproducibility:
+The writing is clear and the presentation of issues motivating the current work is adequately articulated in the text.
+While I am not an expert in the transformer field I feel the authors did a good job explaining the connection between the scaling laws and the downstream performance of the models under consideration.
+The novelty of the work pertains to the training strategies used to reduce computational costs without removing the total number of model parameters.
+Although previous works looked at training with limited resources the author's study and extreme training scenario that is likely to be more pertinent and representative of the resources available to typical, non-institutional, researchers.
+Summary Of The Review:
+Overall I find the motivation for the work and claims made by the authors to be an interesting departure from the traditional language training papers that use exorbitant computational resources.
+It seems more practical to answer questions about how researchers can do more with less when it comes to allocating resources for training transformer models.
+My remarks should be taken with a grain of salt as I am not an expert in this particular area but I would feel more inclined to experiment with transformer models if I felt I could train them to a reasonable level of ability on my modest desktop setup.
+I believe this sentiment represents the spirit of the paper and the results should be of interest to other members of the research community that are hesitant to participate in this research area because of the perceived computational overheads.

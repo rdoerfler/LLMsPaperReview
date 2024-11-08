@@ -1,0 +1,25 @@
+Summary Of The Paper:
+This paper proposes Proto-Trex model to increase the interpretability of the text classification systems.
+The proposed model mainly adds a bunch of prototype layers to learn the similarity between the query and prototypes.
+They also propose an extension caleld iProto-Trex to interactively learn from users' feedbacks.
+Experimental results and example cases show that the Proto-Trex could give comparable classification accuracy compared to plain classification model (w/o explanation) and could provide reasonable explanations.
+Main Review:
+Strengths:
+The proposed Proto-Trex/iProto-Trex are technically sound.
+Through several example cases, the proposed model could generate reasonable explanations.
+Weaknesses:
+The training loss of the model seems to be too complicated. In Eq.1, there are 6 parts for the overall training loss, and each of them associates with a lambda term (I checked the Appendix, but failed to find how you set lambda terms). Each of them sounds reasonable, but unfortunately, there is no specific ablations on how these parts attribute to the final prediction/explanation.
+According to the illustrations at the end of Section 3.4, there are many hyper-parameters should be set (along with lambda terms in training loss).
+How to determine these hyperparameters?
+If we move to a new dataset, we might lost in tuning these hyperparams.
+As the model incorporates additional modules (compared to pure classification model), it is questionable how efficient is Proto-Trex (both for parameter size and inference time).
+Comments:
+It is unclear where are the results from in Table 1b and 1c.
+Yelp?
+Movie?
+Toxicity?
+Summary Of The Review:
+The paper addresses an important issue in explainable natural language processing models.
+The proposed model is reasonable, and the results seem to be OK.
+However, many issues are left unclear, such as its efficiency, hyper-parameter tuning, etc.
+I tend to lean towards weak rejection at the moment.

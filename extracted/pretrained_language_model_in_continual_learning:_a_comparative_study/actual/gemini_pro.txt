@@ -1,0 +1,29 @@
+Summary of the Paper:
+This paper presents a comprehensive study of continual learning (CL) with pretrained language models (PLMs).
+It investigates the performance of five PLMs (ALBERT, BERT, GPT2, RoBERTa, and XLNET) combined with four CL methods (Vanilla, EWC, ER, and DERPP) on three benchmark datasets in two incremental learning settings (task-incremental and class-incremental).
+The paper analyzes the performance differences across PLMs and CL methods, conducts layer-wise probing to understand the forgetting behavior within PLMs, and identifies open research questions in this area.
+Strengths and Weaknesses:
+Strengths:
+Comprehensive study: The paper covers a wide range of PLMs, CL methods, datasets, and settings, providing a valuable overview of the current state-of-the-art.
+Detailed analysis: The layer-wise probing analysis offers insights into the forgetting behavior within PLMs and the effectiveness of different CL methods on different layers.
+Identifies open research questions: The paper highlights several important research directions for future work in PLM-based continual learning.
+Open-source resources: The authors commit to releasing code and datasets, which will benefit the research community.
+Weaknesses:
+Limited novelty of CL methods: The paper mainly focuses on existing CL methods, and the proposed probing analysis, while insightful, is not a novel CL approach.
+Evaluation concerns:
+The pretraining corpus used differs from common choices in prior work, making comparisons difficult.
+Evaluation on GLUE benchmark is missing, hindering comparison with previous PLMs.
+Only best test set results are reported, instead of the standard practice of reporting median results across multiple runs on dev sets.
+Missing comparisons: The paper does not compare with contrastive learning-based sentence-level pretraining tasks, which have shown promising results in CL.
+Additional Comments:
+Address the concerns regarding the evaluation methodology and include comparisons with contrastive learning-based CL approaches.
+Consider exploring and proposing novel CL methods specifically designed for PLMs, based on the insights from the probing analysis.
+Clarity, Quality, Novelty, and Reproducibility:
+Clarity: The paper is clearly written and well-organized.
+Quality: The research is well-executed, but the concerns regarding evaluation and missing comparisons affect the overall quality.
+Novelty: The main contribution lies in the comparative study and probing analysis, which offer valuable insights but are not entirely novel approaches.
+Reproducibility: The authors promise to release code and datasets, which will ensure reproducibility.
+Summary of the Review:
+This paper provides a valuable contribution to the field of continual learning with PLMs.
+The extensive comparative study and detailed probing analysis offer important insights and identify promising research directions.
+However, concerns regarding the evaluation methodology and missing comparisons with recent CL approaches need to be addressed to strengthen the paper's conclusions.

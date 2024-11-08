@@ -1,0 +1,40 @@
+Summary of the Paper:
+The paper proposes NPPrompt, a novel method for fully zero-shot learning with pre-trained language models (PLMs) for natural language understanding tasks.
+The key idea is to use the PLM's own word embeddings to automatically find relevant words to the target label names, without requiring any labeled data, additional unlabeled corpus, or manual prompt engineering.
+NPPrompt searches for the top-k nearest neighbor words to each label name in the PLM's embedding space to construct the verbalizer.
+It then aggregates the PLM's prediction logits for the [MASK] token filtered by the label words to make the final prediction.
+Experiments on text classification, textual entailment, paraphrasing and other tasks demonstrate NPPrompt outperforms previous zero-shot methods by large margins, with absolute gains of 12.8% on text classification and 18.9% on GLUE.
+Strengths and Weaknesses:
+Strengths:
+- NPPrompt enables fully zero-shot learning for PLMs without relying on any labeled data, additional unlabeled corpus, or human-designed prompts/label words.
+This makes it more practical and flexible for real-world applications.
+- Using the PLM's own embedding to find label words is an effective way to elicit PLM's knowledge and adapt to new tasks/labels.
+The nonparametric aggregation of prompted predictions is simple yet powerful.
+- NPPrompt achieves superior zero-shot performance on a wide range of language understanding tasks, showing substantial improvements over previous methods.
+On some tasks it even approaches methods using extra knowledge or data.
+Weaknesses:
+- For label names without semantic meanings, NPPrompt still requires some keywords to work well.
+How to extend it to arbitrary labels is unclear.
+- NPPrompt focuses on the fully zero-shot setting without using any example data.
+How to incorporate few-shot examples when available to further improve performance is not explored.
+- The paper only experiments with English language tasks.
+Whether the technique generalizes to other languages is unknown.
+Clarity, Quality, Novelty, and Reproducibility:
+The paper is clearly written and easy to follow.
+The proposed NPPrompt method is simple and intuitive.
+The extensive experiments are good quality, covering a diverse set of important NLP tasks.
+The key novelty is enabling an effective fully zero-shot learning approach for PLMs without relying on any labeled data, unlabeled corpus or human annotations.
+This tackles a major limitation of previous prompting methods.
+The strong empirical results also push forward the state-of-the-art in zero-shot learning.
+The method is straightforward to implement based on the descriptions.
+The paper provides comprehensive details on experimental setups.
+Therefore the results are likely to be reproducible.
+However, the code is not provided with the submission, so reproducing the full results may still take some effort.
+Summary of the Review:
+This paper presents NPPrompt, a novel and effective method for zero-shot learning with PLMs without using any labeled data or extra corpus.
+NPPrompt leverages the PLM's own embedding space to find relevant label words and makes predictions via nonparametric aggregation.
+Experiments show it outperforms previous zero-shot approaches by large margins on a variety of language tasks.
+The method is simple, intuitive and practical.
+It addresses important limitations of prior prompting techniques and achieves remarkable zero-shot performance.
+A few weaknesses exist such as reliance on label semantics and focus on English tasks.
+But overall this is a strong paper that makes good contributions to advancing PLM's zero-shot learning capabilities.

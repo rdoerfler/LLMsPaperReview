@@ -1,0 +1,15 @@
+Summary Of The Paper:
+This paper conducts an empirical study on the catastrophic forgetting of pretrained language models.
+On two continual learning settings (class incremental and task incremental), the paper evaluates multiple pre-trained models on different data sets, to see how severe the catastrophic forgetting issue is for these pre-trained models.
+Then the paper also tests the effectiveness of multiple continual learning methods on such pre-trained models and draws some conclusions.
+Main Review:
+Although the authors have conducted quite a lot of experiments, the phenomena shown in experiment results is hardly surprising to me.
+It is not surprising that the pre-trained language models would have forgetting issues when fine-tuned on downstream tasks.
+It is also not surprising that rehearsal-based methods perform the best for pre-trained models.
+Moreover, the paper draws a conclusion that BERT is the most robust one and is a good option if a continual learning process is going to be conducted.
+Based on this, the authors provide a few analyses on BERT’s ‘secret’ for continual learning.
+However, compared with other pre-trained models, I don’t see that BERT is significantly better than others given the figures and tables.
+I feel from the figures and tables, BERT and other models look similar.
+The authors didn’t give a comprehensive explanation on how they read such information or a concrete quantitative comparison to support this claim.
+Summary Of The Review:
+A thorough empirical analysis with unsurprising conclusions

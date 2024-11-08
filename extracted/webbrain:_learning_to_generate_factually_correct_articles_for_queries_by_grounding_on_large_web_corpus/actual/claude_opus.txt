@@ -1,0 +1,34 @@
+Summary of the Paper:
+The paper introduces a new task called WebBrain, which aims to generate short factual articles for queries by mining supporting evidence from a large web corpus.
+To enable experiments on WebBrain, the authors construct a large-scale dataset called WebBrain-Raw by extracting English Wikipedia articles and their crawlable Wiki references.
+WebBrain-Raw is ten times larger than the previous biggest peer dataset.
+The authors empirically analyze the performance of current state-of-the-art NLP techniques on WebBrain and propose a new framework called ReGen, which enhances generation factualness through improved evidence retrieval and task-specific pre-training.
+Experiment results show that ReGen outperforms all baselines in both automatic and human evaluations.
+Strengths and Weaknesses:
+Strengths:
+1.The paper addresses an important and challenging task of generating factual articles for queries using evidence from the web.
+This has significant practical applications.
+2.The WebBrain-Raw dataset constructed by the authors is very large-scale (10x bigger than prior datasets) and will be a valuable resource for the research community.
+3.The proposed ReGen framework introduces several novel and effective techniques to improve factual correctness of the generated articles, such as asymmetric sparsity regularization in the retriever, topic consistency and diversity strategies in evidence selection, and task-specific pre-training for the generator.
+4.Extensive experiments are conducted, demonstrating that ReGen outperforms various strong baselines on both automatic metrics and human evaluation of fluency, informativeness and faithfulness.
+Weaknesses:
+1.While the WebBrain-Raw dataset is very large, the paper lacks details on how the queries and articles are split/sampled to create the WebBrain-R and WebBrain-G datasets used for experiments.
+More dataset statistics and analysis would be helpful.
+2.The generator in ReGen uses a simple reference mark correction strategy in decoding, but a more principled approach to improve the accuracy of citing evidence during generation is needed.
+The authors do discuss this as a limitation and future work.
+3.Generating complete Wikipedia-style articles is extremely challenging.
+The current work focuses on generating the first section, which is an important first step but still quite far from the ultimate goal.
+More discussion on the gaps and potential roadmap would strengthen the motivation and impact.
+4.While the human evaluation results are encouraging, details are lacking on the specific criteria, annotation process, number of samples, and inter-annotator agreement.
+A larger-scale and more rigorous human evaluation would make the results more convincing.
+Clarity, Quality, Novelty and Reproducibility:
+The paper is clearly written and easy to follow.
+The proposed WebBrain task and ReGen framework are well-motivated and described.
+The overall quality of the work is high, with the main contributions being the new large-scale WebBrain-Raw dataset and the novel factuality-enhanced ReGen framework.
+Novelty is demonstrated through the new task formulation, dataset construction, and methodological innovations in ReGen.
+Assuming the code and data are released, the experiments should be reproducible.
+Summary of the Review:
+This paper makes valuable contributions in introducing the WebBrain task and dataset for generating factual articles grounded in web evidence, and proposing the ReGen framework that outperforms baselines through novel strategies for evidence retrieval and factuality-enhanced generation.
+While there is still a big gap to generating full Wikipedia articles, this work represents an important step in that direction.
+The paper could be strengthened with more dataset details, deeper analysis on remaining challenges, and more rigorous human evaluation.
+But overall, this is a high-quality submission with notable contributions to the field.

@@ -1,0 +1,22 @@
+Summary Of The Paper:
+This work aims to improve the efficiency and robustness of knowledge augmented LM.
+The intuition is for LM to decide when an external knowledge source is needed.
+A metric Thrust is developed for this decision, based on the relationship between the query embedding and the clusters of instance embeddings.
+representation learning (the detail of which is not clear)
+k-means clustering on training instance embeddings (the training data is not formally defined)
+the Thrust score of a query is computed based on its distance to cluster centers and the length of individual instance embeddings.
+(the intuition is given in Figure 2, but I have hard time connecting that with the given formula)
+(I assume some procedure "adaptively" filter queries by their Thrust score, but I cannot find the description.)
+Experiment is conducted with several LMs (T5, GPT-J, OPT, UnifiedQA) under zero-shot and transfer-learning setttings for QA and classification tasks.
+Retrieval is conducted to the top 25%, 50% or 75% queries based on the Thrust score.
+Strength And Weaknesses:
+Overall the idea of this work is novel, but the description is very hard to follow.
+The lack of formal definitions, make it hard to understand how thrust is computed e.g., "casting a set of instances ( the training data ) into the representation space " The writing is mostly sloppy, e.g., c_0 is used before it is defined
+The experiment result also need more explanations.
+For example in Table 3 it is good to see that using knowledge 25% of the time is as good as using it 75% of the time for many tasks.
+However, one might wonder why only the result of UnifiedQA is shown?
+why not also compare to the case using knowledge 100% of the time?
+Clarity, Quality, Novelty And Reproducibility:
+This paper is very unclear.
+Summary Of The Review:
+This paper is very unclear.

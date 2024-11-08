@@ -1,0 +1,28 @@
+Summary of the Paper:
+This paper proposes using document similarity methods to automatically create noisy parallel datasets for training supervised code translation models.
+The authors explore the effectiveness of various document similarity methods in creating parallel code datasets, study the tolerance of code translation models to varying degrees of noise in the training data, and demonstrate the practical utility of their approach by creating datasets and training models for translating between programming language pairs not explored in prior work.
+Strengths and Weaknesses:
+Strengths:
+- The paper addresses an important problem of lack of parallel datasets for code translation, which has limited the application of supervised techniques to this task.
+The proposed method provides a way to automatically create such datasets.
+- The authors conduct a thorough comparison of different document similarity methods for creating parallel code datasets and identify Word Movers Distance (WMD) as the most effective.
+- The paper presents a detailed study of the noise tolerance of code translation models, showing that they can perform reasonably well even with moderate amounts of noise in the training data.
+This is an important finding for the practicality of the proposed approach.
+- The authors demonstrate the utility of their method by creating datasets and training models for 10 programming language pairs, expanding the coverage beyond what has been explored in prior work. The results show significant improvements over random baselines.
+Weaknesses:
+- While the paper shows promising results, the datasets created are still noisy by design.
+The impact of this noise on downstream applications of the code translation models is not fully explored.
+- The computational efficiency of using WMD at a large scale is not discussed. This could be a bottleneck for very large datasets.
+- The paper is lacking human evaluations of the quality of translations produced by the models trained on the noisy datasets. Automatic metrics are used but they may not fully capture translation quality.
+Clarity, Quality, Novelty, and Reproducibility:
+The paper is well-written and easy to follow.
+The methodology is clearly described and the results are presented in a logical manner.
+The idea of using document similarity for parallel corpus creation is novel in the space of code translation.
+Experiments are conducted rigorously and the results demonstrate the effectiveness of the proposed approach.
+The datasets and code are provided which aids reproducibility.
+Summary of the Review:
+This paper presents a novel and effective method for automatically creating parallel code datasets using document similarity techniques.
+Thorough experiments are conducted to validate the approach, compare different similarity methods, and study model performance under different noise levels.
+The results are promising and the authors demonstrate the utility of the method by producing datasets and models for several new language pairs.
+Overall, this is a strong paper that makes a valuable contribution to the code translation field.
+Some weaknesses exist in evaluating downstream impact and scalability.

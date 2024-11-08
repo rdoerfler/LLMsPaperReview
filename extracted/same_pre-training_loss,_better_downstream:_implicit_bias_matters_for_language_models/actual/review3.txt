@@ -1,0 +1,19 @@
+Summary Of The Paper:
+the submission conducted experiments to study the impact of configurations on the transferability of a pre-trained model through the lens of Hessian matrices, and the studied configurations include the number of training iterations, the training objectives, and the size of a model.
+Unsurprisingly, the conclusion is that more training iterations, standard training objectives, and larger models would lead to better performance on the downstream tasks.
+Strength And Weaknesses:
+----Strength----
+the submission found a correlated trend between the decay of the trace of the Hessian matrix evaluated on the training data and the increase of performance on the downstream tasks.
+given the above observation, it becomes straightforward to infer that a pre-trained model with parameters at a flat minimum would lead to decent performance on the downstream tasks.
+----Weaknesses----
+the trace of a Hessian matrix in the formulation from this paper is very easy to obtain and one doesn't even need to materialise the matrix. The issue is that the Hessian matrix is evaluated around the global minimum of a model being trained on the pre-training data, and, without any knowledge of the pre-training data, it becomes very difficult to compute the Hessian matrix.
+The other issue is that it does require many samples to obtain a reasonable estimate of the trace.
+the trace of the Hessian matrix is only an overview of the magnitude of all eigenvalues.
+A smaller trace could mean that the minimum might be flatter than other minima with the same loss, but it could also mean that the minimum might be steep in only a few directions, and completely non-informative in others.
+The latter case wouldn't necessarily give us a strong transferable model, and yet the trace of the Hessian matrix wouldn't be able to tell.
+maybe I am missing the point and I am happy to be corrected, but the arguments made in this submission or the observations obtained are already well-known empirically, especially in the case of zero-shot and few-shot learning with very large pre-trained transformer models.
+In addition, the theorems mentioned in the submission don't seem necessary, or, in any case, support the arguments or the observations.
+Clarity, Quality, Novelty And Reproducibility:
+clear presentation, but not very original
+Summary Of The Review:
+I don't recommend accepting the submission since the empirical results are well-known and the theorems don't provide theoretical justifications to the observations.

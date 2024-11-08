@@ -1,0 +1,20 @@
+Summary of the Paper:
+This paper conducts a comprehensive comparative study on the interaction between pre-trained language models (PLMs) and continual learning (CL) methods in NLP.
+It evaluates five PLMs and four CL methods across three benchmarks in task- and class-incremental settings.
+The study uncovers performance differences across PLMs and CL methods and provides layer-wise and task-wise probing analyses to understand PLMs' susceptibility to forgetting.
+It identifies the strengths and limitations of various combinations, leading to several research questions that guide future CL technique design.
+Strengths and Weaknesses:
+Strengths:
+The paper provides an extensive comparative analysis across multiple PLMs and CL methods, contributing significantly to understanding their interactions.
+Layer-wise and task-wise probing analyses offer deep insights into how different layers of PLMs are affected by CL, revealing critical aspects of model susceptibility to forgetting.
+The methodology for benchmarking and analysis is rigorous and well-designed, covering a comprehensive range of settings and metrics.
+Weaknesses:
+The paper primarily focuses on quantitative analysis and could benefit from more qualitative examples to illustrate the practical impact of the findings.
+While the study is extensive, it covers only a subset of available PLMs and CL methods, potentially limiting the generalizability of the conclusions.
+Clarity, Quality, Novelty, and Reproducibility:
+The paper is clearly written and well-structured, with high-quality research and novel insights into the interaction between PLMs and CL methods in NLP.
+The detailed methodology and provision of code and datasets support the potential for reproducibility and further research.
+Summary of the Review:
+The paper offers valuable contributions to the NLP and CL communities by thoroughly analyzing the performance of different PLMs and CL methods.
+Its rigorous benchmarking approach and novel layer-wise probing analysis provide deep insights and open up new research avenues.
+While expanding the range of PLMs and CL methods studied could further enhance its impact, the paper's clarity, quality, and potential for reproducibility make it a significant contribution to the field.

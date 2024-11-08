@@ -1,0 +1,12 @@
+Summary Of The Paper:
+As the title suggests, the paper is a comparison of recent continual learning methods that prevent catastrophic forgetting and their effectiveness in some text classification tasks using popular pretrained language models such as BERT, RoBERTa, etc.
+The paper divides continual learning methods into three categories: (1) rehearsal-based, (2) regularization-based, and (3) dynamic architecture.
+The experimental results show that rehearsal based methods are superior to the other two, and also that BERT is generally better than other candidates.
+The paper then proposes a new probing techniques to find out what makes rehearsal-based method better and what's happening inside BERT.
+The paper finds that the last layer has the biggest catastrophic forgetting and lower layer is less impacted.
+Main Review:
+I think a comparative study paper should suffice at least two conditions to be considered for a publication at a venue like ICLR. First, it should present a novel view on the problem, and second, it should draw a novel conclusion out of the experiments. Although the paper could be a good survey for readers who want to learn about continual learning, I think its viewpoint is not new and its conclusion is not surprising. While it is helpful to know that rehearsal works better than regularization in most datasets, this is not entirely a surprising result.
+I think it is a common belief that rehearsal-based is more robust against catastrophic forgetting, while regularization-method is more space-efficient in that it doesn't have to store examples.
+The fact that the last layer suffers from catastrophic forgetting is also not a surprising result, given that the lower layers are known to encode linguistic features and the upper layers encode task-specific features.
+Summary Of The Review:
+While the paper can be helpful for readers who want to learn about continual learning in text classification using pretrained language models, the paper does not seem to bring sufficient a novel viewpoint or conclusion to be published at ICLR.

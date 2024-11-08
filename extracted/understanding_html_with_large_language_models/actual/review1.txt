@@ -1,0 +1,44 @@
+Summary Of The Paper:
+This work addresses the problem of using large language models for understanding HTML.
+Unlike prior work which attempt to solve this problem using dedicated architectures and training procedures and/or large HTML corpora, this work employs large language models pretrained on natural language text and evaluates their performance on three HTML understanding tasks - Semantic Classification of HTML elements, Description Generation for HTML inputs, and Autonomous Web Navigation of HTML pages, thus potentially eliminating the need for dedicated architectures and training procedures.
+Further, using only a small HTML corpus for finetuning a pretrained LM, the work reports encouraging results compared to LMs trained exclusively on the task dataset.
+The key question asked by this work is can off-the-shelf LLM trained on a large text corpus be used in tasks that require some level of understanding of HTML.
+As canonical tasks in HTML understanding, the work looks at three tasks.
+In Semantic Classification, the ask from the model is to classify a salient HTML element into one of a set of role categories that are commonly used in automated form-filling applications.
+E.g. address, email, password.
+In Description Generation, the ask from the model is to, given a HTML snippet as the input, extract a small text sequence from the snippet as the natural language description of the snippet.
+In Autonomous Web Navigation, the ask from the model is to, given a HTML page and a natural language command as the input, identify the appropriate HTML elements and the actions on those elements that would satisfy the command.
+The work tests the idea of using pre-trained LLM for the three canonical tasks with several pretrained LLMs with different architecture encoder-only, encoder-decoder, or decoder-only, different model size, and training data.
+Best results are obtained with encoder-decoder architectures with bi-directional attention.
+The input to the models is the raw HTML text sequence.
+However, when the sequence is too big to fit into the context window of LLM, a snippet of appropriate size is extracted using a heuristic algorithm.
+The work uses MiniWoB benchmark (demonstrations like email forwarding and social media interactions) for Autonomous Web Navigation task, a new dataset consisting of URLs from the real shopping websites for Semantic Classification, and a dataset derived from CommonCrawl for Description Generation.
+Strength And Weaknesses:
+Strengths:
+1.That pre-trained natural language LLM can be effective for tasks involving HTML pages is interesting and can potentially find use in several interesting practical applications.
+2.As no retraining of LLM with large HTML datasets is necessary, models for tasks involving HTML pages can be developed quickly and less expensively.
+3.That raw HTML text can be used as input without needing parsing is an advantage.
+4.Experimental results are very encouraging and validate the claim that pretrained LLMs can be effective for the three tasks.
+Weaknesses:
+1.It is claimed that these three tasks require understanding of both structure and content of the web-page.
+While it is easy to see that textual content plays a key role in each of the three tasks, the role played by the structure of the web-page is not clear.
+It can be argued that no significant HTML structure analysis or understanding is needed for these tasks.
+For example, in Semantic Classification, what is most important for classifying HTML element 'input' into, say, 'username' is the value of its two attributes, 'type' and 'id'.
+As these attributes are in the close neighbourhood of 'input', parsing of HTML is not strictly necessary.
+Therefore, it might a good idea to do some experiments that demonstrate unequivocally the need for HTML structure analysis or understanding in these tasks.
+One such experiment could be to map all HTML tags in the web-page except the salient tags to the same token (say, ***) so that the input is now a sequence of salient tags, and ***.
+2.There is not much novelty in the methodological aspects of the work.
+Clarity, Quality, Novelty And Reproducibility:
+The submission is well written and easy to understand.
+The three canonical tasks are described well and the adaptation of the various LLM for building models for these tasks are well explained.
+The proposed solution is simple and appears to be effective for the tasks considered and the datasets chosen.
+There is not much novelty in methodological aspects and the work is primarily empirical in nature.
+Experiments are designed well and should be easy to reproduce.
+Datasets used in the experiments have been promised to be released.
+The work should be interesting for practitioners.
+Summary Of The Review:
+This work asks the question can off-the-shelf LLM trained on natural language text be used effectively for tasks that involve HTML pages.
+It proposes three tasks as canonical tasks in understanding HTML.
+It employs a variety of LLM to build models for the three tasks using a small amount of HTML data for fine tuning.
+It shows that LLM does help these tasks significantly.
+One key question not answered in this context is how much of HTML structure analysis and understanding is truly required for these questions.

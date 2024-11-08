@@ -1,0 +1,30 @@
+Summary Of The Paper:
+This paper explores extreme parameter compression for pre-trained language model, especially BERT.
+It introduces and compares several tensor decomposition methods and proposes to leverage Tucker decomposition as the final solution.
+The compressed BERT model achieves much smaller size with promising performance.
+Main Review:
+Large scale pre-trained language models have demonstrated their effectiveness.
+However the large model size makes it difficult to deploy and compressing such models have drawn a lot of interest.
+This paper aims to compress PLMs to extremely small size mainly from the perspective of decomposition.
+It introduces several decomposition methods and makes a comprehensive comparison among them from the perspective of compressing Transformer layers.
+The Tucker decomposition is chosen to be the final solution due to its compression ratio.
+The motivation is clear and the methods are technically sound.
+Though the introduced decomposition methods are not new, the adaption to the Transformer layers and corresponding analysis are comprehensive.
+The experimental results demonstrate the effectiveness of the method.
+Especially, the compressed model size is really competitive.
+Some weaknesses:
+The authors do not include embedding layer and prediction layer size in experiments, while only report the Transformer encoder size.
+I know that this can make the size of compressed model really amazing (e.g., 1.8M) and the compression ratio amazing (e.g., 86M/12.3M=7) but is not fair as the whole model including the embedding layer are used when deploying.
+If the embedding layer is added, the model size will increase a lot, and the compression ratio will decrease, which make the experimental results less surprising.
+But this should be made clear.
+The authors name a lot of related works, but compare only very few of them in the experiments.
+Some other method(s) are missing in the related works.
+For example: [1]
+Some typos:
+Section 5.1, "...are not exactly equal to the the raw weights...", duplicate "the"?
+Section 6.2, "...outperforms ALBERT - the latter needs...while the latter does not...", two "latter"?
+reference: [1] Xu, Jin, et al. "NAS-BERT: Task-Agnostic and Adaptive-Size BERT Compression with Neural Architecture Search."
+Summary Of The Review:
+The paper presents extreme compression on pre-trained language models.
+Though the introduced methods are not new, the adaptation to the Transformer layers and the analysis are interesting, and the experiments are convincing.
+Though there exist some weaknesses, I think the paper is of good quality, if the authors could mitigate them.

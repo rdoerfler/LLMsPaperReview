@@ -1,0 +1,29 @@
+Summary of the Paper:
+This paper proposes using document similarity methods to automatically generate noisy parallel datasets for code translation.
+The authors argue that this approach can overcome the limitations of existing code translation methods that rely on scarce manually curated parallel data.
+They explore the effectiveness of various document similarity metrics, analyze the noise tolerance of models trained on such datasets, and demonstrate the practical utility by creating parallel datasets for languages not previously explored in code translation research.
+Strengths and Weaknesses:
+Strengths:
+Addresses a critical challenge: The paper tackles the major hurdle of limited parallel data in code translation, hindering the application of supervised learning techniques.
+Novel approach: Applying document similarity methods to automatically generate parallel code datasets is a novel and promising direction.
+Empirical validation: The paper provides extensive experiments to evaluate the effectiveness of different document similarity metrics and the noise tolerance of trained models.
+Practical utility: The proposed method enables the creation of parallel datasets for a wider range of programming languages, expanding the scope of code translation research and applications.
+Weaknesses:
+Noise concerns: While the authors analyze noise tolerance, the inherent noise in automatically generated datasets could still impact translation quality and modelgeneralizability.
+Limited analysis of failure cases: The paper lacks a deeper analysis of why the proposed method performs poorly on certain tasks or language pairs.
+Scalability concerns: Identifying critical layers and false prefix-matching heads for each model/task combination might not be scalable for practical applications.
+Missing ablations: The study lacks some key ablations, such as analyzing the impact of partially incorrect demonstrations on model performance.
+The authors should consider exploring techniques to further reduce noise in the generated datasets, potentially by incorporating the similarity score into the model training process.
+A deeper analysis of failure cases and the reasons behind them would be valuable to understand the limitations of the proposed method.
+Investigating the scalability of the approach for practical applications and exploring ways to address potential bottlenecks is crucial for future work.
+Conducting additional ablations, such as analyzing the impact of partially incorrect demonstrations, would provide a more comprehensive understanding of the method's robustness.
+Clarity, Quality, Novelty, and Reproducibility:
+Clarity: The paper is clearly written and well-organized, making it easy to follow the proposed method and experimental results.
+Quality: The research is well-conducted, with comprehensive experiments and detailed analysis.
+Novelty: The application of document similarity methods for creating parallel code datasets is novel and holds significant potential.
+Reproducibility: The authors provide the source code for their experiments, facilitating reproducibility and further research.
+Summary of the Review:
+This paper presents a novel and promising approach to address the challenge of limited parallel data in code translation.
+The proposed method of using document similarity metrics to automatically generate parallel datasets shows encouraging results, with models exhibiting reasonable noise tolerance.
+However, concerns remain regarding the impact of noise on translation quality and the scalability of the approach for practical applications.
+Further investigation into failure cases and additional ablations are needed to strengthen the research.

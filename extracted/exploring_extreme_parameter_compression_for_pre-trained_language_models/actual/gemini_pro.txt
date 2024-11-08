@@ -1,0 +1,33 @@
+Summary of the Paper:
+This paper investigates extreme parameter compression for pre-trained language models (PLMs) like BERT.
+It focuses on tensor decomposition, specifically Tucker decomposition, as a promising yet under-explored approach.
+The authors argue that existing compression methods like knowledge distillation and quantization have limitations in achieving high compression ratios.
+They introduce the concept of "decomposability" in Transformer layers and demonstrate its presence in both Self-Attention Networks (SANs) and Feed-Forward Networks (FFNs), suggesting redundancy that can be exploited for compression.
+The paper proposes two protocols: a decomposition protocol that leverages Tucker decomposition to represent weight matrices efficiently, and a reconstruction protocol that optimizes the order of matrix multiplication for faster inference.
+The compressed models, called TuckerBERT, are evaluated on the GLUE benchmark and compared with other compression methods.
+Strengths and Weaknesses:
+Strengths:
+Comprehensive framework: The paper provides a well-structured framework for discussing and comparing different matrix/tensor decomposition methods for PLM compression.
+High compression ratios: Tucker decomposition enables significant parameter reduction, achieving up to 48x compression in Transformer layers with minimal performance loss.
+Faster inference: The reconstruction protocol leads to faster inference speeds even with similar FLOPS compared to the original model.
+Orthogonal to existing methods: The approach is complementary to existing compression methods like knowledge distillation, allowing for further compression of distilled models.
+Weaknesses:
+Knowledge distillation dependence: The success of the compression relies heavily on knowledge distillation to compensate for the discrepancy introduced by weight approximation. This raises questions about the portability of the method to other PLMs or tasks where distillation might not be effective.
+Limited novelty of findings: While the application of Tucker decomposition to PLMs is interesting, the general idea of using tensor decomposition for neural network compression is not entirely novel.
+Impact on generation capabilities: The paper focuses on compression and inference speed, but it would be beneficial to analyze how the proposed method affects the model's generation capabilities and performance on tasks beyond GLUE.
+Clarity, Quality, Novelty, and Reproducibility:
+The paper is clearly written and well-organized.
+The methodology is sound and follows established practices in tensor decomposition and knowledge distillation.
+The experimental results are convincing and demonstrate the effectiveness of the proposed approach.
+However, the novelty of the findings is somewhat limited, as tensor decomposition has been previously explored for neural network compression.
+The paper provides sufficient details for reproducibility, although the specific implementation details of the knowledge distillation process could be further elaborated.
+Summary of the Review:
+This paper presents a promising approach for extreme parameter compression of PLMs using Tucker decomposition.
+The method achieves impressive compression ratios and even improves inference speed while maintaining good performance on the GLUE benchmark.
+However, the reliance on knowledge distillation and the limited novelty of the findings are potential drawbacks.
+Further investigation into the impact on generation capabilities and exploration of alternative methods to address the decomposition discrepancy would be valuable.
+Additional Feedback:
+It would be helpful to discuss the limitations of the proposed method and potential future research directions to address them.
+Exploring the impact of the compression on different downstream tasks, including generation tasks, would provide a more comprehensive understanding of the method's impact.
+Investigating alternative approaches to compensate for the decomposition discrepancy, such as fine-tuning strategies or regularization techniques, could be beneficial.
+Overall, this paper presents a valuable contribution to the field of PLM compression and is worthy of acceptance with minor revisions and clarifications.

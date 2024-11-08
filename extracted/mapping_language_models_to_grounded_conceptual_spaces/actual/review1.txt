@@ -1,0 +1,41 @@
+Summary Of The Paper:
+This works aims at investigating whether large language models (LMs) pretrained only on texts, can implicitly learn grounded concepts of the world beyond texts.
+Specifically, the authors test whether the LMs can map some conceptual domains (e.g., direction, color) to grounded world representations (e.g., textualized grid world, RGB representation of colors).
+The authors give a rather small number of examples as prompts to the models in an in-context learning setup.
+They find that large LMs like GPT-3 can often output the correct concept for the grounded world representations, even though it’s likely that the model hasn’t seen the grounded world representations in its pretraining.
+They conclude that the text-only LMs may already learn the grounded representations implicitly, without explicit from-scratch training like in the visual language models.
+Main Review:
+I think this paper investigates a very interesting problem.
+The experiments are rather thorough, with different levels of controls (e.g., semantic-invariant transformations to the world representations, generalization to unseen worlds or unseen concepts).
+The writing is clear and structured as well.
+However, I think the concerns that some readers might raise and complain include:
+(1) Metric.
+Is the top-3 accuracy meaningful for the task, especially for the spatial and cardinal problems where the concept space is very small, and for GPT-3 that knows to output in-domain words only?
+Is the substring metric suitable for the color problem, especially in the “unseen concept” setup?
+For example, if “light blue” is a seen concept and “dark blue” is the test-time unseen concept, then answering the seen concept “light blue” in the unseen concept setup would result in a perfect accuracy.
+Would that defeat the purpose of testing generalization to unseen concepts, like in Table 2?
+(2) Conclusion drawn from the results.
+The authors argue that if the LM successfully generates the correct concept based on the grounded representation (likely “unseen” in the pretraining data), it means that the model knows to ground the concept to the non-text world.
+However, is it possible that the model doesn’t understand the relationship between the concepts and the grounded representations, but instead utilizes a similarity between the test grounded representation and the grounded representations in the in-context prompts?
+For example, upon seeing the test representation (e.g., [0,1,0,0] in the spatial domain, or RGB (140, 0, 255) in the color domain), the model can use a simple strategy: copying the concept of a bunch of most similar representations in the in-line prompt examples (e.g., [0, 1, 0, 0, 0], or RGB (145, 0, 255)).
+This strategy would not involve the concept of “left” or “pink”, and is robust to the rotation transformation (while not robust to the random transformation, if each point in the world was transformed independently).
+This would align with the results in Table 1.
+To check whether this hypothesis is (partially) true, we can look at experiments like:
+A: Test on some real unseen concepts.
+This was done in the paper, like in spatial and cardinal columns in Table 2, Table 9, 10, 11 (in the appendix).
+But the performance is not very strong in these cases even for GPT-3 (top-1 accuracy).
+B: Test with fewer prompts.
+This is to prevent the model from memorizing similarity with the prompting examples too much.
+This was also done in the paper (Figure 6 in the appendix).
+Again, the performance is not strong, if the number of prompts goes below 20 or 60.
+C: Replace all of the concept names with concepts in an unrelated domain (e.g., substituting all “left” and “right” with “apple” and “orange”).
+If the performance is above baseline in this setup, should we conclude that the LM implicitly learns to map fruit concepts to the grounded spatial world?
+This was not done in the paper and may be a good control experiment.
+(3) Though the paper investigates an interesting problem, the overall takeaway of this work is not very clear to me.
+How is the analysis useful for future work?
+(4) Some details in the paper should be checked.
+For example, in Section 2.1, the authors say that all models are pretrained on the 40GB OPENAI-WT dataset, but this is not true for GPT-3?
+Also for the color experiments, it is not clear whether 60 or 6+57 or 70 (as mentioned in B.1.1 in the appendix) prompts were used.
+Summary Of The Review:
+Overall I think this work investigates an interesting problem, but the main argument needs to be justified more carefully (as mentioned in (1), (2) above).
+Also, the takeaway and impact of the work are not very clear to me, other than showing the somewhat inscrutable power of GPT-3.

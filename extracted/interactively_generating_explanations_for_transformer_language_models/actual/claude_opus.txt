@@ -1,0 +1,19 @@
+Summary of the Paper:
+This paper introduces Prototypical-Transformer Explanation (Proto-Trex) Networks, which enhance transformer language models with a prototype layer to generate case-based reasoning explanations for model predictions.
+An interactive learning setup (iProto-Trex) is also proposed to incorporate human feedback and improve the model's explanations.
+Experiments on text classification tasks demonstrate that Proto-Trex performs on par with non-interpretable baselines while providing prototypical explanations, and interactive learning further improves explanation quality.
+Strengths and Weaknesses:
+Strengths:
+- Proto-Trex provides interpretable explanations for transformer language models while maintaining competitive performance.
+- The interactive learning setup allows incorporating human feedback to improve explanation quality.
+- Experiments are conducted on multiple datasets and architectures to validate the approach.
+Weaknesses:
+- The trade-off between interpretability and accuracy could be further analyzed and improved. - More details on the user study for interactive learning would strengthen the paper's claims. - Comparison to other interpretability methods for language models is lacking.
+Clarity, Quality, Novelty, and Reproducibility:
+The paper is generally well-written and easy to follow.
+The proposed Proto-Trex architecture is novel in generating prototypical explanations for transformer language models.
+The interactive learning component is also an interesting extension.
+Experiments seem comprehensive, covering different datasets, architectures, and ablations.
+However, some details on reproducibility, such as hyperparameters and model selection, are missing.
+Summary of the Review:
+This paper makes a solid contribution in enhancing transformer language models with prototype networks to generate interpretable explanations. The interactive learning extension is also valuable. While there is some room for improvement in the analysis and comparisons, overall this work seems significant and worthy of publication with minor revisions.

@@ -1,0 +1,35 @@
+Summary of the Paper:
+This paper explores using large language models (LLMs) for HTML understanding tasks, without relying on specialized architectures or HTML-specific training.
+The authors define three benchmark tasks to evaluate HTML understanding capabilities: 1) Semantic Classification of HTML elements into categories, 2) Description Generation to produce natural language descriptions of HTML snippets, and 3) Autonomous Web Navigation of HTML pages given instructions.
+They fine-tune various pre-trained LLMs, including encoder-only, encoder-decoder, and decoder-only architectures, on these tasks.
+Results show that LLMs, especially encoder-decoder models like T5, transfer remarkably well to HTML understanding.
+Fine-tuned LLMs outperform models trained from scratch, achieving up to 192x better sample efficiency on the web navigation task.
+The authors also release a large HTML dataset distilled from CommonCrawl for the description generation task.
+Strengths and Weaknesses:
+Strengths:
+- Applying LLMs to HTML understanding is a novel and important problem with practical applications in web automation and retrieval.
+This is one of the first works to systematically study this.
+- The three proposed benchmark tasks capture key aspects of HTML understanding.
+The tasks are well-motivated and the datasets used are suitable.
+- Experimenting with a wide range of state-of-the-art LLM architectures provides useful insights into which models work best for these tasks.
+- Demonstrating strong transfer from LLMs to HTML understanding tasks, without HTML-specific architectures or training, is an important finding that can spur more work in this direction.
+- Open-sourcing a large automatically labeled HTML dataset from CommonCrawl is a valuable contribution to the community.
+Weaknesses:
+- More analysis could have been done to understand why encoder-decoder models like T5 perform best.
+The bidirectional attention hypothesis is stated but not investigated in depth.
+- The snippet extraction procedure for handling large HTML pages has some ad-hoc aspects.
+A more principled approach to processing long HTML sequences would be good to explore.
+- More discussion of the potential limitations of repurposing LLMs for HTML understanding and ideas for future improvements would have strengthened the paper.
+Clarity, Quality, Novelty, and Reproducibility:
+The paper is clearly written and easy to follow.
+The task formulations, model architectures, datasets, and experimental methodology are all described in sufficient detail.
+- The technical quality of the work is high.
+The experiments are comprehensive and the results are significant.
+- Applying LLMs to HTML understanding benchmarks is novel, and the strong results advance the state-of-the-art, especially on the web navigation task.
+- The datasets and model details are provided, facilitating reproducibility.
+Open-sourcing the CommonCrawl dataset is a big plus.
+Summary of the Review:
+This paper makes a valuable contribution by demonstrating the effectiveness of LLMs for HTML understanding tasks.
+The strong transfer results, without requiring specialized architectures, can serve as a new baseline and open up avenues for future work.
+While a few aspects could be improved, such as more analysis of architectures and snippet extraction, overall this is a high-quality paper with novel findings that advance an important research direction.
+The new dataset is also a useful resource for the community.

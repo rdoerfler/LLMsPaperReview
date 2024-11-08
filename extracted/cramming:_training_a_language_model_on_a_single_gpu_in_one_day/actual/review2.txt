@@ -1,0 +1,35 @@
+Summary Of The Paper:
+This paper investigated pretraining a mask language model in a resource-constrained setting, i.e. a single GPU for one day.
+The authors empirically tested various architectural and data changes in order to maximize performance.
+There are some interesting findings, such as per-gradient efficiency only depends on model size, several strategies to filter and sort the training data brought improvement, etc.
+As a results, the authors were able to push the performance close to BERT base if excluding some outlier tasks.
+Strength And Weaknesses:
+Strengths:
+This paper adds more insights on scaling-down, which is less understood as most concurrent efforts are around scaling-up.
+The experiments have a good coverage in terms of testing various architectural changes from recent literature.
+The final performance on downstream tasks (GLUE) are impressive given the limited compute budget.
+Weaknesses:
+The biggest missing piece is an ablation study on the improvement from various architecture changes.
+In the current version, the authors provided a comprehensive list of things they tried, what helped and what didn't.
+But it's unknown which change(s) brought the bigger improvement.
+Related to this is the poor performance on CoLA.
+Although the authors provided several hypotheses, some of them should be tested to verify whether they're actually related to any of the architecture or data changes, or mostly due to reduced model size.
+For example, one possible cause provided by the authors is that reasonable performance CoLA would need more training data.
+But are models in these experiment trained on less data compared to BERT-base?
+Is it possible to see whether the performance gap can actually be closed if the models were trained longer than one day (i.e.
+seeing more data)?
+Clarity, Quality, Novelty And Reproducibility:
+Clarity:
+For all the architectural modifications in Sec 4.2, does "no improvement" refer to pretraining loss or downstream tasks?
+In Sec 4.3 batch size schedule, you found optimal performance from different batch size for pretraining (1536) and downstream tasks (4032).
+Why do you think pretraining loss benefit from smaller batch size?
+Similarly, could any of the architectural changes in Sec 4.2 have different effects on pretraining vs. downstream?
+For all the changes in Sec 4.2 and 4.3, when you test a specific modification, what were used for the rest of the architecture and training setup?
+How were they chosen?
+Quality:
+The 128 sequence length differs drastically from common choice in language models pretraining (e.g. 1024, or at least 512).
+To make sure conclusions from this work would apply, some additional experiments with longer sequence length would be helpful.
+Summary Of The Review:
+Overall, this paper tackles an important problem, the experiments design are sound and the empirical findings are informative for language models pretraining.
+If the authors could add more clarity to generalizability and robustness of the findings, e.g. experiments with sequence lengths longer than 128, further ablate on the causes of drop in CoLA, etc.
+then the results would be more valuable to language models pretraining.

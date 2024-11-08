@@ -1,0 +1,20 @@
+Summary Of The Paper:
+The authors present their work looking at how text-only input can create what they call a "grounded" model.
+The results support the idea that a small input of text-only data can give rise to the models behaving in such ways as to generalise over things like left and right or colours. This indicates, the perhaps unsurprising conclusion, that language is able to, on a meta level, encode some aspects of groundedness, as defined by the authors, and the perhaps more impressive conclusion that the models can indeed tap into the latent structure found in language using a few examples and thereby generate useful isomophisms.
+Main Review:
+I think the modelling work presented is useful and interesting — and importantly: explained well and coherently.
+However, I find many statements not thought out as much as they deserve.
+For one, colours are as relative as left/right.
+Something red looks dramatically different under white light than it does under other colours of light, and so on.
+Also see visual illusions where the same shade of grey looks like different colours as a function of where it is in the image.
+This is why categorical cognition plays a role in colours in humans.
+The authors could at minimum note this, if they wish.
+Another example is on the equivocation of "text" and "language" throughout the manuscript.
+I also find it a bit strange to say "north" in humans is not grounded.
+I assume it is always grounded to where the Sun is and what hemisphere we are in and so if somebody were to lie to us about where north is, we would eventually figure it out when we saw the movement of shadows, etc.
+There is a lot of research on what humans indeed do here, so some literature review could be done if claims need to be made about actual human behaviour.
+Overall, however, I find the modelling here very interesting and compelling.
+I like that the authors explored a pre-trained model.
+Perhaps providing a coherent definition of "grounded" versus "ungrounded" might be useful to help formalise the distinction as used by the authors.
+Summary Of The Review:
+The work is good quality and well-explained, but could benefit from slightly more details on the rationale behind some jargon and claims about human cognition.

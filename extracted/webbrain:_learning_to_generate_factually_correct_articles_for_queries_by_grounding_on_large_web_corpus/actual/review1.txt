@@ -1,0 +1,44 @@
+Summary Of The Paper:
+This paper presents a new dataset and associated task that involves generating the first section of Wikipedia pages from a set of retrieved references.
+The dataset is similar in form to previous work like WikiSumm, but it is significantly larger and the authors promise to release the references, which have been downloaded from non-Wikipedia sites.
+The dataset generation process involves a number of filtering steps, based on term overlap, that narrow down the reference data to passages that are likely to be related to the target Wikipedia article and associate these passages with sentences in the target.
+The goal, at test time, is to retrieve reference passages that may be related to a topic, and then generate the target section of the Wikipedia article.
+Along with the dataset, this paper presents a new model, ReGen.
+ReGen is composed of a retriever (based on SPLADE) and a reference encoder and target decoder (based on FiD).
+When trained on the WebBrain data, ReGen outperforms both large language model baselines and also a retrieval augmented model with a dense retriever (FiD + BART) according to a range of automatic metrics, and also annotator judgements of a small set of predictions.
+I have some questions about some of these comparisions below, but it is clear that ReGen is capable of generating coherent and informative text.
+It is also capable of providing references for this text, which is a significant advantage over methods that don't include retrieval.
+There are a number of nice ablations that show how the different systems' performances change with different numbers of retrievals and gold references.
+These comparisons are useful in understanding the tradeoffs between retrieving a lot of supporting evidence, with lower precision, vs fewer high quality references.
+Strength And Weaknesses:
+Strengths
+This paper promises a massive new dataset for retrieval augmented text generation, that could be very useful to the NLP community.
+Having said that, I do have questions about the release with respect to copyright and privacy concerns (detailed below in the ethics section).
+The end system can retrieve references, and link them to generated sentences, which is a very nice end product which could have real utility beyond unconstrained text generation, which cannot provide any form of attribution for its predictions.
+There are a number of interesting modeling and training choices made, which lead to significant improvements over a very large language model (GPT3) and also similar retrieval agumented approaches with different choices of retriever and training procedure.
+Weaknesses
+There are a lot of separate contributions here that are not independently evaluated (data filtering / retrieval filtering / warmup strategy).
+It would be nice to see evaluations that validate these choices.
+The reference passage filtering process selects the references included in the retrieval corpus references according to term overlap with the target Wikipedia article.
+If I'm understanding this process correctly, this means that the references stored in the corpus have been selected according to observations of the test time targets, so there is some leakage of information from the test targets into the model input.
+The paper should discuss this.
+The prompt given to GPT3 "Introduce [Page Title]" does not mention that the target is Wikipedia-style text, and the example in Figure 1. does not look much like the start of a Wikipedia article.
+Meanwhile, GPT3 is definitely able to generate Wikipedia style text if prompted to do so.
+The comparision to GPT3 would be stronger if the prompt was better tied to the actual task.
+Clarity, Quality, Novelty And Reproducibility:
+Clarity & Reproducability
+The paper is clearly written and all parts are pretty well described.
+The authors commit to releasing the data, which will allow easy replication.
+Novelty
+The dataset is similar in form to previous work, but extends that previous work to the scenario where references must be retrieved from a very large corpus.
+Similarly, the model is a small modification of existing approaches but it appears to work better than well chosen baselines for this task.
+Quality
+There are a lot of details in the filtering procedures used to select the contents of the dataset, and assign references to sentences.
+These are all justified int the text, but are not supported by any sort of analysis.
+If this is going to become a benchmark dataset, going forward, it would be good to see a discussion of how these choices affect the task.
+In particular, see my question about test target leakage into the retrieval corpus above (under Weaknesses).
+Summary Of The Review:
+This paper presents a significant new dataset and task that could be useful to the community, going forward, in benchmarking methods of retrieval augmented generation.
+The new model is also quite different from previous work, which has generally relied on dense DPR-style retrievers.
+Overall, I think this paper is a nice contribution and I am currently leaning toward acceptance.
+However, I also have some serious questions below about the data release strategy, and how the authors propose to handle concerns about releasing multiple terrabytes of data which may include copyrighted works or personal information.

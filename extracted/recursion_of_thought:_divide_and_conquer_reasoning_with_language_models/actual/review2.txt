@@ -1,0 +1,15 @@
+Summary Of The Paper:
+This paper experiments with fully supervised training of a LM to produce subsequences needed for solving simple reasoning tasks, motivated by limited context size of LMs.
+Strength And Weaknesses:
+On the positive side, the paper is well written and easy to read.
+On the negative side, the solution proposed is formulated as a fully supervised problem, meaning for each task the exact steps needed to solve the problem needs to be annotated.
+This is not a scalable approach as for realistic real-world applications obtaining detailed annotations for reasoning problems is an expert task which is expensive to scale to large datasets.
+As a result, outside of tasks such as arithmetic operations where the dataset can be created automatically (and one could argue that you wouldn't use a task specific LM as the paper doesn't deal with multiple tasks or out-of-distribution problems), the applicability of this approach is minimal.
+Clarity, Quality, Novelty And Reproducibility:
+The paper is written clearly.
+The novelty is minimal as the solution proposed is rather trivial as it doesn't try to solve the hard problem of reasoning without direct supervision, or other settings such as few-shot/zero-shot/multi-task and formulates the problem as a fully supervised task.
+Due to simplicity of approach, I think it's reproducible.
+Summary Of The Review:
+Unfortunately, I don't see much impact from this work in practical terms.
+The formulation doesn't scale to general reasoning problems, the tasks considered aren't tasks that you would train a specific LM to solve, and the algorithmic solution is very simple/trivial extension.
+Hence, I'm not able to recommend this paper for publication.

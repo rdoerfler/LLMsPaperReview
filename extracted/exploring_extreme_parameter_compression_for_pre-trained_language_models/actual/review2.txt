@@ -1,0 +1,23 @@
+Summary Of The Paper:
+This paper proposes to use tensor decomposition to jointly compress the model weights in all attention and FFN layers of a Transformer model, which reaches similar performance as the original BERT model while marking the model much smaller.
+Main Review:
+Reasons for score:
+I think the idea proposed in the paper is novel, but some design choices can be further elaborated and there should be more experiments on larger models and more ablation studies.
+Detailed comments:
+Strengths:
+Applying tensor decomposition across layers to utilize the similarity between layers is novel. This is a valuable contribution to the model compression community.
+The paper analyzes the optimal way to perform matrix multiplication given the compression method proposed in the paper.
+Weaknesses:
+The paper proposed multiple potential ways of compressing weight matrices (matrix decomposition and tensor train decomposition) as some alternatives to the proposed Tucker decomposition.
+However, the author didn't compare with tensor train decomposition due to time constraints.
+I believe the paper will be more solid by adding ablation studies on tensor train decomposition.
+The paper only performs experiments on BERT-base and TinyBERT models, but I believe that the compression method proposed in the paper should be more demanded by larger models.
+Some design choices in the paper seem arbitrary.
+For example, why do you jointly compress all the layers, including all the FFN weights and attention weights?
+I can understand the similarity of the attention query weight vectors across the layers, but I can’t understand why all the weights are merged.
+In addition, the reason for splitting each FFN weight matrix into 4 seems to make it possible to combine it with attention weights.
+Other comments:
+How does this method compare with previous works in terms of training/inference latency?
+Summary Of The Review:
+The paper would be better with more experiments on larger models and ablation studies.
+Also, the presentation and the rationale behind the idea are not clear to me.

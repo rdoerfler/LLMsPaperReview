@@ -1,0 +1,54 @@
+Summary Of The Paper:
+This paper explores methods for improving the consistency of prompt-based factual probing of pre-trained language models.
+The main contributions are (1) several methods for mapping natural language prompts to continuous prompts that empirically improve accuracy and consistency on a factual probing benchmark and (2) analysis comparing reasonable alternatives in terms of accuracy and consistency.
+Main Review:
+Strengths:
+The problem setting--mapping natural language prompts to more optimal continuous prompts--is interesting.
+Most prior work on prompting attempts to find optimal prompt templates for each task (or in this setting, KB relation type), with the assumption that the task label is known at test time.
+Methods like P-Adapters for learning a transformation of natural language prompts could be an interesting alternative to standard prompting (with a fixed template per task) and fine-tuning, with possible applications to meta-learning/transfer learning.
+The authors compare methods with different assumptions about the availability of annotations, and under different kinds of distribution shifts.
+The paper is clearly written and the proposed methods are sensible and easy to understand.
+Major comments:
+The paper does not draw a connection to prior work on robust optimization (for example, see references in [1]), which offers a more principled framework for formulating the objective of invariance to a class of input perturbations.
+At the very least, it would be good to give a formal definition of robustness/consistency and cite this line of prior work.
+The paper does not provide a clear justification for why P-Adapters would be expected to improve consistency, and nothing in the training objective encourages the model to be consistent.
+The argument might be more convincing if you could compare it to a training objective that does explicitly promote consistency--for example, by encouraging the hidden representations of different prompt paraphrases to be similar.
+As this paper notes, the factual probing benchmark has class imbalances and represents a very particular use case, so while P-Adapters appear to improve consistency here it’s unclear if these results will generalize to other settings.
+Would it be possible to evaluate P-Adapters on a wider variety of tasks, following prior work on prompt optimization [2, 3]?
+For example, [4] provide 100 prompt templates for a wider variety of NLP tasks.
+The paper would be more compelling if you could show that P-Adapters improve consistency in other settings too.
+Much of the motivation of this paper is based on assertions about user preferences, but there is no human evaluation to validate these claims.
+For example, would a typical user prefer to give a natural language input but get an inconsistent response?
+Or would they rather pick a pre-defined relation type with better promise of consistency?
+In particular, it’s not clear why user preferences would place any restrictions on training.
+MoE model: How accurate is the relation classifier?
+There is a big performance drop in the “OOD Prompts” setting, which leads me to wonder if the relation classifier was adequately trained.
+Either way, relation classification results should be included and discussed in the main paper--a perfect relation classifier would lead to 100% consistency.
+All of the models suffer a performance drop on the “OOD Objects” setting, which indicates that the models have over-fit to the (imbalanced) distribution of entities in Wikidata.
+It’s unclear how to interpret consistency in this setting, because the models are consistently producing the incorrect response.
+It might be more informative to report something like the “Consistent-Acc.” measurement from [5].
+Table 2 does not compare results to any prior work.
+For example, can these results be compared to the “Consistency Improved PLM” results from [5]?
+Minor comments:
+The metric called “precision@1” should be called “accuracy@1”
+Table 2 does not explain how the results are aggregated (prior work takes either the micro- or macro-average over relation types).
+The description of the methods and the illustration (Figure 2) are somewhat unclear.
+Is there one MLP applied at each position?
+Three MLPs?
+The meaning of the different-colored tokens could also be explained in the caption.
+The paper is missing some implementation details, such as the size of the BiLSTM.
+The results section (section 5) might be easier to read if it were divided into subsections or paragraphs.
+It would be interesting to see the accuracy breakdown by relation type.
+[1] Sinha, Aman, Hongseok Namkoong, and John Duchi.
+Certifying Some Distributional Robustness with Principled Adversarial Training. International Conference on Learning Representations. 2018.
+[2] Shin, Taylor, Yasaman Razeghi, Robert L. Logan IV, Eric Wallace, and Sameer Singh. "Eliciting Knowledge from Language Models Using Automatically Generated Prompts." EMNLP.2020.
+[3] Xiao Liu, Yanan Zheng, Zhengxiao Du, Ming Ding, Yujie Qian, Zhilin Yang, and Jie Tang. GPT understands, too. arXiv preprint arXiv:2103.10385, 2021b.
+[4] Gao, Tianyu, Adam Fisch, and Danqi Chen. "Making pre-trained language models better few-shot learners." ACL.2021.
+[5] Elazar, Yanai, Nora Kassner, Shauli Ravfogel, Abhilasha Ravichander, Eduard Hovy, Hinrich Schütze, and Yoav Goldberg. "Measuring and improving consistency in pretrained language models." arXiv preprint arXiv:2102.01017. 2021.
+Summary Of The Review:
+The paper proposes methods for mapping natural language prompts to continuous prompts, with the goal of improving accuracy and consistency on a factual probing benchmark.
+The problem is interesting and the method appears to work on this benchmark, but I there are three main changes I would like to see before recommending this paper for acceptance, possibly at a future conference:
+Drawing a connection to prior work on robust optimization, and providing a clearer formal justification for why this method will improve consistency.
+Providing more detailed empirical results and discussion (in particular relation classification accuracy).
+The current results are hard to interpret because models can be consistent but inaccurate, and because models can perform well by over-fitting the entity distribution.
+Ideally applying the method to a wider range of prompting tasks, to show whether the results will extend beyond the particular setting of factual probing.

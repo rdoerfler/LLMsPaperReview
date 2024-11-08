@@ -1,0 +1,30 @@
+Summary Of The Paper:
+The authors find that the MCQA ability of LLMs has been underestimated, and they propose multiple choice prompting (MCP), in which a question and its symbol-enumerated candidate answers are all passed to an LLM as a single prompt.
+Surprisingly, the performance of LLMs equipped with MCP dramatically improves, approaching or even surpassing SOTA.
+This demonstrates that the power of LLMs can be used broadly in the future.
+Strength And Weaknesses:
+Strength:
+This paper is well-written and easy to understand.
+The authors propose a simple but effective prompting method, which outperforms previous CP methods, approaching or even surpassing SOTA performance.
+Experimental results show that the MCQA ability of LLMs has been previously underestimated.
+And there is a better way to prompt a single LLM.
+The potential of multiple choices prompts can be further tapped.
+Future work include prompt engineering is still promising.
+Weakness:
+The novelty of this paper is limited.
+Multiple choices prompting (MCP) has been used in other QA tasks, such as TruthfulQA and RACE.
+Although the experimental results prove that the proposed multiple choices prompting (MCP) methods can outperform existing cloze prompting (CP) methods, the reasons behind it are still unclear.
+Since the authors have listed several problems within CP methods, I'm curious about whether these problems are all solved or avoided by their MCP methods.
+More analysis is needed to show this.
+Clarity, Quality, Novelty And Reproducibility:
+Clarity Good.
+But it would be better to include more analysis.
+Quality Good.
+A simple but effective prompting method.
+Novelty Novelty is limited.
+Details can be found in the weakness part.
+Reproducibility Good.
+The code is attached by the authors.
+Summary Of The Review:
+Interesting paper but not good enough.
+It would be better to include more analysis on whether MCP can deal with these several problems that CP faces.

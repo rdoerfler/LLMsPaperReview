@@ -1,0 +1,27 @@
+Summary Of The Paper:
+The paper studies how pre-trained large language models (LLMs) perform on three HTML understanding tasks: (1) semantic classification of HTML elements, (2) description generation for HTML inputs and (3) autonomous web navigation of HTML pages.
+It found that pre-trained LLMs can work on these tasks effectively after fine-tuning.
+They require less task-specific data while perform better than the previous best supervised model.
+Strength And Weaknesses:
+Strength
+The paper is easy to follow.
+The study of how LLMs perform on raw HTML texts is interesting and novel.
+Weaknesses
+Models that are trained on task specific data to compare against is questionable.
+I expect to see more task-specific models such as StructuralLM [1], MarkupLM [2] that respect the tree structure of HTML (or some other methods mentioned in the paper) to be evaluated against.
+However, the results seem to focus on LLMs only.
+I don't see the point of compare different variants of LLMs with or without pre-training.
+Basically, I need to see the following question answered: "For specific web tasks, do I want to use a HTML specific model trained on the small dataset or just to fine-tune LLMs"?
+[1] Li, C., Bi, B., Yan, M., Wang, W., Huang, S., Huang, F. and Si, L., 2021. StructuralLM: Structural Pre-training for Form Understanding. arXiv preprint arXiv:2105.11210.
+[1] Li, J., Xu, Y., Cui, L. and Wei, F., 2021. MarkupLM: Pre-training of text and markup language for visually-rich document understanding. arXiv preprint arXiv:2110.08518.
+Clarity, Quality, Novelty And Reproducibility:
+Clarity: The paper is easy to follow as the content of the paper is simple.
+Quality: The experiments seem to be well-done.
+Novelty: The novelty is limited in terms of methodology.
+It is mostly an empirical study for large LLMs on HTML texts.
+Reproducibility: Some details are missing.
+Either code or more detailed experimental setup should be provided in the supplementary material
+Summary Of The Review:
+I like the idea of studying LLMs on HTML texts.
+However, it seems to me that the experiment setup (re. models to compare against) cannot support the main claim of why one would like to do so.
+Besides, the technical novelty of the paper is limited for a ML conference like ICLR; a NLP conference might be a better fit for this submission.

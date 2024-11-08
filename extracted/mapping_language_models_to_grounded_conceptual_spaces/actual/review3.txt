@@ -1,0 +1,28 @@
+Summary Of The Paper:
+This work seeks to probe large pre-trained language models for indications that they have induced a conceptual space that is structured similarly to one constructed from interactions with the real-world, despite being trained solely from text.
+Most of this probing takes the form perceptual tasks -- can LMs quickly learn new concepts related to navigation, or colors, if given some related examples from the space?
+In both navigation and color tasks, this seems to be the case, and a consistent trend emerges where larger LMs perform better on this task.
+The experiments seem well-controlled, and the authors present an insightful discussion of model performance.
+Main Review:
+Overall I really enjoyed this paper.
+The scope was fairly narrow and the experiments were not diverse enough to provide a sense of a thorough understanding of how LM's are forming this space, what possible confounds might be at play, or what other domains might have similar effects.
+But apart from these concerns, the paper is well-written and presented in an organized manner, and essentially all the discussion points contributed something to my understanding of the work.
+The topic is also very timely and important, and the implications of this work could help unify work in NLP, vision, and other grounded/situated learning.
+An obvious main strength of the paper is that empirically the results are clear and consistent across all experiments.
+The similarities between induced and gold spaces, between smaller models and larger models, is very significant.
+The experiments themselves are quite simple and straightforward, but my biggest worry -- that confounds from the LM training data may be leaking in and influencing these conceptual spaces -- were strongly considered by the authors.
+Their solution of using rotations to test against isomorphic spaces makes intuitive sense.
+One thing I am considering is whether it's possible that huge parameter language models may be inducing mechanisms for performing spatial rotations on subspaces, though at some point it might become difficult to separate a model's ability to memorize the data and perform on-the-fly rotations, from something that might be called a non-trivial understanding of these concepts/spaces.
+That is mostly an aside as I can't present it as anything more than speculation.
+One of the few questions about the color experiment results was to what extent the model was backing off to predict less specific color names, since it is something that is not well-captured in top-1 accuracy (though maybe some combination of this and distance evaluation starts to get at it).
+And why were 67 other colors inserted in the color prompts?
+It seemed arbitrary.
+How are grids incorporated into the model?
+In Appendix B2, it appears to be just as a string following "World", but is it a "linearized" string of one row after another?
+Typos: Zellers reference "within the prompt ."
+Summary Of The Review:
+The paper provides new insights into whether large pre-trained LMs induce conceptual spaces that mirror those found in the real world.
+This could be an important finding, that together with many related works, gives us a better understanding of what sorts of higher reasoning abilities such LMs are capable of.
+I found the experiments straightforward, but well-done, and some foresight was given to what confounding factors may be creeping into these results.
+And across all model sizes we learn that similarities between these spaces increases with model size, and that low model sizes, though still big in comparison to many models, here are truly insufficient to capture concept spaces anywhere comparable to the largest models.
+The paper is well-written and references are good, although I may have missed an important reference or two since this is slightly outside of my research area, but barring the existence of similar uncited work, I think it's a paper worth publishing.

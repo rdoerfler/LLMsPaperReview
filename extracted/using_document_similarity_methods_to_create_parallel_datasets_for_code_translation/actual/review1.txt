@@ -1,0 +1,14 @@
+Summary Of The Paper:
+The paper proposes a simple similarity-based data augmentation technique to translate code written in one programming language to another.
+With empirical investigation, they show such apparently simple data augmentation closely matches the performance of the models trained on the manually annotated datasets.
+Main Review:
+The proposed technique can be useful for legacy code translation where annotated data is scarce.
+The empirical investigations are solid.
+The paper is well-written and easy to understand.
+The authors did not provide any explanation/intuition/evidence why such a simple data augmentation technique works.
+The main problem with this approach is that the performance suffers significantly with CodeNet dataset. The reason behind similarity-based data augmentation will work is because for implementing similar functionalities often similar variable names are used. However, such an assumption may not be true for CodNet where developers did independent implementations. Thus, the dropping of performance for CodeNet is not surprising. However, this raises questions about the usability of this technique.
+The contrast between performance with noise is useful, but again that shows how sensitive this technique is with noise and for some legacy code (e.g., COBOL --- a language authors use to motivate the study) the amount of noise might be high.
+Summary Of The Review:
+The authors propose an approach of data augmentation for code translation for document similarities.
+However, the results show the approach suffered for independently developed code (CodeNet), which is the most realistic case.
+The approach is also susceptible to noise.

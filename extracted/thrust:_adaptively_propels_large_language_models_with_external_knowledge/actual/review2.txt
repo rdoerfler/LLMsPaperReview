@@ -1,0 +1,27 @@
+Summary Of The Paper:
+This work focuses on improving the use of knowledge in knowledge-augmented Pre-Trained Language Models (PTLM).
+Authors hypothesize that using knowledge for all instances can backfire and lead the model towards incorrect predictions, but simultaneously for some instances, external knowledge is required.
+To combat this issue, a new metric, Thrust, is proposed to select instances where external knowledge is more important.
+Authors test this new method for efficiency and performance improvements on several datasets and models.
+Strength And Weaknesses:
+Strengths
+The core hypothesis of the work makes sense to me, especially for larger models.
+Proposed method is quite simple and works without further fine-tuning or training and offers efficiency gains.
+Authors show that using thrust is better at selecting instances which require knowledge than just random selection.
+Weaknesses / Questions
+Evaluation with recent models like RETRO [1] and Atlas [2] is missing.
+Table 2, if my understanding is correct, with knowledge case is presented after the vertical bar (|).
+If that's true, please fix the description of the model which states the opposite.
+Table 2, is the with knowledge same as using full knowledge?
+Table 4, when comparing thrust with full knowledge, what are the exact performance numbers?
+Please mention the evaluation times for both cases as well.
+Citations:
+[1] Borgeaud, S., Mensch, A., Hoffmann, J., Cai, T., Rutherford, E., Millican, K., Driessche, G.V., Lespiau, J., Damoc, B., Clark, A., Casas, D.D., Guy, A., Menick, J., Ring, R., Hennigan, T.W., Huang, S., Maggiore, L., Jones, C., Cassirer, A., Brock, A., Paganini, M., Irving, G., Vinyals, O., Osindero, S., Simonyan, K., Rae, J.W., Elsen, E., & Sifre, L. (2022). Improving language models by retrieving from trillions of tokens. ICML.
+[2] Izacard, G., Lewis, P., Lomeli, M., Hosseini, L., Petroni, F., Schick, T., Yu, J.A., Joulin, A., Riedel, S., & Grave, E. (2022). Few-shot Learning with Retrieval Augmented Language Models. ArXiv, abs/2208.03299.
+Clarity, Quality, Novelty And Reproducibility:
+Overall, the work is presented well and the motivation is well-founded.
+Summary Of The Review:
+Authors have proposed a new metric to effectively select cases which require external knowledge.
+Authors have done a decent job of evaluating the method with current literature, however a few important evaluations are missing.
+Since this paper revolves around retrieval based LMs, authors should have done more evaluation on using thrust in conjunction with some of the well known retrieval based LMs.
+Overall, I think in it's current form this work requires more refinement in terms of more robust evaluation and I would vote for rejecting this paper.

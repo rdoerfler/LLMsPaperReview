@@ -1,0 +1,38 @@
+Summary Of The Paper:
+The paper uses large pre-trained generative language models to perform tasks of text classification or question answering.
+As other works, in classification, they feed the text as prompt, and predict the class with the maximal next-token-probability by the model.
+The authors argue and show that by adding to the query some relevant background knowledge in textual form (this text, which is obtained from various sources is referred to as `external knowledge'), performance often improves.
+And this leads to the following main claimed contribution of the paper.
+Rather than incorporate external knowledge for any query, the authors propose to assess the difficulty of addressing each query, and only model external knowledge for the hardest queries.
+To achieve this, they first cluster the training data within the embedding space, and measure the distance of the query representation to these clusters.
+The experiments apply to several language models (including T5, GPT-J and a couple more), either in zero-shot learning setting, or when first presenting the models some labeled examples (fine tuning).
+Several tasks are evaluated, where the source of `external knowledge' differs per task.
+For example, in some cases, the document title is the query, and the document content is modeled as external knowledge; in other cases the knowledge pertains to human-authored explanations (on the task of detecting textual entailment between two sentences), relevant human-authored facts (question answering), or facts derived from a knowledge graph.
+Results are reported with and without external knowledge.
+In addition, results are reported when extending only the hardest 25/50/75 percent of the queries using the proposed approach for detecting hard queries.
+The results are overall positive.
+Strength And Weaknesses:
+Strengths:
+The topic and general ideas are interesting
+Weaknesses:
+A main weakness is that the work is not reproducible, with respect to both the methods and datasets.
+Clarity: some important terms are not defined at all or until later in the paper, including the key term of external knowledge (which commonly means something else actually, as in knowledge graphs).
+The experiments miss some important baselines.
+There are some technical inaccuracies, e.g., the definition of the F1 measure is incorrect.
+Clarity, Quality, Novelty And Reproducibility:
+A main weakness is that the work is not reproducible.
+It is not clear if the external knowledge used is published or not, and if and how it is possible to obtain it.
+The methods (and experiments) are described informally, or obscurely, where the specific choices made are not motivated or compared to alternatives.
+The related work section comes at a late phase of the reading, and finally makes it clear that the modeling of explicit knowledge as discussed throughout the paper is not at all a common practice ("In this work, we pioneer the study by adding the knowledge in the plain text format.")
+This leap is hardly discussed or motivated in comparison to the literature.
+While the motivation for identifying `hard cases' is 'limited bandwidth or budget to retrieve external knowledge', efficiency and computation time is not evaluated.
+Also, the choice or selecting some fixed portion of the queries (e.g., 25 percent) for expansion is not motivated.
+Why not use a threshold over the query difficulty score for example?
+A baseline of selecting random instances rather the based on difficulty may be informative.
+There are some technical inaccuracies, e.g., the definition of the F1 measure is incorrect.
+There are some typos and style issues.
+Summary Of The Review:
+The ideas are interesting, but the writeup is not solid.
+The presentation of ideas and experiments lack comparison with existing works.
+Some terms are not well defined or misused.
+Reproducibility is a main issue.

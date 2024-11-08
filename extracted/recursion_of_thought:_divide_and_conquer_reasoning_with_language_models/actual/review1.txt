@@ -1,0 +1,22 @@
+Summary Of The Paper:
+This paper demonstrates that for simple algorithmic problems (arithmetic), language models can be taught to split problems into multiple subproblems, which can then be fed back to the LM to be solved independently.
+With very small models this can achieve great performance on these tasks, and it circumvents the limit in context-length of existing transformer models.
+Strength And Weaknesses:
+My main concern with this approach is that the paper does not discuss how to apply this approach to more general problems.
+The problems considered here are very simple, and an algorithm to solve them needs to be known in order to generate the training data.
+So, in its current form this does not enable any new abilities as we could use the base algorithm instead of using expensive LMs.
+In terms of the insight from a learning point-of-view, I also do not see anything surprising in this work.
+After decomposing the problem manually (i.e. by writing an algorithm to generate training data), the learning task is pretty simple (for addition, for example, all the model has to do is to extract the last digit from two numbers).
+So the high accuracy of the resulting method is not that surprising.
+Clarity, Quality, Novelty And Reproducibility:
+The writing style is a bit "flashy", which gives room for miscommunications.
+For example, the paper opens with the following statement:
+Although neural networks have achieved amazing results on various domains, e.g., images, texts, audios, videos, games, etc., nearly all of them are classified as System 1 tasks (Kahneman, 2013), ...
+Afaik, this statement is not supported by the literature, and in particular not by the given reference.
+Following Kahneman's theory, tasks like playing the board game go would certainly require system 2 thinking.
+IMO, dropping the first paragraph would help the paper.
+The paper also makes claims such as "the length of CoT can grow rapidly with the problem’s complexity", without further explanation and I am not even sure what exactly this means.
+Summary Of The Review:
+This paper demonstrates that decomposing simple algorithmic problems can circumvent the limit in context length language models.
+However, the technique only seems to work for problems for which we already have algorithms, and it is unclear to me if this could be extended to more general problems.
+The writing style should be improved.

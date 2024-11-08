@@ -1,0 +1,38 @@
+Summary of the Paper:
+This paper focuses on using large language models (LLMs) like GPT-3 and Codex for multiple choice question answering (MCQA) tasks.
+The authors argue that the traditional "cloze prompting" (CP) approach used with LLMs for MCQA is sub-optimal and leads to underestimation of LLM capabilities.
+They propose an alternative "multiple choice prompting" (MCP) approach where the question and answer options are presented together to the LLM, which then outputs the symbol associated with its chosen answer.
+The authors define the concept of "multiple choice symbol binding" (MCSB) - the ability of an LLM to associate answer options with their representing symbols in an order-invariant way - as a key requirement for MCP to be effective.
+They show that LLMs vary greatly in MCSB ability, with models like Codex and InstructGPT demonstrating much higher MCSB than GPT-3.
+Across experiments on 20 diverse MCQA datasets, the authors find that using MCP with a high MCSB model like Codex leads to significantly higher accuracies compared to using CP.
+Codex with MCP matches or exceeds previous state-of-the-art results on 9 out of the 20 datasets.
+The authors conclude that the MCQA capabilities of LLMs have been previously underestimated due to reliance on CP, and that MCP is a more effective approach for aligning LLMs to MCQA tasks.
+Strengths and Weaknesses:
+Strengths:
+- The paper presents a novel and intuitive idea in multiple choice prompting (MCP) that leads to significantly improved MCQA performance from LLMs compared to the widely used cloze prompting (CP) approach.
+The extensive experiments convincingly demonstrate the effectiveness of MCP.
+- The authors identify and formalize an important capability required for MCP to work well - multiple choice symbol binding (MCSB).
+Their analysis of MCSB abilities of various LLMs provides useful insights.
+- The breadth of the empirical evaluation is a key strength - experiments span 20 diverse MCQA datasets and the results consistently support the main claims.
+Matching/exceeding SOTA on 9 datasets with a single LLM and prompting approach is quite remarkable.
+- The paper is clearly written, well-structured and easy to follow.
+Assumptions and experimental details are properly spelled out.
+Weaknesses:
+- While the paper demonstrates the effectiveness of MCP, it doesn't provide many insights into what enables higher MCSB in some models. A deeper analysis of model properties that lead to high MCSB would have been useful.
+- The authors avoid any prompt engineering and use very standardized prompts throughout. While this helps keep the comparison between CP and MCP clean, it would have been interesting to see if prompt engineering can further boost MCP performance.
+- Dataset leakage is a potential concern that could have been analyzed in a bit more depth, though the authors do provide reasonable arguments for why it's unlikely to be a major factor.
+- It would have been nice to see results on some non-English MCQA datasets to further demonstrate the generality of the approach.
+Clarity, Quality, Novelty and Reproducibility:
+The paper is clearly written and easy to follow.
+The authors do a commendable job of detailing the experimental setup and grounding the work in prior literature.
+The overall quality of research seems high, with extensive experiments supporting the key claims.
+The idea of using multiple choice prompts for MCQA with LLMs is quite novel to the best of my knowledge.
+While some prior works have used this prompting approach on a couple of datasets, this paper is the first to extensively explore MCP, introduce key related concepts like MCSB, and demonstrate its effectiveness over CP on a wide range of MCQA tasks.
+The authors have provided source code and specified the model versions and hyperparameters, which should allow reproducibility of results.
+Use of a fixed random seed is a good practice.
+Summary of the Review:
+In summary, this is a high-quality paper that makes a valuable contribution to the field of using LLMs for MCQA.
+The authors present multiple choice prompting as a more effective alternative to cloze prompting, introduce the concept of multiple choice symbol binding ability, and demonstrate significant improvements in MCQA accuracy across a wide range of datasets.
+The paper is well-written and easy to follow, with extensive experiments supporting the key claims.
+A deeper analysis of what enables high MCSB and the effect of prompt engineering could have made the work even stronger.
+Overall, this paper has the potential to shift how LLMs are applied to MCQA tasks going forward.
