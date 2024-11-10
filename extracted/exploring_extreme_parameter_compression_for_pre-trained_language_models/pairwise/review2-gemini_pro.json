@@ -1,0 +1,10 @@
+{
+    "A1-B2": {
+        "rationale": "Both points address the novelty of the approach. Review A mentions the lack of comparison with tensor train decomposition, while Review B discusses the limited novelty of using tensor decomposition for neural network compression. Both concern the extent to which the method adds new value compared to existing work.",
+        "similarity": 7
+    },
+    "A4-B3": {
+        "rationale": "Both points highlight missing evaluations or comparisons related to performance. Review A mentions the absence of discussions on training/inference latency, while Review B suggests exploring how the method impacts tasks beyond GLUE, both focusing on a gap in performance analysis.",
+        "similarity": 6
+    }
+}

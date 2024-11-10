@@ -1,0 +1,18 @@
+{
+    "1": {
+        "summary": "The paper lacks experimental comparison with tensor train decomposition, which is a relevant compression method and would strengthen the results.",
+        "verbatim": "The paper proposed multiple potential ways of compressing weight matrices (matrix decomposition and tensor train decomposition) as some alternatives to the proposed Tucker decomposition. However, the author didn't compare with tensor train decomposition due to time constraints. I believe the paper will be more solid by adding ablation studies on tensor train decomposition."
+    },
+    "2": {
+        "summary": "The experiments are limited to BERT-base and TinyBERT models, while the method would be more relevant for larger models where compression is more impactful.",
+        "verbatim": "The paper only performs experiments on BERT-base and TinyBERT models, but I believe that the compression method proposed in the paper should be more demanded by larger models."
+    },
+    "3": {
+        "summary": "Certain design choices in the model, such as compressing all layers jointly and splitting each FFN weight matrix into 4, lack clear justification.",
+        "verbatim": "Some design choices in the paper seem arbitrary. For example, why do you jointly compress all the layers, including all the FFN weights and attention weights? I can understand the similarity of the attention query weight vectors across the layers, but I can’t understand why all the weights are merged. In addition, the reason for splitting each FFN weight matrix into 4 seems to make it possible to combine it with attention weights."
+    },
+    "4": {
+        "summary": "The paper does not discuss or provide comparisons regarding training and inference latency in relation to previous works.",
+        "verbatim": "How does this method compare with previous works in terms of training/inference latency?"
+    }
+}

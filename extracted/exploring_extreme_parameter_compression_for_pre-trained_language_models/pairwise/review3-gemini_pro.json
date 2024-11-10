@@ -1,0 +1,10 @@
+{
+    "A1-B2": {
+        "rationale": "Both points discuss the limited novelty of the method. Review A critiques the application of tensor decomposition to transformers as an incremental extension, while Review B highlights that the general idea of using tensor decomposition in neural network compression is not entirely novel.",
+        "similarity": 8
+    },
+    "A4-B1": {
+        "rationale": "Both points focus on knowledge distillation and its impact. Review A mentions a large accuracy drop due to knowledge distillation fine-tuning, while Review B highlights the dependency on knowledge distillation to mitigate weight approximation errors and concerns about its applicability to other models or tasks.",
+        "similarity": 7
+    }
+}

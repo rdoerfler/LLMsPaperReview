@@ -1,0 +1,10 @@
+{
+    "A1-B2": {
+        "rationale": "Both points highlight the need for a more substantial theoretical foundation for the application of Tucker decomposition in transformers. Review A suggests that Tucker decomposition is an incremental extension lacking novelty, while Review B requests a deeper theoretical explanation for its effectiveness in this context.",
+        "similarity": 7
+    },
+    "A2-B1": {
+        "rationale": "Both points address limitations of the proposed method’s structure. Review A suggests a potential bias introduced by the fixed structure of Tucker decomposition, while Review B discusses concerns about the scalability and reliability of the decomposed sets, which is also affected by structural choices.",
+        "similarity": 6
+    }
+}

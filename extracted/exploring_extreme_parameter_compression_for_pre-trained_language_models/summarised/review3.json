@@ -1,0 +1,22 @@
+{
+    "1": {
+        "summary": "The application of tensor decomposition for transformers is an incremental extension of existing work and lacks significant novelty.",
+        "verbatim": "The use of tensor decomposition for compressing neural networks has been explored extensively for CNNs, RNNs and Embeddings. The use here to compress transformers is a natural extension of the idea... Tucker decomposition has been used extensively in NN to compress RNNs, CNNs and Embeddings... Thus use of tucker decomposition and its ability to compress BERT MHA and FFN layers is incremental improvement over the previous results."
+    },
+    "2": {
+        "summary": "The paper lacks exploration into the potential biases introduced by the fixed structure of Tucker decomposition and its effect on model performance.",
+        "verbatim": "In order to improve the paper, I recommend providing more insights into the workings of the method and the bias that the fixed structure like tucker decomposition can lead to."
+    },
+    "3": {
+        "summary": "The paper does not sufficiently explore the systems impact of Tucker decomposition on training and inference performance, specifically why 50x parameter reduction does not lead to 50x speed improvement.",
+        "verbatim": "I also recommend exploring the systems impact of running training and inference using tucker decomposed layers and why say 50x reduction in parameter count, does not lead to a 50x improvement in RPS (Table 4)."
+    },
+    "4": {
+        "summary": "The large accuracy drop observed with knowledge distillation fine-tuning in Table 6 is not explained.",
+        "verbatim": "Further, I would encourage the authors to explore and understand why finetuning with KD in Table 6 leads to such large accuracy drop."
+    },
+    "5": {
+        "summary": "The paper lacks comparisons to sparsified BERT models for parameter compression in Table 4, specifically for lower compression ratios (2-3x).",
+        "verbatim": "Table 4 should have comparisons to sparsified BERT, esp for data points with 2-3x parameter compression. Both structured sparsity and random sparsity could achieve said compression."
+    }
+}

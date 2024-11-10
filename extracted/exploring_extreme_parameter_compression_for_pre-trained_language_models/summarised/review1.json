@@ -1,0 +1,10 @@
+{
+    "1": {
+        "summary": "The model size reported does not include the embedding and prediction layers, which makes the reported compression ratio seem higher than it actually is when deploying the full model.",
+        "verbatim": "The authors do not include embedding layer and prediction layer size in experiments, while only report the Transformer encoder size... If the embedding layer is added, the model size will increase a lot, and the compression ratio will decrease, which make the experimental results less surprising. But this should be made clear."
+    },
+    "2": {
+        "summary": "Limited experimental comparison with other related work, lacking sufficient benchmarks against existing methods.",
+        "verbatim": "The authors name a lot of related works, but compare only very few of them in the experiments. Some other method(s) are missing in the related works."
+    }
+}
