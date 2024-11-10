@@ -1,0 +1,19 @@
+Your goal is to identify the key concerns raised in the review, focusing only on potential reasons for rejection.
+
+Please provide your analysis in JSON format, including a concise summary, and the exact wording from the review. 
+
+Submission Title: <Title> 
+
+=====Review: 
+‘‘‘ 
+<Review_Text> 
+‘‘‘ 
+
+===== 
+Example JSON format: 
+{{ 
+    "1": {{"summary": "<your concise summary>", "verbatim": "<concise, copy the exact wording in the review>"}}, 
+    "2": ... 
+}} 
+
+Analyze the review and provide the key concerns in the format specified above. Ignore minor issues like typos and clarifications. Output only json.

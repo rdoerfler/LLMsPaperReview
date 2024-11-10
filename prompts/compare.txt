@@ -1,0 +1,31 @@
+Your task is to carefully analyze and accurately match the key concerns raised in two reviews, ensuring a strong correspondence between the matched points. Examine the verbatim closely. 
+
+=====Review A: 
+‘‘‘ 
+<JSON extracted comments for Review A from previous step> 
+‘‘‘ 
+
+=====Review B: 
+‘‘‘ 
+<JSON extracted comments for Review B from previous step> 
+‘‘‘ 
+
+Please follow the example JSON format below for matching points. For instance, if point 1 from review A is nearly identical to point 2 from review B, it should look like this: 
+
+{{ 
+    "A1-B2": {{"rationale": "<explain why A1 and B2 are nearly identical>", "similarity": "<5-10, only an integer>"}}, 
+    ... 
+}} 
+
+
+Note that you should only match points with a significant degree of similarity in their concerns. Refrain from matching points with only superficial similarities or weak connections. For each matched pair, rate the similarity on a scale of 5-10. 
+
+5. Somewhat Related: Points address similar themes but from different angles. 
+6. Moderately Related: Points share a common theme but with different perspectives or suggestions. 
+7. Strongly Related: Points are largely aligned but differ in some details or nuances. 
+8. Very Strongly Related: Points offer similar suggestions or concerns, with slight differences. 
+9. Almost Identical: Points are nearly the same, with minor differences in wording or presentation. 
+10. Identical: Points are exactly the same in terms of concerns, suggestions, or praises. 
+
+
+If no match is found, output an empty JSON object. Provide your output as JSON only.

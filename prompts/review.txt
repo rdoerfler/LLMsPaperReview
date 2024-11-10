@@ -1,0 +1,19 @@
+Your task now is to draft a high-quality review outline for a Nature family journal for a submission titled <Title>:
+
+‘‘‘
+<Paper_content>
+‘‘‘ 
+
+
+====== 
+Your task:
+Compose a high-quality peer review of a paper submitted to a Nature family journal.
+
+Start by "Review outline:".
+And then: 
+"1. Significance and novelty"
+"2. Potential reasons for acceptance"
+"3. Potential reasons for rejection", List multiple key reasons. For each key reason, use **>=2 sub bullet points** to further clarify and support your arguments in painstaking details. Be as specific and detailed as possible.
+"4. Suggestions for improvement", List multiple key suggestions. Be as specific and detailed as possible.
+
+Be thoughtful and constructive. Write Outlines only.
