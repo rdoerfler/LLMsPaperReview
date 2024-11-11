@@ -1,14 +1,32 @@
 {
-    "gpt4-vs-human": {
-        "hit_rate": 0.5,
-        "sso_coefficient": 0.5,
-        "jaccard_index": 0.20000000298023224,
-        "sd_coefficient": 0.30158731341362
-    },
     "gemini-vs-human": {
-        "hit_rate": 0.5555555721124014,
-        "sso_coefficient": 0.6111111243565878,
-        "jaccard_index": 0.32777778307596844,
-        "sd_coefficient": 0.49047620097796124
+        "hit_rate": 0.14017636842197842,
+        "sso_coefficient": 0.19074074493514168,
+        "jaccard_index": 0.0988728576236301,
+        "sd_coefficient": 0.15451277560657925
+    },
+    "human-vs-human": {
+        "hit_rate": 0.24338624543613857,
+        "sso_coefficient": 0.2766666680574417,
+        "jaccard_index": 0.16506253199444876,
+        "sd_coefficient": 0.22161604232258267
+    },
+    "gpt4-vs-human": {
+        "hit_rate": 0.11481481591860453,
+        "sso_coefficient": 0.11481481591860453,
+        "jaccard_index": 0.059259260031912064,
+        "sd_coefficient": 0.08423280649715
+    },
+    "llm-vs-llm": {
+        "hit_rate": 0.25925926234987046,
+        "sso_coefficient": 0.28333333929379784,
+        "jaccard_index": 0.1598412725660536,
+        "sd_coefficient": 0.2436508019765218
+    },
+    "claude-vs-human": {
+        "hit_rate": 0.15760141213734943,
+        "sso_coefficient": 0.19259259303410847,
+        "jaccard_index": 0.1059082920352618,
+        "sd_coefficient": 0.16254967484209273
     }
 }

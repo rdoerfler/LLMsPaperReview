@@ -49,7 +49,7 @@ def calculate_hit_rates(summarised_data, pairwise_data):
     model_dict = {model: value for model, value in summarised_data}
     model_pairs = [(model_pair, pairwise_count / model_dict.get(model_pair.split('-')[-1], 1))
                    for model_pair, pairwise_count in pairwise_data]
-    return np.array(model_pairs, dtype=[('model_pair', 'U20'), ('hit_rate', 'f4')])
+    return np.array(model_pairs, dtype=[('model_pair', 'U50'), ('hit_rate', 'f4')])
 
 
 def calculate_sso_coefficients(summarised_data, pairwise_data):
@@ -62,7 +62,7 @@ def calculate_sso_coefficients(summarised_data, pairwise_data):
         for model_pair, pairwise_count in pairwise_data
         if (model_name := model_pair.split('-')[-1]) and (reviewer_name := model_pair.split('-')[0])
     ]
-    return np.array(sso_coefficients, dtype=[('model_pair', 'U20'), ('sso_coefficient', 'f4')])
+    return np.array(sso_coefficients, dtype=[('model_pair', 'U50'), ('sso_coefficient', 'f4')])
 
 
 def calculate_jaccard_indices(summarised_data, pairwise_data):
@@ -76,7 +76,7 @@ def calculate_jaccard_indices(summarised_data, pairwise_data):
         for model_pair, pairwise_count in pairwise_data
         if (model_name := model_pair.split('-')[-1]) and (reviewer_name := model_pair.split('-')[0])
     ]
-    return np.array(jaccard_indices, dtype=[('model_pair', 'U20'), ('jaccard_index', 'f4')])
+    return np.array(jaccard_indices, dtype=[('model_pair', 'U50'), ('jaccard_index', 'f4')])
 
 
 def calculate_sd_coefficient(summarised_data, pairwise_data):
@@ -89,7 +89,7 @@ def calculate_sd_coefficient(summarised_data, pairwise_data):
         for model_pair, pairwise_count in pairwise_data
         if (model_name := model_pair.split('-')[-1]) and (reviewer_name := model_pair.split('-')[0])
     ]
-    return np.array(sd_coefficients, dtype=[('model_pair', 'U20'), ('sd_coefficient', 'f4')])
+    return np.array(sd_coefficients, dtype=[('model_pair', 'U50'), ('sd_coefficient', 'f4')])
 
 
 def combine_metrics(hit_rates, sso_coefficients, jaccard_indices, sd_coefficients):
@@ -114,13 +114,24 @@ def combine_metrics(hit_rates, sso_coefficients, jaccard_indices, sd_coefficient
 
 def categorize_comparison(comparison):
     """Categorize comparisons based on names."""
+
+    comparison_first = comparison.split('-')[0]
+    comparison_last = comparison.split('-')[-1]
+
+    # Get GPT Scores
     if "gpt4" in comparison and "review" in comparison:
         return "gpt4-vs-human"
+    # Get Gemini Scores
     elif "gemini_pro" in comparison and "review" in comparison:
         return "gemini-vs-human"
-    elif "review" in comparison and "review" in comparison.split('-'):
+    # Get Claude Scores
+    elif "claude_opus" in comparison and "review" in comparison:
+        return "claude-vs-human"
+    # Get Human Scores
+    elif "review" in comparison_first and "review" in comparison_last:
         return "human-vs-human"
-    elif "gpt4" in comparison and "gemini_pro" in comparison:
+    # Get LLM Scores
+    elif (comparison_first in ["gpt4", "gemini_pro", "claude_opus"]) and (comparison_last in ["gpt4", "gemini_pro", "claude_opus"]):
         return "llm-vs-llm"
     return None
 
@@ -130,6 +141,7 @@ def calculate_category_averages(all_metrics):
     Average Metrics across all papers and all comparisons for:
     - GPT vs. Human Reviews
     - Gemini vs. Human Reviews
+    - Claude vs. Human Reviews
     - Humans vs. Humans
     - LLMs vs. LLMs
 
