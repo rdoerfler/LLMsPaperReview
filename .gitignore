@@ -5,3 +5,5 @@ venv/
 __pychache__/
 .env
 llm-api.ipynb
+figures/*
+processed/*

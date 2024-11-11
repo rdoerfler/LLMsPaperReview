@@ -192,6 +192,7 @@ def calculate_total_averages(all_comparisons):
     # Accumulate sums and counts for each metric by category
     for paper, comparisons in all_comparisons.items():
         for comparison, metrics in comparisons.items():
+
             # Determine the category of the comparison
             category = categorize_comparison(comparison)
             if category is None:
@@ -201,6 +202,9 @@ def calculate_total_averages(all_comparisons):
             for metric, value in metrics.items():
                 category_totals[category][metric]['sum'] += value
                 category_totals[category][metric]['count'] += 1
+
+    # Resort Categories
+    category_totals = dict(sorted(category_totals.items()))
 
     # Calculate averages for each metric in each category
     average_metrics_by_category = {
