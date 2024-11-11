@@ -133,6 +133,7 @@ def plot_avg_of_all_metrics(data):
 
 
 if __name__ == "__main__":
+
     # Define file paths
     metrics_file_path = 'processed/all_metrics.json'
     average_file_path = 'processed/average_metrics.json'
