@@ -1,0 +1,19 @@
+
+{
+    "1": {
+        "summary": "The fully supervised approach is not scalable for real-world applications due to the need for detailed annotations.",
+        "verbatim": "the solution proposed is formulated as a fully supervised problem, meaning for each task the exact steps needed to solve the problem needs to be annotated. This is not a scalable approach as for realistic real-world applications obtaining detailed annotations for reasoning problems is an expert task which is expensive to scale to large datasets."
+    },
+    "2": {
+        "summary": "The approach lacks applicability outside specific tasks such as arithmetic where datasets can be auto-generated.",
+        "verbatim": "outside of tasks such as arithmetic operations where the dataset can be created automatically..., the applicability of this approach is minimal."
+    },
+    "3": {
+        "summary": "The novelty is minimal and the approach doesn't tackle reasoning without supervision.",
+        "verbatim": "The novelty is minimal as the solution proposed is rather trivial as it doesn't try to solve the hard problem of reasoning without direct supervision, or other settings such as few-shot/zero-shot/multi-task."
+    },
+    "4": {
+        "summary": "The approach has limited impact and is a simple/trivial extension.",
+        "verbatim": "Unfortunately, I don't see much impact from this work in practical terms... and the algorithmic solution is very simple/trivial extension."
+    }
+}

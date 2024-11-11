@@ -1,10 +1,15 @@
+
 {
     "1": {
-        "summary": "The paper lacks discussion on the scalability of the proposed approach as the decomposed sets grow larger, which could impact the reliability of probabilistic inference.",
-        "verbatim": "The discussion on the scalability of the proposed approach as the sets produced by the decomposition grow larger is somewhat lacking. There might be concerns about the reliability of probabilistic inference in such cases."
+        "summary": "Lacking discussion on scalability as decomposition sets grow larger.",
+        "verbatim": "The discussion on the scalability of the proposed approach as the sets produced by the decomposition grow larger is somewhat lacking."
     },
     "2": {
-        "summary": "The paper could benefit from a deeper theoretical explanation of why Tucker decomposition is particularly effective for this application compared to other techniques.",
+        "summary": "Concerns about reliability of probabilistic inference.",
+        "verbatim": "There might be concerns about the reliability of probabilistic inference in such cases."
+    },
+    "3": {
+        "summary": "Need for deeper theoretical discussion on the benefits of Tucker decomposition.",
         "verbatim": "While the paper provides a good comparison with existing methods, it could benefit from a deeper theoretical discussion on why Tucker decomposition outperforms other techniques in this specific application."
     }
 }

@@ -1,0 +1,23 @@
+
+{
+    "1": {
+        "summary": "Statements in the paper regarding relativity of colors are not thoroughly considered.",
+        "verbatim": "For one, colours are as relative as left/right. Something red looks dramatically different under white light than it does under other colours of light, and so on."
+    },
+    "2": {
+        "summary": "The paper equivocates 'text' and 'language' without clarity.",
+        "verbatim": "Another example is on the equivocation of 'text' and 'language' throughout the manuscript."
+    },
+    "3": {
+        "summary": "The claim about 'north' not being grounded in humans is questionable.",
+        "verbatim": "I also find it a bit strange to say 'north' in humans is not grounded."
+    },
+    "4": {
+        "summary": "A literature review on human behavior related to grounding could strengthen the claims.",
+        "verbatim": "There is a lot of research on what humans indeed do here, so some literature review could be done if claims need to be made about actual human behaviour."
+    },
+    "5": {
+        "summary": "A coherent definition of 'grounded' versus 'ungrounded' would be beneficial.",
+        "verbatim": "Perhaps providing a coherent definition of 'grounded' versus 'ungrounded' might be useful to help formalise the distinction as used by the authors."
+    }
+}

@@ -1,0 +1,11 @@
+
+{
+    "A1-B1": {
+        "rationale": "Both reviews highlight the need for supervised learning as a limitation, emphasizing the requirement for detailed supervision in each task, which can restrict the broader applicability of the approach.",
+        "similarity": "9"
+    },
+    "A2-B2": {
+        "rationale": "Each point discusses the lack of exploration regarding generalization in RoT, whether regarding unseen tasks, problem sizes, or length generalization.",
+        "similarity": "8"
+    }
+}

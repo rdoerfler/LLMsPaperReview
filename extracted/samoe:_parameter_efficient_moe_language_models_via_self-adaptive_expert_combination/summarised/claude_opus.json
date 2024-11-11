@@ -1,0 +1,11 @@
+
+{
+    "1": {
+        "summary": "The review suggests providing additional intuition or analysis on the effectiveness of the self-adaptive expert combination formulation.",
+        "verbatim": "- While the rationale for the self-adaptive combination is clear, it would be useful to provide some additional intuition or analysis on why this particular formulation is effective."
+    },
+    "2": {
+        "summary": "The review notes a limitation in the evaluation, which focuses solely on autoregressive language models and suggests testing on other architectures like encoder-only models.",
+        "verbatim": "- Evaluation focuses on autoregressive language models. It would be interesting to see if the benefits extend to other architectures like encoder-only models as well."
+    }
+}

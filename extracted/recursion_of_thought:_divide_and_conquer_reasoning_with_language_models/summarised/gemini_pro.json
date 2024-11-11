@@ -1,0 +1,15 @@
+
+{
+    "1": {
+        "summary": "The reliance on supervised training data is a potential limitation.",
+        "verbatim": "Supervision: RoT currently requires supervised training data with ground truth intermediate steps, which can be expensive to obtain."
+    },
+    "2": {
+        "summary": "RoT does not support length generalization, limiting its adaptability.",
+        "verbatim": "Length generalization: RoT does not facilitate length generalization, meaning a model trained on a specific problem size might not generalize to larger sizes."
+    },
+    "3": {
+        "summary": "Lack of clarity in the description of recursive procedures and training data distribution.",
+        "verbatim": "Clarity: Some aspects of the paper, particularly the technical details of the recursive procedures, could benefit from improved clarity and elaboration. Providing more detailed explanations and examples of the recursive procedures would improve clarity."
+    }
+}

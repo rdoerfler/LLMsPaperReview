@@ -1,0 +1,11 @@
+
+{
+    "1": {
+        "summary": "The novelty is primarily empirical with no significant technical contribution.",
+        "verbatim": "The novelty is primarily empirical, and the technical approach is essentially an application of known techniques (the standard pretrain-finetune paradigm of LLMs)."
+    },
+    "2": {
+        "summary": "The reproducibility is questioned due to the absence of code in the supplementary material.",
+        "verbatim": "The Supplementary Material only provides the data file. It is better to make the codes available for reproducing these results."
+    }
+}

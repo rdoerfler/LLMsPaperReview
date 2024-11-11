@@ -1,0 +1,11 @@
+
+{
+    "A1-B1": {
+        "rationale": "Both points discuss the lack of in-depth analysis into the specific characteristics or insights that enable high MCSB ability in LLMs.",
+        "similarity": 9
+    },
+    "A2-B2": {
+        "rationale": "Both points highlight the absence of prompt engineering exploration, suggesting it could improve performance, despite both papers emphasizing fairness in comparison.",
+        "similarity": 9
+    }
+}

@@ -1,0 +1,27 @@
+
+{
+    "1": {
+        "summary": "Unclear which MoE model was studied and lack of citations",
+        "verbatim": "I did not know which MoE model does this paper study... The author needs to announce which model they used for analysis and add citations."
+    },
+    "2": {
+        "summary": "Analysis based on only one MoE model",
+        "verbatim": "This article used only one MoE model to draw analysis conclusions, which I cannot agree with...analysis conclusions need to conduct experiments with at least two representative MoE models."
+    },
+    "3": {
+        "summary": "Concerns about expert pool method and lack of dataset diversity",
+        "verbatim": "I am very suspicious about the expert pool method proposed... How to choose the size of the expert pool... does not use multiple datasets to test the required expert pool size."
+    },
+    "4": {
+        "summary": "Use of the Pile dataset with duplicate documents without de-duplication",
+        "verbatim": "the Pile dataset is full of duplicate documents... this paper does not perform additional de-duplication processing."
+    },
+    "5": {
+        "summary": "Lack of FLOPs comparison with dense models",
+        "verbatim": "this paper does not report total training flops number... doesn’t compare it with a dense model with the same amount of flops in table 1."
+    },
+    "6": {
+        "summary": "Discrepancy in performance results compared to expected flops",
+        "verbatim": "I notice usually a dense model (350M) could get a score of 70.2 on piqa. This SaMoE with more flops achieves a score 68.9."
+    }
+}

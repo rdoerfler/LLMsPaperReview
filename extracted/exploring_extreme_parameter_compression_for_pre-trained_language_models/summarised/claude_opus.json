@@ -1,18 +1,19 @@
+
 {
     "1": {
-        "summary": "The paper's evaluation is limited to the GLUE benchmark and lacks performance results on other NLP tasks, potentially limiting the generalizability of the findings.",
-        "verbatim": "Evaluation is primarily on the GLUE benchmark; performance on other NLP tasks is not shown."
+        "summary": "The paper's evaluation is limited to the GLUE benchmark and lacks testing on other NLP tasks.",
+        "verbatim": "Evaluation is primarily on the GLUE benchmark; performance on other NLP tasks is not shown"
     },
     "2": {
-        "summary": "Theoretical analysis on why Tucker decomposition is effective for Transformer compression is limited, which weakens the theoretical foundation of the work.",
-        "verbatim": "Theoretical analysis of why Tucker decomposition works well for compressing Transformers is somewhat limited."
+        "summary": "The theoretical analysis of why Tucker decomposition is effective for Transformers is not comprehensive.",
+        "verbatim": "Theoretical analysis of why Tucker decomposition works well for compressing Transformers is somewhat limited"
     },
     "3": {
-        "summary": "The study does not explore the potential for even more extreme compression with some performance trade-offs, which may limit understanding of the compression boundaries.",
-        "verbatim": "Does not explore the limits of compression - even smaller models may be possible with some performance trade-off."
+        "summary": "The paper does not explore the limits of compression to see if even smaller models are achievable with some performance trade-off.",
+        "verbatim": "Does not explore the limits of compression - even smaller models may be possible with some performance trade-off"
     },
     "4": {
-        "summary": "The impact of the proposed method on pre-training efficiency and resource requirements is not analyzed, which is relevant for large-scale model applications.",
-        "verbatim": "Impact on pre-training efficiency and resources is not analyzed, though this is very relevant for large-scale PLMs."
+        "summary": "There is no analysis of the impact on pre-training efficiency and resources, which is crucial for large-scale PLMs.",
+        "verbatim": "Impact on pre-training efficiency and resources is not analyzed, though this is very relevant for large-scale PLMs"
     }
 }

@@ -1,0 +1,19 @@
+
+{
+    "1": {
+        "summary": "The generation is limited to only the first passage of Wikipedia pages, closely resembling existing works.",
+        "verbatim": "Limiting the generation to only the first passage of wikipedia pages is a pretty strong limitation, also making this work very close to existing multi-document summarization works."
+    },
+    "2": {
+        "summary": "The input passage selection method could be improved using more advanced techniques.",
+        "verbatim": "In “Reference Passage Selection” and “Dataset Generation”, the authors select input passages for training with simple word overlap or BM25. It seems like this could be easily improved by using an entailment model, a dense retriever or even SPLADE."
+    },
+    "3": {
+        "summary": "The dataset would be more valuable if it were multilingual instead of English-only.",
+        "verbatim": "The proposed \"WebBrain-Raw\" dataset would be more interesting if it was multilingual instead of English-only."
+    },
+    "4": {
+        "summary": "It's unclear how the modeling choices compare against other methods on competitive benchmarks.",
+        "verbatim": "The techniques proposed by the authors are very interesting, but they are only applied to the dataset they created, so it's not totally clear how their modeling choices would stack up against other methods on a more competitive benchmark."
+    }
+}

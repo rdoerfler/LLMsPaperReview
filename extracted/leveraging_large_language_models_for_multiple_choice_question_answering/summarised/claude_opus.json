@@ -1,0 +1,19 @@
+
+{
+    "1": {
+        "summary": "Lack of insights into what enables higher MCSB in some models.",
+        "verbatim": "While the paper demonstrates the effectiveness of MCP, it doesn't provide many insights into what enables higher MCSB in some models. A deeper analysis of model properties that lead to high MCSB would have been useful."
+    },
+    "2": {
+        "summary": "Lack of prompt engineering exploration.",
+        "verbatim": "The authors avoid any prompt engineering and use very standardized prompts throughout. While this helps keep the comparison between CP and MCP clean, it would have been interesting to see if prompt engineering can further boost MCP performance."
+    },
+    "3": {
+        "summary": "Limited analysis on dataset leakage.",
+        "verbatim": "Dataset leakage is a potential concern that could have been analyzed in a bit more depth, though the authors do provide reasonable arguments for why it's unlikely to be a major factor."
+    },
+    "4": {
+        "summary": "Lack of evaluation on non-English datasets.",
+        "verbatim": "It would have been nice to see results on some non-English MCQA datasets to further demonstrate the generality of the approach."
+    }
+}

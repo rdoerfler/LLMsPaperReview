@@ -1,0 +1,11 @@
+
+{
+    "A7-B4": {
+        "rationale": "Both points address a lack of clarity and confusion regarding the presentation of results in Table 1b. Review A mentions confusion about the numbers, whereas Review B questions the source of the results.",
+        "similarity": 7
+    },
+    "A8-B4": {
+        "rationale": "Both points express concerns about the results presented in Table 1c. Review A discusses low rationale performance and an unclear evaluation method, while Review B questions the origin of these results.",
+        "similarity": 6
+    }
+}

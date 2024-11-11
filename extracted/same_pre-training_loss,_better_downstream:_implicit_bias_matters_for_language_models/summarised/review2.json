@@ -1,0 +1,19 @@
+
+{
+    "1": {
+        "summary": "Unclear practical implications under current language model regimes.",
+        "verbatim": "It is, however, unclear what the practical implications of this work are."
+    },
+    "2": {
+        "summary": "Pretraining loss is not a reliable performance indicator, but evaluating during pretraining is a simple remedy.",
+        "verbatim": "Second, while this paper points that pretraining loss is not a reliable indicator of downstream performance, a simple remedy is to evaluate on downstream tasks during pretraining and compare models accordingly, which is likely already done in practice."
+    },
+    "3": {
+        "summary": "Lack of demonstration of practical benefits of insights on real datasets.",
+        "verbatim": "Finally, this paper does not demonstrate if the insight gleaned in this work can lead to additional “flatness regularization” that induces better downstream performance on real datasets."
+    },
+    "4": {
+        "summary": "Desirable to have validation on real data due to empirical motivation.",
+        "verbatim": "some validation on real data seems desirable."
+    }
+}

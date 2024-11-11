@@ -1,0 +1,15 @@
+
+{
+    "A4-B1": {
+        "rationale": "A4 mentions the novelty is incremental and lacks significant improvement, while B1 states the proposed method is not novel and discusses leveraging vocabulary distribution, highlighting a common lack of novelty.",
+        "similarity": 8
+    },
+    "A4-B2": {
+        "rationale": "A4 and B2 both discuss the novelty of the work, with A4 mentioning that the method is not significantly innovative, and B2 stating that the method is similar to existing works, limiting its novelty.",
+        "similarity": 8
+    },
+    "A4-B3": {
+        "rationale": "Both A4 and B3 highlight the limited novelty of the paper, with A4 stating the method lacks significant improvements, and B3 explicitly saying the overall novelty is limited.",
+        "similarity": 7
+    }
+}

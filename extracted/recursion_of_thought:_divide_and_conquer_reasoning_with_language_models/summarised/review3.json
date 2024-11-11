@@ -1,0 +1,19 @@
+
+{
+    "1": {
+        "summary": "The training of the Recursion of Thought (RoT) framework requires significant human input to design appropriate subproblems.",
+        "verbatim": "The training of RoT requires (non-trivial) human inputs to design proper subproblems."
+    },
+    "2": {
+        "summary": "There is a lack of systematic approach to construct subproblems for the RoT framework, which is essential for its functionality.",
+        "verbatim": "One important point missing from this work is how to systematically construct subproblems given any problem in order to teach the model learn the recursion of thoughts."
+    },
+    "3": {
+        "summary": "Uncertain about RoT's ability to handle diverse or structurally different subproblems as typically needed for recursion.",
+        "verbatim": "Does RoT have the ability to learn a problem where its subproblems have different structures (as recursion usually requires the same structure in the subproblems)?"
+    },
+    "4": {
+        "summary": "Concerns about the performance of RoT on specific types of problems like NP-hard problems that lack a obvious divide-and-conquer structure.",
+        "verbatim": "What is the performance of RoT on (maybe small-scale) NP-hard algorithmic problems that may not have the divide-and-conquer structure such as TSP?"
+    }
+}

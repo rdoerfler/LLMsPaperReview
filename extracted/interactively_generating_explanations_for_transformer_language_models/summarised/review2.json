@@ -1,0 +1,35 @@
+
+{
+    "1": {
+        "summary": "Related works have limited coverage and do not consider various approaches.",
+        "verbatim": "Related works have limited coverage. There are many lines of explanation works, such as those use prompt engineering, information bottleneck, and purely generative approaches. This paper has limited coverage on these topics."
+    },
+    "2": {
+        "summary": "Explanation generation part is vague and lacks elaboration.",
+        "verbatim": "The explanation generation part is vague. The explanation generation (sec 3.5) needs elaboration."
+    },
+    "3": {
+        "summary": "The experiment section is weak and results are confusing.",
+        "verbatim": "The experiment section is weak. I found the experiment results are confusing. To the best degree, it offers marginal improvement over the best baselines in terms of task F1."
+    },
+    "4": {
+        "summary": "Weak analysis on generated explanations.",
+        "verbatim": "Analysis on generated explanation is also weak. Analysis on generated explanation is another weak point since it's absent."
+    },
+    "5": {
+        "summary": "No solid explanation evaluation conducted in the paper.",
+        "verbatim": "I don't see a solid explanation evaluation in this paper. And when it comes to generative explanations, ideally, there should be some human-based evaluation over a subset of testing data. But no such thing in this paper."
+    },
+    "6": {
+        "summary": "Explanation method has limitations and lacks context dependence.",
+        "verbatim": "This design has certain limitations: a) not context/example dependent; b) this is hardly generation, instead, it is more in line with salience-based explanation works."
+    },
+    "7": {
+        "summary": "Confusing presentation of results in tables, especially Table 1b.",
+        "verbatim": "Tab 1b is confusing. I don't understand what each number means."
+    },
+    "8": {
+        "summary": "Rationale performance numbers are low and their evaluation method is unclear.",
+        "verbatim": "Tab 1c shows rationale performances however these numbers are quite low compared with prior works (e.g. Paranjape's work at EMNLP 20). And not sure if rationale performances are based on token or sentence selection."
+    }
+}

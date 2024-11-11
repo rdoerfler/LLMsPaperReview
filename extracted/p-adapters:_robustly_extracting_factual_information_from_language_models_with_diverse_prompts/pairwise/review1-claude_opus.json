@@ -1,0 +1,11 @@
+
+{
+    "A1-B1": {
+        "rationale": "Both points express concerns about the modest precision of language models or systems in factual extraction, emphasizing around a 50% accuracy or correctness threshold.",
+        "similarity": 9
+    },
+    "A4-B2": {
+        "rationale": "Both points discuss limitations in how embeddings are used or analyzed, although A4 specifically addresses MoE and Oracle layers, while B2 discusses subject/object embeddings.",
+        "similarity": 6
+    }
+}

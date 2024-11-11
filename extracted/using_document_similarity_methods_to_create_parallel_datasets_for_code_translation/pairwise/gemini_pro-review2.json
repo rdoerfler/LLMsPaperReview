@@ -1,0 +1,7 @@
+
+{
+    "A1-B2": {
+        "rationale": "Both points discuss concerns about noise in datasets. A1 raises the impact of noise on translation quality and model generalizability, while B2 criticizes the research for showing noise tolerance without proposing methods to mitigate it.",
+        "similarity": 6
+    }
+}

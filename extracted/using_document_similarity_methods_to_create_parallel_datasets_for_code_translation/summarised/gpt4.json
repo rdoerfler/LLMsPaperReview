@@ -1,0 +1,15 @@
+
+{
+    "1": {
+        "summary": "Biased outcomes due to reliance on chosen document similarity methods.",
+        "verbatim": "The reliance on document similarity methods may introduce biases based on the chosen method, potentially affecting the generalizability of the approach."
+    },
+    "2": {
+        "summary": "Limited exploration of noise impact across diverse languages and contexts.",
+        "verbatim": "Limited exploration of the impact of different levels of noise across more diverse programming languages and contexts."
+    },
+    "3": {
+        "summary": "Challenges in reproducing results due to setup complexity and variability in methods.",
+        "verbatim": "The reproducibility of the results may be challenging due to the complexity of the setup and potential variability in the document similarity measures."
+    }
+}

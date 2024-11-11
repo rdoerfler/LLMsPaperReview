@@ -1,0 +1,19 @@
+
+{
+    "1": {
+        "summary": "The approach only applies to simple problems and doesn't address general problems.",
+        "verbatim": "My main concern with this approach is that the paper does not discuss how to apply this approach to more general problems. The problems considered here are very simple, and an algorithm to solve them needs to be known in order to generate the training data. So, in its current form this does not enable any new abilities as we could use the base algorithm instead of using expensive LMs."
+    },
+    "2": {
+        "summary": "The learning insight is unremarkable as the decomposed tasks are trivial.",
+        "verbatim": "In terms of the insight from a learning point-of-view, I also do not see anything surprising in this work. After decomposing the problem manually (i.e. by writing an algorithm to generate training data), the learning task is pretty simple (for addition, for example, all the model has to do is to extract the last digit from two numbers). So the high accuracy of the resulting method is not that surprising."
+    },
+    "3": {
+        "summary": "The writing style is misleading and unsupported by references.",
+        "verbatim": "The writing style is a bit 'flashy', which gives room for miscommunications. For example, the paper opens with the following statement: Although neural networks have achieved amazing results on various domains, e.g., images, texts, audios, videos, games, etc., nearly all of them are classified as System 1 tasks (Kahneman, 2013), ... Afaik, this statement is not supported by the literature, and in particular not by the given reference. Following Kahneman's theory, tasks like playing the board game go would certainly require system 2 thinking. IMO, dropping the first paragraph would help the paper."
+    },
+    "4": {
+        "summary": "Unexplained claims about CoT length and problem complexity.",
+        "verbatim": "The paper also makes claims such as 'the length of CoT can grow rapidly with the problem’s complexity', without further explanation and I am not even sure what exactly this means."
+    }
+}

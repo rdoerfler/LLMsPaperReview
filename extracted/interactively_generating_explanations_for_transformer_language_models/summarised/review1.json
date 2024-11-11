@@ -1,0 +1,19 @@
+
+{
+    "1": {
+        "summary": "The description of the set of prototypes is unclear, leading to questions about their pre-definition and necessity for training.",
+        "verbatim": "W1 - I'm quite unsure about the set of prototypes. It seems not described in the main contents."
+    },
+    "2": {
+        "summary": "The main table lacks clarity, particularly regarding the concept of faithfulness.",
+        "verbatim": "W2 - The main table is not clear, especially on faithfulness."
+    },
+    "3": {
+        "summary": "The method's explanation may introduce reporting bias similar to post-hoc explanations.",
+        "verbatim": "Q2 - Just curious, in the introduction, why the post-hoc explanation is potentially reporting-bias? Isn't this method also potentially reporting-bias since it only uses samples from train data as prototypes?"
+    },
+    "4": {
+        "summary": "The method and experimental settings lack sufficient detail, making the approach difficult to follow.",
+        "verbatim": "More details are needed especially on experimental settings, and methods."
+    }
+}

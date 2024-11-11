@@ -1,0 +1,11 @@
+
+{
+    "A1-B1": {
+        "rationale": "Both points express concern with biases introduced by the chosen methods for document alignment or similarity, affecting the efficiency or generalizability.",
+        "similarity": 6
+    },
+    "A4-B2": {
+        "rationale": "Both points address the impact of noise but from different perspectives—A4 critiques conclusions on noise and accuracy, whereas B2 discusses limited noise exploration across languages.",
+        "similarity": 5
+    }
+}

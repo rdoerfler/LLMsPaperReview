@@ -1,0 +1,11 @@
+
+{
+    "A4-B3": {
+        "rationale": "A4 discusses the importance of reporting inference time to demonstrate the benefits of a smaller parameter count, while B3 questions if the method increases inference time due to additional activated parameters. Both concern inference time and efficiency, albeit from slightly different angles.",
+        "similarity": "6"
+    },
+    "A6-B1": {
+        "rationale": "A6 discusses the need to demonstrate the importance of parameter reduction using metrics like serving latency and step time, which aligns with B1's concern about unfair comparison by focusing on parameter efficiency instead of computational cost (FLOPs). Both address the importance of relevant metrics beyond mere parameter count.",
+        "similarity": "6"
+    }
+}

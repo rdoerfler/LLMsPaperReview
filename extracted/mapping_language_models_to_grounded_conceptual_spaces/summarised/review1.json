@@ -1,0 +1,19 @@
+
+{
+    "1": {
+        "summary": "Questioning the suitability of the evaluation metrics used for assessing model performance.",
+        "verbatim": "Is the top-3 accuracy meaningful for the task, especially for the spatial and cardinal problems where the concept space is very small, and for GPT-3 that knows to output in-domain words only? Is the substring metric suitable for the color problem, especially in the 'unseen concept' setup?"
+    },
+    "2": {
+        "summary": "Concerns about conclusions drawn from results; models might exploit similarities instead of true understanding.",
+        "verbatim": "Is it possible that the model doesn’t understand the relationship between the concepts and the grounded representations, but instead utilizes a similarity between the test grounded representation and the grounded representations in the in-context prompts?"
+    },
+    "3": {
+        "summary": "The overall takeaway and usefulness of the study for future work are unclear.",
+        "verbatim": "Though the paper investigates an interesting problem, the overall takeaway of this work is not very clear to me. How is the analysis useful for future work?"
+    },
+    "4": {
+        "summary": "Concerns about the accuracy of some details provided in the paper.",
+        "verbatim": "Some details in the paper should be checked. For example, in Section 2.1, the authors say that all models are pretrained on the 40GB OPENAI-WT dataset, but this is not true for GPT-3?"
+    }
+}

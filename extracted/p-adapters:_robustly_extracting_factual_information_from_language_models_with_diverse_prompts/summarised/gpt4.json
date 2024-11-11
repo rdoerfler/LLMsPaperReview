@@ -1,0 +1,11 @@
+
+{
+    "1": {
+        "summary": "Limited discussion on scalability and adaptability to other LLMs and languages.",
+        "verbatim": "there is limited discussion on the potential scalability and adaptability of the proposed method to LLMs beyond BERT and RoBERTa or to languages other than English."
+    },
+    "2": {
+        "summary": "Lack of qualitative analysis on prompt effectiveness.",
+        "verbatim": "The empirical evaluation primarily focuses on the quantitative benefits of P-Adapters, with less emphasis on the qualitative analysis of why certain prompts work better and how P-Adapters manage to improve upon them."
+    }
+}

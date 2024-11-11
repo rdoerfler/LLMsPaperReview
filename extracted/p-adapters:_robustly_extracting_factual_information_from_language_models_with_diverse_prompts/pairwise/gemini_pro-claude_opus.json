@@ -1,0 +1,11 @@
+
+{
+    "A1-B1": {
+        "rationale": "Both points discuss the modest overall precision of the P-Adapters, indicating that despite some improvements, the models do not achieve high precision.",
+        "similarity": 9
+    },
+    "A2-B3": {
+        "rationale": "Both points highlight the absence of human evaluation in assessing the interpretability claims of the generated prompts.",
+        "similarity": 9
+    }
+}

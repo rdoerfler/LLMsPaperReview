@@ -1,0 +1,11 @@
+
+{
+    "A1-B1": {
+        "rationale": "Both points discuss the requirement for supervised training data and highlight the expense associated with obtaining such data.",
+        "similarity": 9
+    },
+    "A2-B2": {
+        "rationale": "The points in both reviews address the concern regarding length generalization and how RoT does not explore or facilitate this aspect.",
+        "similarity": 9
+    }
+}

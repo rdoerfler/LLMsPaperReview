@@ -1,0 +1,11 @@
+
+{
+    "A2-B5": {
+        "rationale": "Both points express skepticism about the applicability or necessity of the theoretical results. A2 questions the practical applicability of the theoretical results due to possibly invalid assumptions, while B5 points out that the theorems don't support the arguments or observations.",
+        "similarity": 7
+    },
+    "A3-B3": {
+        "rationale": "Both points discuss concerns related to the use of the Hessian's trace as a measure. A3 highlights the lack of experiments with other flatness measures beyond the trace of the Hessian, while B3 questions the reliability of using Hessian trace to indicate model transferability.",
+        "similarity": 6
+    }
+}

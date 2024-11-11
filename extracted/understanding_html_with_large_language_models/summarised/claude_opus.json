@@ -1,0 +1,15 @@
+
+{
+    "1": {
+        "summary": "More analysis needed on why encoder-decoder models like T5 perform best.",
+        "verbatim": "More analysis could have been done to understand why encoder-decoder models like T5 perform best. The bidirectional attention hypothesis is stated but not investigated in depth."
+    },
+    "2": {
+        "summary": "Snippet extraction procedure for large HTML pages lacks a principled approach.",
+        "verbatim": "The snippet extraction procedure for handling large HTML pages has some ad-hoc aspects. A more principled approach to processing long HTML sequences would be good to explore."
+    },
+    "3": {
+        "summary": "The paper lacks discussion on limitations and future improvements of repurposing LLMs for HTML understanding.",
+        "verbatim": "More discussion of the potential limitations of repurposing LLMs for HTML understanding and ideas for future improvements would have strengthened the paper."
+    }
+}

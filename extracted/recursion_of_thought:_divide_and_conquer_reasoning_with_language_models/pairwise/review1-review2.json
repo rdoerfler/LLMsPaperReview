@@ -1,0 +1,11 @@
+
+{
+    "A1-B2": {
+        "rationale": "A1 and B2 both express concerns about the limited applicability of the approach. A1 focuses on the simplicity of the problems to which the approach can be applied, while B2 points out that the approach is mainly applicable to tasks where datasets can be generated automatically, such as arithmetic operations.",
+        "similarity": 8
+    },
+    "A2-B3": {
+        "rationale": "A2 and B3 discuss the simplicity and triviality of the task after it's decomposed. A2 points out the simplicity of the learning task post-decomposition while B3 notes that the solution is trivial and lacks novelty.",
+        "similarity": 8
+    }
+}

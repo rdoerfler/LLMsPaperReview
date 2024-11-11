@@ -1,0 +1,15 @@
+
+{
+    "1": {
+        "summary": "Modest overall performance despite improvements.",
+        "verbatim": "While P-Adapters improve upon the baseline, the absolute precision achieved by even the best models remains relatively low, particularly in out-of-distribution settings."
+    },
+    "2": {
+        "summary": "Limited interpretability analysis with no supporting human evaluation.",
+        "verbatim": "Limited interpretability analysis: The paper claims improved interpretability of generated prompts but lacks a dedicated study or human evaluation to support this claim."
+    },
+    "3": {
+        "summary": "Unclear experimental details hinder reproducibility.",
+        "verbatim": "Unclear experimental details: Some experimental details, such as the number of samples needed for training, are not fully elaborated."
+    }
+}

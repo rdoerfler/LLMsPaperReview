@@ -1,0 +1,15 @@
+
+{
+    "1": {
+        "summary": "Reproducibility could be improved with more detailed experimental settings.",
+        "verbatim": "Reproducibility: While the paper mentions experiments and results, detailed settings for reproducibility (e.g., hyperparameters, computational resources) could be better emphasized."
+    },
+    "2": {
+        "summary": "Comparison with baselines lacks depth and analysis.",
+        "verbatim": "Comparison with Baselines: The paper could benefit from a deeper analysis of why NPPrompt outperforms baselines, including insights into cases where it might not perform as expected."
+    },
+    "3": {
+        "summary": "Generalization to other languages or domains needs exploration.",
+        "verbatim": "Generalization to other languages or domains: The paper primarily focuses on English; extending and evaluating the approach for other languages or specific domains could provide further insights."
+    }
+}

@@ -1,0 +1,15 @@
+
+{
+    "1": {
+        "summary": "The impact of noise in the created datasets on downstream applications is not fully explored.",
+        "verbatim": "The impact of this noise on downstream applications of the code translation models is not fully explored."
+    },
+    "2": {
+        "summary": "The computational efficiency of using Word Movers Distance (WMD) for large datasets is not discussed.",
+        "verbatim": "The computational efficiency of using WMD at a large scale is not discussed. This could be a bottleneck for very large datasets."
+    },
+    "3": {
+        "summary": "The paper lacks human evaluations of translation quality, relying only on automatic metrics.",
+        "verbatim": "The paper is lacking human evaluations of the quality of translations produced by the models trained on the noisy datasets. Automatic metrics are used but they may not fully capture translation quality."
+    }
+}

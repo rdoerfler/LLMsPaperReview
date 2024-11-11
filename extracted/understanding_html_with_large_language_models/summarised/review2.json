@@ -1,0 +1,19 @@
+
+{
+    "1": {
+        "summary": "Questionable choice of comparison models and insufficient evaluation against task-specific models.",
+        "verbatim": "Models that are trained on task specific data to compare against is questionable. I expect to see more task-specific models such as StructuralLM [1], MarkupLM [2] that respect the tree structure of HTML (or some other methods mentioned in the paper) to be evaluated against."
+    },
+    "2": {
+        "summary": "Lack of clarity on when to use task-specific models versus fine-tuned LLMs for web tasks.",
+        "verbatim": "Basically, I need to see the following question answered: 'For specific web tasks, do I want to use a HTML specific model trained on the small dataset or just to fine-tune LLMs'?"
+    },
+    "3": {
+        "summary": "Limited technical novelty for a machine learning conference.",
+        "verbatim": "Besides, the technical novelty of the paper is limited for a ML conference like ICLR; a NLP conference might be a better fit for this submission."
+    },
+    "4": {
+        "summary": "Missing details on experiment reproducibility.",
+        "verbatim": "Reproducibility: Some details are missing. Either code or more detailed experimental setup should be provided in the supplementary material."
+    }
+}

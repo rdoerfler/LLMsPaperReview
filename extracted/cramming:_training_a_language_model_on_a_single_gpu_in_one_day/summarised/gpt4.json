@@ -1,0 +1,11 @@
+
+{
+    "1": {
+        "summary": "The research primarily focuses on transformer architectures and the MLM objective, potentially overlooking other models or training objectives.",
+        "verbatim": "Limited Scope: The research mainly focuses on transformer architectures and the MLM objective, which may overlook potential benefits from other models or training objectives."
+    },
+    "2": {
+        "summary": "The specific modifications and their impacts may not generalize across different datasets, tasks, or larger computational settings.",
+        "verbatim": "Generalization of Findings: While the study provides valuable insights into scaling down, the specific modifications and their impacts might not generalize across different datasets, tasks, or larger computational settings."
+    }
+}

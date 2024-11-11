@@ -1,0 +1,15 @@
+
+{
+    "A1-B1": {
+        "rationale": "Both points discuss the lack of novelty and the unsurprising nature of the findings. They focus on the absence of new insights provided by the study, indicating that the results align with existing knowledge.",
+        "similarity": "9"
+    },
+    "A2-B1": {
+        "rationale": "Both points highlight the expectedness of rehearsal methods being more effective. They agree on the predictive nature of the study's outcomes regarding established beliefs.",
+        "similarity": "8"
+    },
+    "A3-B1": {
+        "rationale": "Both points mention expected results concerning catastrophic forgetting, with A3 focusing on the last layer and B1 on pre-trained models generally. They align on the predictability of forgetting issues.",
+        "similarity": "7"
+    }
+}

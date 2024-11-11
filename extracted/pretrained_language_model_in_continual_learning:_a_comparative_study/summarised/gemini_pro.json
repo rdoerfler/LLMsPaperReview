@@ -1,0 +1,19 @@
+
+{
+    "1": {
+        "summary": "The pretraining corpus differs from common choices, complicating comparisons.",
+        "verbatim": "The pretraining corpus used differs from common choices in prior work, making comparisons difficult."
+    },
+    "2": {
+        "summary": "Evaluation on the GLUE benchmark is missing, limiting comparative analysis.",
+        "verbatim": "Evaluation on GLUE benchmark is missing, hindering comparison with previous PLMs."
+    },
+    "3": {
+        "summary": "The paper only reports best test results instead of median results from multiple runs.",
+        "verbatim": "Only best test set results are reported, instead of the standard practice of reporting median results across multiple runs on dev sets."
+    },
+    "4": {
+        "summary": "Lacks comparison with contrastive learning-based pretraining tasks which have shown good results in CL.",
+        "verbatim": "The paper does not compare with contrastive learning-based sentence-level pretraining tasks, which have shown promising results in CL."
+    }
+}

@@ -1,0 +1,23 @@
+
+{
+    "1": {
+        "summary": "The Oracle results suggest that language models can only achieve ~50% accuracy on known entity predicates, questioning the viability of fact extraction.",
+        "verbatim": "The “Oracle'' results from Table 1 are thought provoking: with perfect knowledge regarding the predicate/relation of test examples, and a subsequent 100% consistent response, the LLM is only able to obtain ~50% correct responses from T-Rex, which is an admittedly limited evaluation (41 “head” predicates, mostly of well known entities)."
+    },
+    "2": {
+        "summary": "The paper should investigate why errors occur in the Oracle model, potentially due to unseen triples or model capacity limitations.",
+        "verbatim": "I would have liked for the paper to dig a little deeper into this headroom question from the previous point. Would it be possible to conduct a sampled qualitative evaluation of errors of the Oracle model in the ID cases? Are the errors due to unseen triples during training time (e.g., not in Wikipedia), or maybe there are issues with model capacity (maybe a 10x version of the LM would be able to recall the prompted fact)?"
+    },
+    "3": {
+        "summary": "Section 4.1 is unclear about the data used for training and evaluation, needing a more precise description and data release for reproducibility.",
+        "verbatim": "In terms of writing, the most confusing section in the paper is Section 4.1. After re-reading it twice, I was still not able to ascertain: (1) what data was used to train the models, and (2) what data was used to evaluate the models. The section makes reference to LAMA’s T-REX, LPAQA, ParaRel, as well as augmentations using BERT lexical replacements, as well as data from “Shin et al, 2020”. I really think this section needs to be rewritten and the training, eval and test datasets should be much more precisely described. I would also encourage authors to release the exact datasets and splits to allow others to reproduce/improve on this work. But even with a data release, a precise description of how this data was constructed is very important."
+    },
+    "4": {
+        "summary": "The description of MoE and Oracle layers in the paper is insufficient to clarify how embeddings create continuous prompts.",
+        "verbatim": "For the MoE and Oracle layers, the description in the paper is insufficient to determine the outputs presented to the first layer of the model. The depiction in Figure 2 hints that the entire sequence is rewritten using the fixed-length learned embeddings, and perhaps the subject or MASK embeddings are preserved? But actually sub-section 4.2 never formally describes how the embeddings are used to create the continuous prompts?"
+    },
+    "5": {
+        "summary": "The LAMA benchmarks are limited; evaluating on a larger model may be beneficial.",
+        "verbatim": "The LAMA benchmarks have one unfortunate characteristic: since it was constructed for BERT-style single token prediction, it has stripped down the original datasets (see the original version of T-Rex, which contains over 600 unique predicates vs. the 41 from LAMA: https://hadyelsahar.github.io/t-rex/ and https://aclanthology.org/L18-1544.pdf ). I wonder if a more comprehensive version of this would be to evaluate on a larger sequence-to-sequence model like BART https://arxiv.org/abs/1910.13461 or T5 https://arxiv.org/abs/1910.10683 (both available as HuggingFace models)."
+    }
+}

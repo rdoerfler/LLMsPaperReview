@@ -1,0 +1,7 @@
+
+{
+    "A1-B1": {
+        "rationale": "Review A's concern about the reliance on supervised data closely mirrors Review B's point about needing a known algorithm to generate training data, indicating that both critiques address the limitation of needing pre-existing solutions or data to train or validate the problem-solving approach.",
+        "similarity": 6
+    }
+}

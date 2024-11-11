@@ -1,0 +1,19 @@
+
+{
+    "1": {
+        "summary": "Lack of explanation for why the data augmentation technique works.",
+        "verbatim": "The authors did not provide any explanation/intuition/evidence why such a simple data augmentation technique works."
+    },
+    "2": {
+        "summary": "Performance suffers significantly with CodeNet dataset, raising questions about usability.",
+        "verbatim": "The main problem with this approach is that the performance suffers significantly with CodeNet dataset...this raises questions about the usability of this technique."
+    },
+    "3": {
+        "summary": "Assumption that similar variable names are used may not hold true for independently developed code.",
+        "verbatim": "However, such an assumption may not be true for CodeNet where developers did independent implementations."
+    },
+    "4": {
+        "summary": "Technique is susceptible to noise, which may affect legacy code like COBOL.",
+        "verbatim": "The contrast between performance with noise is useful, but again that shows how sensitive this technique is with noise and for some legacy code (e.g., COBOL --- a language authors use to motivate the study) the amount of noise might be high."
+    }
+}

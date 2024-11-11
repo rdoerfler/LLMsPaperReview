@@ -1,0 +1,11 @@
+
+{
+    "A2-B1": {
+        "rationale": "Both points express the concern that the paper offers only an incremental improvement over previous research, highlighting that the use of tensor decomposition in neural network compression lacks novelty.",
+        "similarity": 9
+    },
+    "A2-B2": {
+        "rationale": "Both points discuss the lack of novelty and prior research's extensive coverage of tensor decomposition and related techniques, implying the current work is not introducing anything new.",
+        "similarity": 8
+    }
+}

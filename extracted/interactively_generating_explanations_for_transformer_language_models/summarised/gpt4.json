@@ -1,0 +1,11 @@
+
+{
+    "1": {
+        "summary": "The complexity of the Proto-Trex architecture may hinder widespread adoption in resource-limited settings.",
+        "verbatim": "The complexity of the Proto-Trex architecture might pose challenges for widespread adoption, especially in resource-constrained environments."
+    },
+    "2": {
+        "summary": "The evaluation of user interactions and their impact on model performance needs more comprehensive studies with diverse participants.",
+        "verbatim": "While promising, the evaluation of user interactions and their impact on model performance and interpretability could benefit from further in-depth studies involving a broader range of participants."
+    }
+}

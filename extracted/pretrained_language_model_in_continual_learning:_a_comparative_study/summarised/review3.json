@@ -1,0 +1,19 @@
+
+{
+    "1": {
+        "summary": "Inconsistent enumeration of continual learning strategies.",
+        "verbatim": "The 'veins of CL methods' has a different number over the course of the paper, which makes it hard to identify when a given list of N things is a list of the 'veins of CL methods'. Specifically, in the abstract and intro this number is 4, in section 2.3 this number is 3, in section 3.1 this number is 6, in Table 1 this number is 5 (two different sets of 5), in Figure 1 this number is 6, and in Figure 2 this number is 4."
+    },
+    "2": {
+        "summary": "Inconsistent terminology for the continual learning strategies.",
+        "verbatim": "Along the same lines, it would help to be consistent with the language around each set of N things. For example, the 'veins of CL methods' are called at least 'veins', 'schemes,' and 'approaches' at different points."
+    },
+    "3": {
+        "summary": "Weak analysis and presentation of quantitative results.",
+        "verbatim": "Section 3.2, Table 1, and Figure 1 are relatively weak in my opinion. What am I supposed to conclude? I can look at the table and see the different results, but so what? What should I be drawing my eye to in the table (bold would help)? The Figure here is too small to even attempt to parse."
+    },
+    "4": {
+        "summary": "Lack of practical implications or applications of insights.",
+        "verbatim": "It would be really great to see how the insights after analysis can be used to improve performance."
+    }
+}

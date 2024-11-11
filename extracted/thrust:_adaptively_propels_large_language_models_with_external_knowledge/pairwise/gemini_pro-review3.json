@@ -1,0 +1,11 @@
+
+{
+    "A2-B3": {
+        "rationale": "Both points emphasize the absence of important baselines in the experiments, which affects the evaluation's comprehensiveness.",
+        "similarity": 9
+    },
+    "A3-B6": {
+        "rationale": "A3 and B6 both highlight lack of justification and clarity regarding the choices made in experimental methods and dataset selection.",
+        "similarity": 7
+    }
+}

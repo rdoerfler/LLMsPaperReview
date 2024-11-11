@@ -1,0 +1,11 @@
+
+{
+    "A1-B4": {
+        "rationale": "Both points discuss concerns about noise impacting the performance, however, Review A focuses on translation quality and generalizability, while Review B debates the unsupported conclusion drawn about noise ratio and accuracy.",
+        "similarity": 7
+    },
+    "A3-B1": {
+        "rationale": "Both points discuss scalability concerns. Review A questions the scalability of the method applied to different models/tasks, while Review B questions the feasibility of the algorithm with large data.",
+        "similarity": 6
+    }
+}

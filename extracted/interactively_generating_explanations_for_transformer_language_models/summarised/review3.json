@@ -1,0 +1,19 @@
+
+{
+    "1": {
+        "summary": "The training loss is too complicated, and there are no ablations on how different parts contribute to predictions.",
+        "verbatim": "The training loss of the model seems to be too complicated. In Eq.1, there are 6 parts for the overall training loss, and each of them associates with a lambda term (I checked the Appendix, but failed to find how you set lambda terms). Each of them sounds reasonable, but unfortunately, there is no specific ablations on how these parts attribute to the final prediction/explanation."
+    },
+    "2": {
+        "summary": "There are many hyper-parameters without guidance on how to set them, posing a challenge when moving to new datasets.",
+        "verbatim": "According to the illustrations at the end of Section 3.4, there are many hyper-parameters should be set (along with lambda terms in training loss). How to determine these hyperparameters? If we move to a new dataset, we might lost in tuning these hyperparams."
+    },
+    "3": {
+        "summary": "The model's efficiency regarding parameter size and inference time is questionable due to additional modules.",
+        "verbatim": "As the model incorporates additional modules (compared to pure classification model), it is questionable how efficient is Proto-Trex (both for parameter size and inference time)."
+    },
+    "4": {
+        "summary": "It is unclear where the results in Table 1b and 1c are sourced from.",
+        "verbatim": "It is unclear where are the results from in Table 1b and 1c. Yelp? Movie? Toxicity?"
+    }
+}

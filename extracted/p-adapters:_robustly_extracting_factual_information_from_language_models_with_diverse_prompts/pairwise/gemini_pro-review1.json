@@ -1,0 +1,11 @@
+
+{
+    "A1-B1": {
+        "rationale": "Both points discuss the limitations and modest performance of the models in question. Review A focuses on the low precision of models in out-of-distribution settings, while Review B highlights the limited accuracy (~50%) even with controlled variables, questioning the utility of fact extraction.",
+        "similarity": 6
+    },
+    "A3-B3": {
+        "rationale": "Both points express concerns about unclear experimental details which affect reproducibility. Review A notes vaguely described training sample details, while Review B emphasizes confusion about data usage and calls for precise descriptions and data release.",
+        "similarity": 8
+    }
+}

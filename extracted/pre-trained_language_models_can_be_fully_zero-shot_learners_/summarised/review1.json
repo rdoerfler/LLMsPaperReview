@@ -1,0 +1,19 @@
+
+{
+    "1": {
+        "summary": "The method is limited to specific classification tasks like news classification.",
+        "verbatim": "The proposed method is pretty limited to the classification tasks, particularly for news classification, where the label names are informative and have many semantic relevant words in the vocabulary."
+    },
+    "2": {
+        "summary": "The method struggles with multi-word expressions or uninformative label names.",
+        "verbatim": "It is also limited when the label names are multi-word expressions or phrases. It does not support the cases where the label names are not informative enough and additional label description is needed."
+    },
+    "3": {
+        "summary": "The title and narrative are potentially misleading and overclaim the method's general applicability.",
+        "verbatim": "The title and narrative can be misleading and an overclaim. As mentioned before, it is limited to masked LMs and the advantage is mainly for tasks like news classification."
+    },
+    "4": {
+        "summary": "Novelty is considered incremental, and the method lacks significant performance improvement.",
+        "verbatim": "Overall, I think the paper presents a novel zero-shot classification paper but the limitations are there and the performance is not that significant."
+    }
+}

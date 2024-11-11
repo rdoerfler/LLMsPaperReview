@@ -1,0 +1,11 @@
+
+{
+    "A2-B2": {
+        "rationale": "Both points express a need for further clarity and explanation regarding how the Thrust score is computed, with Review A citing a lack of formal definitions and Review B mentioning specifics like hyperparameters.",
+        "similarity": 7
+    },
+    "A3-B1": {
+        "rationale": "Both points highlight a need for more detailed experimental results and comparisons. While Review A focuses on additional measures and comparisons in the results, Review B calls for further comprehensive experiments on various benchmarks.",
+        "similarity": 6
+    }
+}

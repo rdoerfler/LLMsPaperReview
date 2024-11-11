@@ -1,0 +1,15 @@
+
+{
+    "1": {
+        "summary": "The use of simplified datasets may limit the generalizability of the findings to real-world applications.",
+        "verbatim": "Simplified datasets: While the use of simplified datasets enables controlled experiments, it raises concerns about the generalizability of the findings to real-world, complex datasets."
+    },
+    "2": {
+        "summary": "The limited focus on downstream tasks may not be representative of diverse NLP applications.",
+        "verbatim": "Limited downstream tasks: The experiments primarily focus on a few specific downstream tasks, which might not be representative of the diverse range of NLP applications."
+    },
+    "3": {
+        "summary": "Reaching near-optimal pre-training loss in large-scale models could be computationally challenging.",
+        "verbatim": "Computational feasibility: Reaching the saturation regime, where the pre-training loss is near-optimal, might be computationally challenging for large-scale models and datasets."
+    }
+}

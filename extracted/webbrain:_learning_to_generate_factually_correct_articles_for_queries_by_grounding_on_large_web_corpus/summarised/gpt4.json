@@ -1,0 +1,15 @@
+
+{
+    "1": {
+        "summary": "Lacks discussion on approach limitations.",
+        "verbatim": "However, the paper lacks a thorough discussion on the limitations of their approach..."
+    },
+    "2": {
+        "summary": "Potential biases in the dataset are not addressed.",
+        "verbatim": "...potential biases in the dataset..."
+    },
+    "3": {
+        "summary": "Scalability to other languages or domains is not discussed.",
+        "verbatim": "...and the scalability of their solution to other languages or domains."
+    }
+}

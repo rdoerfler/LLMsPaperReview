@@ -1,0 +1,11 @@
+
+{
+    "A3-B1": {
+        "rationale": "Both points address the concern that the insights or findings may not effectively translate to complex real-world datasets, emphasizing the lack of validation or demonstration of benefits on more sophisticated datasets.",
+        "similarity": 7
+    },
+    "A1-B2": {
+        "rationale": "Both points touch on the lack of practical applicability, with A1 focusing on unclear implications and B2 on the absence of concrete guidelines; both highlight a gap in practical execution or understanding of the concept introduced.",
+        "similarity": 6
+    }
+}

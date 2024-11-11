@@ -1,0 +1,15 @@
+
+{
+    "A1-B4": {
+        "rationale": "Both points deal with the effects and conclusions drawn from noise in datasets impacting the model's performance, although Review A emphasizes the unexplored nature of this impact while Review B critiques the unsupported conclusions about noise ratio and accuracy.",
+        "similarity": 7
+    },
+    "A2-B1": {
+        "rationale": "Review A discusses the computational inefficiency associated with WMD, while Review B mentions the inefficiency of an alignment algorithm, implying potential scalability issues in processing large datasets.",
+        "similarity": 6
+    },
+    "A3-B3": {
+        "rationale": "Both points criticize the evaluation methods used in assessing translation quality or accuracy, with Review A focusing on the need for human evaluation as opposed to automatic metrics, and Review B questioning the validity of pseudo-match accuracy for code translation models.",
+        "similarity": 7
+    }
+}

@@ -1,0 +1,23 @@
+
+{
+    "1": {
+        "summary": "Concerns about the evaluation of separate contributions.",
+        "verbatim": "There are a lot of separate contributions here that are not independently evaluated (data filtering / retrieval filtering / warmup strategy). It would be nice to see evaluations that validate these choices."
+    },
+    "2": {
+        "summary": "Test target leakage into the retrieval corpus.",
+        "verbatim": "The reference passage filtering process selects the references included in the retrieval corpus references according to term overlap with the target Wikipedia article. If I'm understanding this process correctly, this means that the references stored in the corpus have been selected according to observations of the test time targets, so there is some leakage of information from the test targets into the model input. The paper should discuss this."
+    },
+    "3": {
+        "summary": "Incomplete prompt design for comparison with GPT3.",
+        "verbatim": "The prompt given to GPT3 'Introduce [Page Title]' does not mention that the target is Wikipedia-style text, and the example in Figure 1. does not look much like the start of a Wikipedia article. Meanwhile, GPT3 is definitely able to generate Wikipedia style text if prompted to do so. The comparision to GPT3 would be stronger if the prompt was better tied to the actual task."
+    },
+    "4": {
+        "summary": "Concerns about data release strategy regarding copyright and privacy.",
+        "verbatim": "Having said that, I do have questions about the release with respect to copyright and privacy concerns (detailed below in the ethics section)."
+    },
+    "5": {
+        "summary": "Lack of analysis on filtering choices for dataset construction.",
+        "verbatim": "There are a lot of details in the filtering procedures used to select the contents of the dataset, and assign references to sentences. These are all justified int the text, but are not supported by any sort of analysis. If this is going to become a benchmark dataset, going forward, it would be good to see a discussion of how these choices affect the task."
+    }
+}

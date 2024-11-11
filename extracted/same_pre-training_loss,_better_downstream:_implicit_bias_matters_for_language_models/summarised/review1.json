@@ -1,0 +1,23 @@
+
+{
+    "1": {
+        "summary": "The main claim that flatness determines downstream performance is not well-supported.",
+        "verbatim": "The claim that flatness can decide the downstream performance is not well-supported."
+    },
+    "2": {
+        "summary": "Flatness might be a result of large model sizes, and not the actual cause of good performance.",
+        "verbatim": "One possible explanation is that the flatness could be a consequence of scaling up the model size, and the good performance is brought by the large model size, too."
+    },
+    "3": {
+        "summary": "Lack of evidence showing flatness as the main reason for good performance.",
+        "verbatim": "The authors need to have more evidence to prove that flatness is the main reason that leads to good performance, otherwise, they may be both the consequence of another factor (like model size)."
+    },
+    "4": {
+        "summary": "The relationship between flatness on pretraining tasks and downstream performance is unclear.",
+        "verbatim": "When computing Hessian, I assume that you are using the loss of pretraining datasets, not downstream datasets. Then how can the flatness on the pretraining task reflect the situation on downstream tasks?"
+    },
+    "5": {
+        "summary": "The paper does not provide code, making reproducibility difficult.",
+        "verbatim": "The authors didn't provide the code. I think it's hard to reproduce the results by ourselves."
+    }
+}

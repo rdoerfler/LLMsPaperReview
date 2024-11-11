@@ -1,0 +1,23 @@
+
+{
+    "1": {
+        "summary": "Lack of ablation study on architecture changes and their impact.",
+        "verbatim": "The biggest missing piece is an ablation study on the improvement from various architecture changes."
+    },
+    "2": {
+        "summary": "Unclear which architectural changes led to improvements.",
+        "verbatim": "In the current version, the authors provided a comprehensive list of things they tried, what helped and what didn't. But it's unknown which change(s) brought the bigger improvement."
+    },
+    "3": {
+        "summary": "Poor performance on CoLA and lack of tested hypotheses for the cause.",
+        "verbatim": "Related to this is the poor performance on CoLA. Although the authors provided several hypotheses, some of them should be tested to verify whether they're actually related to any of the architecture or data changes, or mostly due to reduced model size."
+    },
+    "4": {
+        "summary": "Unclear impact of batch size on pretraining vs downstream tasks.",
+        "verbatim": "In Sec 4.3 batch size schedule, you found optimal performance from different batch size for pretraining (1536) and downstream tasks (4032). Why do you think pretraining loss benefit from smaller batch size?"
+    },
+    "5": {
+        "summary": "Need for additional experiments with longer sequence length.",
+        "verbatim": "The 128 sequence length differs drastically from common choice in language models pretraining (e.g. 1024, or at least 512). To make sure conclusions from this work would apply, some additional experiments with longer sequence length would be helpful."
+    }
+}

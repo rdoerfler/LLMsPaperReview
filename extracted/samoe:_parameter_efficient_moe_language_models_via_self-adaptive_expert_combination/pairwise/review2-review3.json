@@ -1,0 +1,11 @@
+
+{
+    "A1-B5": {
+        "rationale": "Both points criticize the paper for not comparing its computational efficiency to dense models, emphasizing the lack of FLOPs comparison.",
+        "similarity": "8"
+    },
+    "A2-B1": {
+        "rationale": "Both points address the lack of clarity and comprehensiveness in comparisons with other models, though A2 focuses more on specific related works and B1 talks about the lack of cited models.",
+        "similarity": "6"
+    }
+}

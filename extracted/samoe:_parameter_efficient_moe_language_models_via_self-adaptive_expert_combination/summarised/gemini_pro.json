@@ -1,0 +1,15 @@
+
+{
+    "1": {
+        "summary": "The exploration of proxy tasks is limited and lacks investigation.",
+        "verbatim": "Limited exploration of proxy tasks: The paper relies on a proxy task to measure the closeness to a 'ground-truth prompt' during prompt search, but the definition and selection of this proxy task are not thoroughly investigated."
+    },
+    "2": {
+        "summary": "Some results, such as the reported human-written performance, are unconvincing and need clarification.",
+        "verbatim": "Some unconvincing results: Certain results, such as the reported human-written performance on some datasets, seem lower than expected and require further clarification."
+    },
+    "3": {
+        "summary": "There is a limited comparison with recent baselines, which could strengthen the evaluation of SaMoE.",
+        "verbatim": "Limited comparison baselines: While the paper compares SaMoE with standard MoE and PR-MoE, including more recent baselines would provide a stronger evaluation of its performance."
+    }
+}

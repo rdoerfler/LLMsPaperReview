@@ -1,0 +1,7 @@
+
+{
+    "A1-B2": {
+        "rationale": "Both points express concerns about noise affecting the generalizability and outcomes of the method. A1 discusses the impact of inherent noise in datasets on translation quality and model generalizability, while B2 mentions the limited exploration of noise impact across diverse languages and contexts.",
+        "similarity": 6
+    }
+}

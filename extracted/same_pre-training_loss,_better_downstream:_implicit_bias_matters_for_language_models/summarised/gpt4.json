@@ -1,0 +1,11 @@
+
+{
+    "1": {
+        "summary": "The experiments were conducted on simplified datasets, which may not generalize to complex, real-world datasets.",
+        "verbatim": "The experiments are conducted on simplified datasets, which may limit the generalizability of the findings to more complex, real-world datasets."
+    },
+    "2": {
+        "summary": "The paper lacks concrete guidelines on achieving or measuring model flatness in practical settings.",
+        "verbatim": "While the paper introduces the concept of flatness, it does not provide concrete guidelines on how to achieve or measure flatness in practical settings."
+    }
+}

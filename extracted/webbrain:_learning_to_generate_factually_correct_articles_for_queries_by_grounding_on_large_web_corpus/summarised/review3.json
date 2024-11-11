@@ -1,0 +1,19 @@
+
+{
+    "1": {
+        "summary": "The paper lacks the use of newer evaluation metrics for semantic similarity.",
+        "verbatim": "The paper needs to include some newer metrics such as BERTscore (Zhang et al., 2019), and BARTScore (Yuan et al., 2021) which can check semantic similarity."
+    },
+    "2": {
+        "summary": "There is a lack of qualitative analysis in the experiment section.",
+        "verbatim": "Most of the experiment analyses are in quantitative way. I would like to see more qualitative analysis."
+    },
+    "3": {
+        "summary": "The creation steps for WebBrain-R and WebBrain-G are not clearly explained.",
+        "verbatim": "The steps to create WebBrain-R and WebBrain-G is unclear."
+    },
+    "4": {
+        "summary": "The paper does not provide any code for reproduction.",
+        "verbatim": "However, it does not provide any code for reproduction."
+    }
+}

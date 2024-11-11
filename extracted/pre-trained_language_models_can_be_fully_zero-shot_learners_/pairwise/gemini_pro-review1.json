@@ -1,0 +1,11 @@
+
+{
+    "A1-B2": {
+        "rationale": "Both points discuss the limitation of the method when dealing with uninformative label names and the need for additional information or keywords.",
+        "similarity": "8"
+    },
+    "A2-B4": {
+        "rationale": "Both points relate to the limited application or impact of the method, with A2 noting the focus on zero-shot settings and B4 mentioning the lack of performance improvement.",
+        "similarity": "6"
+    }
+}

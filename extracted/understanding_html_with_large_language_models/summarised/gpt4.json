@@ -1,0 +1,15 @@
+
+{
+    "1": {
+        "summary": "Detailed discussion on limitations and challenges in snippet extraction is missing.",
+        "verbatim": "The paper could benefit from a more detailed discussion on the limitations and challenges faced during the snippet extraction process and how they impact model performance."
+    },
+    "2": {
+        "summary": "Comparison with state-of-the-art models in related fields is missing.",
+        "verbatim": "A comparison with state-of-the-art models in related fields, such as document understanding or web page segmentation, might have provided a broader context."
+    },
+    "3": {
+        "summary": "Lack of discussion on ethical considerations regarding privacy and security in web navigation tasks.",
+        "verbatim": "The ethical considerations of automating web navigation tasks, especially in terms of privacy and security, were not discussed."
+    }
+}

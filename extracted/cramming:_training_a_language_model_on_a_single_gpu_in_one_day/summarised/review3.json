@@ -1,0 +1,15 @@
+
+{
+    "1": {
+        "summary": "The experiments lack convincing breadth and depth.",
+        "verbatim": "The investigation of modifications lack convincing experiments. For example, only one task performance (MNLI) is reported for when studying the impact of training hyper-parameters. Other tasks can have a different trend."
+    },
+    "2": {
+        "summary": "The study of architectural modifications is limited to MLM loss, lacking downstream task results.",
+        "verbatim": "And when exploring the effect of the architecture, only MLM loss is report. The performance of downstream tasks can be also important."
+    },
+    "3": {
+        "summary": "The paper's technical novelty and contributions are limited.",
+        "verbatim": "The technical novelty of this paper is a little limit. The total contributions are also limit."
+    }
+}

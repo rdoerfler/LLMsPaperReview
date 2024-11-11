@@ -1,0 +1,11 @@
+
+{
+    "A1-B4": {
+        "rationale": "Both points express concerns related to the use of real data versus simplified datasets, suggesting a need for validation on more complex or real-world datasets to ensure findings' relevance and applicability.",
+        "similarity": 7
+    },
+    "A3-B3": {
+        "rationale": "Both points suggest a gap between the theoretical insights provided by the paper and practical demonstration, particularly on real datasets, emphasizing the necessity of addressing practical challenges like computational feasibility or generalizing theoretical insights.",
+        "similarity": 6
+    }
+}

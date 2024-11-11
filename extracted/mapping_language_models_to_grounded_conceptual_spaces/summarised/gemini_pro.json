@@ -1,0 +1,15 @@
+
+{
+    "1": {
+        "summary": "The study focuses on limited domains, raising concerns about the generalizability of the approach to more complex concepts.",
+        "verbatim": "Limited domains: The study focuses on a limited set of grounded concepts that can be easily represented in text form. This raises questions about the generalizability of the approach to more complex concepts."
+    },
+    "2": {
+        "summary": "Smaller models perform poorly, suggesting massive scale may be necessary.",
+        "verbatim": "Performance of smaller models: Smaller LLMs perform poorly on the tasks, suggesting that massive scale might be necessary for this approach to work effectively."
+    },
+    "3": {
+        "summary": "Unclear how to extend the technique to ground more complex visual or sensory concepts.",
+        "verbatim": "Unclear how to scale to more complex concepts: It is unclear how this technique could be extended to ground more complex visual or sensory concepts that are difficult to represent textually."
+    }
+}

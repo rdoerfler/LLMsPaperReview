@@ -1,0 +1,7 @@
+
+{
+    "A1-B1": {
+        "rationale": "Both A1 and B1 express concerns about the scalability and cost of the fully supervised approach due to the need for detailed annotations of intermediate steps.",
+        "similarity": 8
+    }
+}

@@ -1,0 +1,19 @@
+
+{
+    "1": {
+        "summary": "RoT requires supervision in the form of ground truth intermediate reasoning steps, which is expensive.",
+        "verbatim": "RoT currently requires supervision in the form of ground truth intermediate reasoning steps for each task. Reducing this expensive supervision could make RoT more widely applicable."
+    },
+    "2": {
+        "summary": "The paper does not explore length generalization capabilities of RoT.",
+        "verbatim": "The paper does not explore how RoT might facilitate length generalization, e.g. training on shorter problems and generalizing to longer ones."
+    },
+    "3": {
+        "summary": "Additional analysis on RoT's limitations and failure cases would be beneficial.",
+        "verbatim": "Some additional analysis on the limitations of RoT and failure cases could provide further insights."
+    },
+    "4": {
+        "summary": "Experimental details could be elaborated further.",
+        "verbatim": "Some of the experimental details could be elaborated further."
+    }
+}

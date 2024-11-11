@@ -1,0 +1,11 @@
+
+{
+    "A2-B2": {
+        "rationale": "Both points address the issue of improving accuracy in sourcing or citing evidence during content generation. A2 emphasizes the model's current struggle to identify sources accurately, while B2 suggests a need for a more principled approach to evidence citation accuracy.",
+        "similarity": 9
+    },
+    "A3-B3": {
+        "rationale": "Both points are concerned with the challenges associated with the generation of long, comprehensive articles. A3 highlights the focus on short article generation, whereas B3 discusses the difficulty in generating complete Wikipedia-like articles and calls for a roadmap.",
+        "similarity": 8
+    }
+}

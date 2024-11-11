@@ -1,0 +1,15 @@
+
+{
+    "1": {
+        "summary": "The justification for choosing specific PLMs, CL methods, and datasets needs elaboration.",
+        "verbatim": "While the paper experiments with an extensive combination of models and methods, the justification for choosing those particular PLMs, CL methods and datasets could be elaborated more."
+    },
+    "2": {
+        "summary": "The reasons for different layer behaviors in PLMs during CL are unclear and need more theoretical analysis.",
+        "verbatim": "The layer-wise probing reveals useful insights, but the underlying reasons why different layers in a PLM demonstrate different remembering/forgetting behavior remains unclear. A more theoretical analysis here could strengthen the paper."
+    },
+    "3": {
+        "summary": "Details on practical costs of applying CL methods to large PLMs are insufficient.",
+        "verbatim": "More details can be provided on the practical costs (computation, memory) of applying different CL methods to the large PLMs to better inform real-world deployment."
+    }
+}

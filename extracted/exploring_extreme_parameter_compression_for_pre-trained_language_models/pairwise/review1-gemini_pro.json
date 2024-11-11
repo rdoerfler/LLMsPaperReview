@@ -1,6 +1,0 @@
-{
-    "A2-B2": {
-        "rationale": "Both points discuss the limited novelty of the approach. Review A mentions insufficient comparison with other methods, while Review B explicitly points out the limited novelty of using tensor decomposition for neural network compression, suggesting overlap in the critique of originality and benchmarking against existing methods.",
-        "similarity": 7
-    }
-}

@@ -1,0 +1,11 @@
+
+{
+    "1": {
+        "summary": "The findings are unsurprising; forgetting issues with fine-tuned pre-trained models and effectiveness of rehearsal-based methods are expected.",
+        "verbatim": "Although the authors have conducted quite a lot of experiments, the phenomena shown in experiment results is hardly surprising to me. It is not surprising that the pre-trained language models would have forgetting issues when fine-tuned on downstream tasks. It is also not surprising that rehearsal-based methods perform the best for pre-trained models."
+    },
+    "2": {
+        "summary": "The claim that BERT is the most robust model is not convincingly supported by the data or analysis presented.",
+        "verbatim": "However, compared with other pre-trained models, I don’t see that BERT is significantly better than others given the figures and tables. I feel from the figures and tables, BERT and other models look similar. The authors didn’t give a comprehensive explanation on how they read such information or a concrete quantitative comparison to support this claim."
+    }
+}

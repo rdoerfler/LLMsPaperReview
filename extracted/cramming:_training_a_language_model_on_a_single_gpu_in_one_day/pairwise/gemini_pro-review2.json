@@ -1,0 +1,7 @@
+
+{
+    "A4-B3": {
+        "rationale": "Both points raise concerns about poor performance on CoLA. Review A attributes this to possible limitations in hyperparameter sensitivity or linguistic capabilities, while Review B mentions the need to test hypotheses about architecture or data changes as causes.",
+        "similarity": "7"
+    }
+}

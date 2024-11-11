@@ -1,0 +1,11 @@
+
+{
+    "A1-B2": {
+        "rationale": "A1 discusses limited evaluation on the GLUE benchmark, lacking testing on other tasks, while B2 criticizes limited experiments, suggesting compression is more necessary for larger models. Both focus on limited evaluation scope but with different specifics.",
+        "similarity": 6
+    },
+    "A3-B4": {
+        "rationale": "A3 mentions the lack of exploration in compression limits and potential trade-offs, while B4 talks about the need for more experiments and ablation studies. Both concern the depth and breadth of experimental analysis.",
+        "similarity": 5
+    }
+}

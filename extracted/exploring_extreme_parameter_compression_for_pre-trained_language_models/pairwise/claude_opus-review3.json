@@ -1,0 +1,11 @@
+
+{
+    "A2-B1": {
+        "rationale": "Both points critique the paper for not providing significant theoretical advancement. A2 specifies the limited theoretical analysis of Tucker decomposition in Transformers, while B1 describes the use as an incremental improvement.",
+        "similarity": 6
+    },
+    "A4-B3": {
+        "rationale": "Both points highlight the lack of analysis concerning system impact and the efficiency of the method. A4 focuses on the impact on pre-training efficiency and resources, crucial for large-scale models, while B3 suggests exploring the systems impact of using decomposed layers.",
+        "similarity": 7
+    }
+}

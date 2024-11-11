@@ -1,0 +1,15 @@
+
+{
+    "1": {
+        "summary": "The proposed method is not considered highly novel.",
+        "verbatim": "The proposed method is not very novel. Generalizing LMs to NLU tasks by checking the vocabulary distribution over the masked token is a common practice. The method which leverages related words to label category does not look very novel to me."
+    },
+    "2": {
+        "summary": "Similarity to existing works makes the paper less novel.",
+        "verbatim": "The work is original, but the proposed method is kind of similar to many existing works, which makes it less novel."
+    },
+    "3": {
+        "summary": "Overall novelty of the paper is limited.",
+        "verbatim": "However, the overall novelty of this paper is limited."
+    }
+}

@@ -1,0 +1,15 @@
+
+{
+    "1": {
+        "summary": "Proto-Trex sometimes has a slight decrease in accuracy compared to non-interpretable baselines.",
+        "verbatim": "Trade-off with accuracy: While generally competitive, Proto-Trex sometimes shows a slight decrease in accuracy compared to non-interpretable baselines."
+    },
+    "2": {
+        "summary": "The evaluation is limited to sentiment classification tasks, questioning its generalizability.",
+        "verbatim": "Limited scope: The evaluation focuses on sentiment classification tasks. Further research is needed to assess the generalizability of the approach to other NLP tasks."
+    },
+    "3": {
+        "summary": "Word-level explanations are less coherent and interpretable than sentence-level ones.",
+        "verbatim": "Word-level explanations: While the paper explores word-level prototypes, the explanations generated seem less coherent and interpretable than sentence-level ones."
+    }
+}

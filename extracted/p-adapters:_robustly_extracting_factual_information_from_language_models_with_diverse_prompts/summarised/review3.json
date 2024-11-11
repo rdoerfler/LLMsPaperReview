@@ -1,0 +1,27 @@
+
+{
+    "1": {
+        "summary": "Lack of connection to robust optimization and no formal justification for why the method improves consistency.",
+        "verbatim": "The paper does not draw a connection to prior work on robust optimization... it would be good to give a formal definition of robustness/consistency and cite this line of prior work. The paper does not provide a clear justification for why P-Adapters would be expected to improve consistency, and nothing in the training objective encourages the model to be consistent."
+    },
+    "2": {
+        "summary": "Limited empirical validation beyond the specific benchmark.",
+        "verbatim": "As this paper notes, the factual probing benchmark has class imbalances and represents a very particular use case, so while P-Adapters appear to improve consistency here it’s unclear if these results will generalize to other settings. Would it be possible to evaluate P-Adapters on a wider variety of tasks?"
+    },
+    "3": {
+        "summary": "No human evaluation to support claims about user preferences.",
+        "verbatim": "Much of the motivation of this paper is based on assertions about user preferences, but there is no human evaluation to validate these claims."
+    },
+    "4": {
+        "summary": "Concerns about relation classifier accuracy and omission in the main paper.",
+        "verbatim": "MoE model: How accurate is the relation classifier?... Either way, relation classification results should be included and discussed in the main paper."
+    },
+    "5": {
+        "summary": "Performance drop on 'OOD Objects' indicates overfitting to entity distribution.",
+        "verbatim": "All of the models suffer a performance drop on the 'OOD Objects' setting, which indicates that the models have over-fit to the (imbalanced) distribution of entities in Wikidata."
+    },
+    "6": {
+        "summary": "Lack of comparison with prior work in results table.",
+        "verbatim": "Table 2 does not compare results to any prior work. For example, can these results be compared to the 'Consistency Improved PLM' results from [5]?"
+    }
+}

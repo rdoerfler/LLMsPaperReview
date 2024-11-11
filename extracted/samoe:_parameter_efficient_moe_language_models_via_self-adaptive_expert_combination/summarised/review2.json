@@ -1,0 +1,19 @@
+
+{
+    "1": {
+        "summary": "The paper does not provide a fair comparison due to focusing on parameter efficiency rather than computational cost (FLOPs).",
+        "verbatim": "The paper does not provide a fair comparison by fixing total parameters but ignore the computational cost (FLOPs) or activated parameters."
+    },
+    "2": {
+        "summary": "The paper lacks comparisons with significant related works and different routing methods.",
+        "verbatim": "The paper misses fair comparisons with many significant related work including autoregressive sparse MoE, GLaM."
+    },
+    "3": {
+        "summary": "Increasing activated parameters may lead to increased inference time, which is not addressed.",
+        "verbatim": "For example, whether this method increases activated parameters (experts per token) is unclear and should be explained."
+    },
+    "4": {
+        "summary": "There is a lack of explanation on how quality gains can be achieved.",
+        "verbatim": "The paper should be also more proactive in explaining why quality gains can be achieved."
+    }
+}

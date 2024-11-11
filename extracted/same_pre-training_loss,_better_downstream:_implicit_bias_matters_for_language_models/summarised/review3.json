@@ -1,0 +1,31 @@
+
+{
+    "1": {
+        "summary": "Difficulty in computing the Hessian matrix without pre-training data.",
+        "verbatim": "The issue is that the Hessian matrix is evaluated around the global minimum of a model being trained on the pre-training data, and, without any knowledge of the pre-training data, it becomes very difficult to compute the Hessian matrix."
+    },
+    "2": {
+        "summary": "Large sample size needed for reasonable estimate of Hessian trace.",
+        "verbatim": "The other issue is that it does require many samples to obtain a reasonable estimate of the trace."
+    },
+    "3": {
+        "summary": "Trace of Hessian matrix may not reliably indicate model transferability.",
+        "verbatim": "The trace of the Hessian matrix is only an overview of the magnitude of all eigenvalues. A smaller trace could mean that the minimum might be flatter than other minima with the same loss, but it could also mean that the minimum might be steep in only a few directions, and completely non-informative in others."
+    },
+    "4": {
+        "summary": "Empirical results and observations already well-known.",
+        "verbatim": "the arguments made in this submission or the observations obtained are already well-known empirically, especially in the case of zero-shot and few-shot learning with very large pre-trained transformer models."
+    },
+    "5": {
+        "summary": "Theorems do not support arguments or observations.",
+        "verbatim": "the theorems mentioned in the submission don't seem necessary, or, in any case, support the arguments or the observations."
+    },
+    "6": {
+        "summary": "Not very original.",
+        "verbatim": "clear presentation, but not very original"
+    },
+    "7": {
+        "summary": "Lack of recommendation for acceptance due to well-known results and lack of theoretical justification.",
+        "verbatim": "I don't recommend accepting the submission since the empirical results are well-known and the theorems don't provide theoretical justifications to the observations."
+    }
+}

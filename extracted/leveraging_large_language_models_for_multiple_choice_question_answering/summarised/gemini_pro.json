@@ -1,0 +1,15 @@
+
+{
+    "1": {
+        "summary": "The paper lacks in-depth analysis of specific characteristics contributing to high MCSB ability in LLMs.",
+        "verbatim": "Limited model analysis: While the paper shows that Codex performs well with MCP, it does not delve deeper into the specific characteristics of LLMs that contribute to high MCSB ability."
+    },
+    "2": {
+        "summary": "The paper does not explore prompt engineering for MCP, which could lead to further performance improvements.",
+        "verbatim": "Prompt engineering not explored: The authors intentionally avoid prompt engineering to ensure a fair comparison between CP and MCP. However, exploring prompt engineering techniques for MCP could potentially lead to further performance improvements."
+    },
+    "3": {
+        "summary": "The evaluation process is computationally expensive, highlighting the need for more efficient evaluation strategies.",
+        "verbatim": "Computational cost: While MCP is more efficient than CP per question, the evaluation process across numerous datasets and prompting methods remains computationally expensive."
+    }
+}

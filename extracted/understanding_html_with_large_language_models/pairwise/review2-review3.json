@@ -1,0 +1,11 @@
+
+{
+    "A4-B2": {
+        "rationale": "Both points address concerns about the lack of reproducibility due to missing code or details, highlighting the need for supplementary material to facilitate replication of results.",
+        "similarity": "9"
+    },
+    "A3-B1": {
+        "rationale": "Both points critique the lack of technical novelty, though Review A frames it in the context of the suitability for a specific conference, while Review B focuses on the empirical nature of contributions.",
+        "similarity": "7"
+    }
+}

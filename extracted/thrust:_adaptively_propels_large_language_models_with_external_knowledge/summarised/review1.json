@@ -1,0 +1,19 @@
+
+{
+    "1": {
+        "summary": "Lack of clarity and formal definitions in the methodology.",
+        "verbatim": "The writing is mostly sloppy, e.g., c_0 is used before it is defined"
+    },
+    "2": {
+        "summary": "Difficulty in understanding how the Thrust score is computed.",
+        "verbatim": "The lack of formal definitions, make it hard to understand how thrust is computed e.g., 'casting a set of instances (the training data) into the representation space'"
+    },
+    "3": {
+        "summary": "Incomplete experimental results and insufficient comparisons.",
+        "verbatim": "The experiment result also need more explanations. For example in Table 3 it is good to see that using knowledge 25% of the time is as good as using it 75% of the time for many tasks. However, one might wonder why only the result of UnifiedQA is shown? why not also compare to the case using knowledge 100% of the time?"
+    },
+    "4": {
+        "summary": "Overall lack of clarity in the paper.",
+        "verbatim": "This paper is very unclear."
+    }
+}

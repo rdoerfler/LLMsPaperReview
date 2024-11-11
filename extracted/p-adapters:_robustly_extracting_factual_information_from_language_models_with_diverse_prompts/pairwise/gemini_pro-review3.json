@@ -1,0 +1,11 @@
+
+{
+    "A2-B3": {
+        "rationale": "Both points express concern about a lack of human evaluation to support claims. A2 criticizes the absence of human evaluation for interpretability claims, while B3 points out the lack of human evaluation for claims about user preferences.",
+        "similarity": 9
+    },
+    "A1-B5": {
+        "rationale": "Both points touch upon a lack of robustness or generalization in performance. A1 mentions low precision, particularly in out-of-distribution settings, and B5 notes a performance drop in 'OOD Objects' due to overfitting.",
+        "similarity": 7
+    }
+}

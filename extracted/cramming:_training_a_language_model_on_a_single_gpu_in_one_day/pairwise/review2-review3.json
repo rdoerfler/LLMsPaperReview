@@ -1,0 +1,11 @@
+
+{
+    "A1-B1": {
+        "rationale": "Both points express a need for more detailed experiments and analyses regarding architectural modifications and their impacts.",
+        "similarity": 6
+    },
+    "A2-B2": {
+        "rationale": "Both points concern the insufficient analysis of architectural changes and their impact on loss and task performance, though with slightly different focuses.",
+        "similarity": 7
+    }
+}

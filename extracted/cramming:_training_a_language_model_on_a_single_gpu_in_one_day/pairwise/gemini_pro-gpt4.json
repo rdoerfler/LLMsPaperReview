@@ -1,0 +1,7 @@
+
+{
+    "A1-B1": {
+        "rationale": "Both points critique the limited exploration of training objectives, specifically focusing on the use of the MLM objective while suggesting the potential benefits of investigating alternative objectives.",
+        "similarity": "8"
+    }
+}

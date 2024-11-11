@@ -1,0 +1,19 @@
+
+{
+    "A2-B6": {
+        "rationale": "Both points address the lack of clarity and detail in the explanation of specific methodological choices, though A2 focuses on Thrust's hyperparameters and runtime cost, while B6 speaks more generally about methods and their informal or obscure description.",
+        "similarity": 6
+    },
+    "A1-B3": {
+        "rationale": "Both points concern missing experimental evaluations, although A1 refers to additional benchmarks and B3 mentions missing baselines.",
+        "similarity": 5
+    },
+    "A2-B8": {
+        "rationale": "Both points involve concerns about efficiency and computational details; A2 asks for runtime cost details, while B8 mentions the lack of computation time evaluation.",
+        "similarity": 7
+    },
+    "A3-B5": {
+        "rationale": "Both points discuss the use of external knowledge in Thrust. A3 seeks qualitative examples, while B5 questions the clarity of source and accessibility of external knowledge.",
+        "similarity": 6
+    }
+}

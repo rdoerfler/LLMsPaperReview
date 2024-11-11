@@ -1,0 +1,15 @@
+
+{
+    "1": {
+        "summary": "The domains tested are simple and restricted, which may limit generalization to more complex concepts.",
+        "verbatim": "The domains tested (colors and directions) are fairly simple and restricted to text representations. It's unclear if the findings would generalize to more complex grounded concepts."
+    },
+    "2": {
+        "summary": "Lack of comparison to multimodal models makes it hard to assess the gap between text-only models and grounded models.",
+        "verbatim": "There is no comparison to multimodal models trained on both text and perceptual data, to assess the gap between pure language models and grounded models."
+    },
+    "3": {
+        "summary": "More analysis of why the largest model succeeds is needed to enhance explanatory power.",
+        "verbatim": "More insight into what enables the largest model to succeed (e.g. analyzing its representations) would strengthen the explanatory power of the work."
+    }
+}

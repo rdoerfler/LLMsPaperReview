@@ -1,0 +1,19 @@
+
+{
+    "1": {
+        "summary": "Noise in automatically generated datasets could impact translation quality and model generalizability.",
+        "verbatim": "Noise concerns: While the authors analyze noise tolerance, the inherent noise in automatically generated datasets could still impact translation quality and modelgeneralizability."
+    },
+    "2": {
+        "summary": "The paper lacks analysis of why the method performs poorly on some tasks or language pairs.",
+        "verbatim": "Limited analysis of failure cases: The paper lacks a deeper analysis of why the proposed method performs poorly on certain tasks or language pairs."
+    },
+    "3": {
+        "summary": "Scalability of the method for practical applications is questionable.",
+        "verbatim": "Scalability concerns: Identifying critical layers and false prefix-matching heads for each model/task combination might not be scalable for practical applications."
+    },
+    "4": {
+        "summary": "Missing key ablations, such as analyzing the impact of partially incorrect demonstrations.",
+        "verbatim": "Missing ablations: The study lacks some key ablations, such as analyzing the impact of partially incorrect demonstrations on model performance."
+    }
+}

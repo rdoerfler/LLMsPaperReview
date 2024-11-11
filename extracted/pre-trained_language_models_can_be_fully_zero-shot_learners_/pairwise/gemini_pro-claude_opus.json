@@ -1,0 +1,11 @@
+
+{
+    "A1-B1": {
+        "rationale": "Both points discuss the issue with NPPrompt handling labels that lack semantic meaning and the necessity for specific keywords.",
+        "similarity": 9
+    },
+    "A2-B2": {
+        "rationale": "Both points address the lack of exploration of few-shot scenarios to enhance performance.",
+        "similarity": 9
+    }
+}

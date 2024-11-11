@@ -1,0 +1,19 @@
+
+{
+    "1": {
+        "summary": "The trade-off between interpretability and accuracy needs further analysis and improvement.",
+        "verbatim": "The trade-off between interpretability and accuracy could be further analyzed and improved."
+    },
+    "2": {
+        "summary": "The user study details for interactive learning need more elaboration to strengthen the claims.",
+        "verbatim": "More details on the user study for interactive learning would strengthen the paper's claims."
+    },
+    "3": {
+        "summary": "The paper lacks comparison with other interpretability methods for language models.",
+        "verbatim": "Comparison to other interpretability methods for language models is lacking."
+    },
+    "4": {
+        "summary": "Details on reproducibility, such as hyperparameters and model selection, are missing.",
+        "verbatim": "However, some details on reproducibility, such as hyperparameters and model selection, are missing."
+    }
+}

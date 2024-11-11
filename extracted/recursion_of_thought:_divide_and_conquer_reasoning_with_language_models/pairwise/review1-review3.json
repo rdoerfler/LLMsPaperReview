@@ -1,0 +1,11 @@
+
+{
+    "A1-B2": {
+        "rationale": "Both points express concerns about the lack of applicability of the approach to general or diverse types of problems. A1 mentions that the approach only applies to simple problems, while B2 highlights the absence of a systematic way to construct subproblems for different situations.",
+        "similarity": 8
+    },
+    "A2-B1": {
+        "rationale": "A2 and B1 both discuss the simplicity of the tasks involved in the approach. A2 focuses on the trivial nature of the tasks after decomposition, while B1 mentions non-trivial human inputs required for crafting subproblems, implying simplicity in the task design.",
+        "similarity": 7
+    }
+}

@@ -1,0 +1,15 @@
+
+{
+    "A1-B2": {
+        "rationale": "Both A1 and B2 raise issues about clarity related to undefined or late-defined terms, which leads to confusion in understanding the paper's content.",
+        "similarity": 9
+    },
+    "A2-B6": {
+        "rationale": "A2 and B6 both highlight problems with the paper's methodology being informally or obscurely described, which affects understanding how results are derived.",
+        "similarity": 7
+    },
+    "A3-B3": {
+        "rationale": "A3 and B3 both address the concern of missing experimental comparisons or baselines, affecting the completeness of the experimental results.",
+        "similarity": 9
+    }
+}

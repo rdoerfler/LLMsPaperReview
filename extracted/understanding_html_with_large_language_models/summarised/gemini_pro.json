@@ -1,0 +1,15 @@
+
+{
+    "1": {
+        "summary": "Context window length is a limitation for handling real-world websites.",
+        "verbatim": "Limited context window: The paper highlights the context window length as a bottleneck for LLMs in handling real-world websites, which are often much larger than the pages used in the benchmarks."
+    },
+    "2": {
+        "summary": "Snippet extraction can lead to information loss and degrade performance.",
+        "verbatim": "Snippet extraction impact: While necessary for longer pages, snippet extraction can lead to information loss and performance degradation."
+    },
+    "3": {
+        "summary": "Error analysis could be more comprehensive and deeper.",
+        "verbatim": "Error analysis: The error analysis could be more comprehensive, exploring more diverse error types and providing deeper insights into model behavior."
+    }
+}

@@ -1,0 +1,7 @@
+
+{
+    "A4-B2": {
+        "rationale": "Both points discuss the sensitivity of the technique to noise. Review A highlights its susceptibility to noise and its effects on legacy code like COBOL, while Review B points out the limited exploration of noise impact across diverse languages and contexts.",
+        "similarity": "7"
+    }
+}

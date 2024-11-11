@@ -1,0 +1,15 @@
+
+{
+    "1": {
+        "summary": "Performance is limited by reliance on retrieved evidence compared to gold references.",
+        "verbatim": "Retrieval quality: While ReGen shows improvement, the reliance on retrieved evidence still leads to performance below that achieved with gold references, highlighting the need for further advancements in retrieval quality."
+    },
+    "2": {
+        "summary": "The model struggles with accurately identifying the sources of information for generated sentences.",
+        "verbatim": "Reference mark accuracy: The current model struggles to accurately identify the source of information for generated sentences, impacting factualness and readability."
+    },
+    "3": {
+        "summary": "Focus on short articles limits the ability to create comprehensive content like full Wikipedia pages.",
+        "verbatim": "Limited article length: The current focus is on generating short articles, whereas full Wikipedia pages contain much more information. Generating longer, comprehensive articles remains a challenge."
+    }
+}

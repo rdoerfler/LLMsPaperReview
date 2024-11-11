@@ -1,0 +1,11 @@
+
+{
+    "1": {
+        "summary": "The paper lacks thorough comparison with existing methods in external knowledge utilization.",
+        "verbatim": "The paper does not thoroughly compare its approach with existing methods in the domain of external knowledge utilization, which could have strengthened the argument for its novelty and effectiveness."
+    },
+    "2": {
+        "summary": "The reliance on the novel metric Thrust may introduce bias due to its potential lack of universal applicability.",
+        "verbatim": "The reliance on the novel metric Thrust for determining the necessity of external knowledge could introduce bias if the metric itself is not universally applicable across different types of tasks and domains."
+    }
+}

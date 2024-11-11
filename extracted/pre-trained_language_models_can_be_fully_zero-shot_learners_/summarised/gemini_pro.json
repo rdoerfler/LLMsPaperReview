@@ -1,0 +1,15 @@
+
+{
+    "1": {
+        "summary": "Limited analysis for label names lacking semantic meaning.",
+        "verbatim": "The paper acknowledges that NPPrompt may require additional keywords for label names lacking semantic meaning."
+    },
+    "2": {
+        "summary": "Focus primarily on zero-shot setting, lack of exploration in few-shot scenarios.",
+        "verbatim": "The study primarily focuses on the zero-shot setting, leaving the exploration of few-shot scenarios for future work."
+    },
+    "3": {
+        "summary": "Evaluation mainly on text classification and GLUE benchmark NLU tasks; lacks coverage on tasks like NLP ranking or relation extraction.",
+        "verbatim": "The evaluation primarily focuses on text classification and NLU tasks from the GLUE benchmark. Further investigation is needed to assess its effectiveness on other NLP tasks like ranking or relation extraction."
+    }
+}

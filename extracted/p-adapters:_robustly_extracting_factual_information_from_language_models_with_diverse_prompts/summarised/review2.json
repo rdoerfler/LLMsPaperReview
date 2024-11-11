@@ -1,0 +1,7 @@
+
+{
+    "1": {
+        "summary": "The review raises concerns about inadequate error analysis, particularly regarding model hallucination and grounding.",
+        "verbatim": "This said, the reader could benefit from better error analysis, as it is not clear how much hallucination and grounding the model is producing."
+    }
+}

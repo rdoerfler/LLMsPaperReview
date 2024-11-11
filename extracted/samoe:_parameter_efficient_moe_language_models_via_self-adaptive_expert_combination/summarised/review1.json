@@ -1,0 +1,27 @@
+
+{
+    "1": {
+        "summary": "Unclear evaluation of speedup in Table 1.",
+        "verbatim": "How the speedup in table 1 is evaluated?"
+    },
+    "2": {
+        "summary": "Marginal gains in downstream tasks.",
+        "verbatim": "The gains in the downstream tasks are marginal."
+    },
+    "3": {
+        "summary": "Lack of zero-shot results variation at nearby checkpoints.",
+        "verbatim": "It's better to report the variation of zero-shot results at nearby checkpoints as well."
+    },
+    "4": {
+        "summary": "Important to report inference step time during autoregressive decoding.",
+        "verbatim": "I feel it's important to report the inference step time during autoregressive decoding to best demonstrate the gains from a smaller number of parameters."
+    },
+    "5": {
+        "summary": "Skepticism about multi-rc results due to a big jump.",
+        "verbatim": "Double check the multi-rc results? It's a big jump from 1+ to 70+."
+    },
+    "6": {
+        "summary": "Need to demonstrate why parameter reduction matters using metrics like serving latency and step time.",
+        "verbatim": "So it would be better if the authors clearly demonstrated why the large reduction in the parameter count matters using the metrics people care about: the serving latency, the step time, etc."
+    }
+}

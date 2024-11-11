@@ -1,0 +1,19 @@
+
+{
+    "1": {
+        "summary": "Evaluation with recent models like RETRO and Atlas is missing.",
+        "verbatim": "Evaluation with recent models like RETRO [1] and Atlas [2] is missing."
+    },
+    "2": {
+        "summary": "There are questions/clarifications needed for Table 2 regarding the description of the model and knowledge usage.",
+        "verbatim": "Table 2, if my understanding is correct, with knowledge case is presented after the vertical bar (|). If that's true, please fix the description of the model which states the opposite. Table 2, is the with knowledge same as using full knowledge?"
+    },
+    "3": {
+        "summary": "Missing performance numbers and evaluation times in Table 4 when comparing thrust with full knowledge.",
+        "verbatim": "Table 4, when comparing thrust with full knowledge, what are the exact performance numbers? Please mention the evaluation times for both cases as well."
+    },
+    "4": {
+        "summary": "The work requires more robust evaluation, especially with well-known retrieval based LMs.",
+        "verbatim": "Since this paper revolves around retrieval based LMs, authors should have done more evaluation on using thrust in conjunction with some of the well known retrieval based LMs."
+    }
+}

@@ -1,0 +1,15 @@
+
+{
+    "1": {
+        "summary": "The approach requires supervised learning for each task, limiting its applicability where such supervision is feasible.",
+        "verbatim": "The approach requires supervised learning for each task, potentially limiting its applicability to problems where such detailed supervision is feasible."
+    },
+    "2": {
+        "summary": "The paper does not address the generalizability of models trained with RoT to unseen tasks or problem sizes.",
+        "verbatim": "The paper does not explore the generalizability of models trained with RoT to tasks or problem sizes not seen during training."
+    },
+    "3": {
+        "summary": "The approach's dependence on recursive problem-solving may not suit all reasoning tasks.",
+        "verbatim": "Despite its potential, the approach's dependence on recursive problem-solving may not be suitable for all types of reasoning tasks."
+    }
+}

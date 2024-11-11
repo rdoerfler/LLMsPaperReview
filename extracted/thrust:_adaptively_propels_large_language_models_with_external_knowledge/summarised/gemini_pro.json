@@ -1,0 +1,19 @@
+
+{
+    "1": {
+        "summary": "The paper's claim of 'internalizing' the task through distillation might be overstated",
+        "verbatim": "The paper's claim that the proposed model 'internalizes' the task through distillation might be overstated, as it essentially boils down to improved fine-tuning."
+    },
+    "2": {
+        "summary": "Evaluation lacks a crucial baseline of a student model instruction-tuned without distillation",
+        "verbatim": "The evaluation lacks a crucial baseline - a student model instruction-tuned without distillation. This makes it difficult to isolate the gains specifically attributable to the distillation process."
+    },
+    "3": {
+        "summary": "Selection of datasets for evaluation is inconsistent and lacks justification",
+        "verbatim": "The selection of datasets for evaluation in some experiments appears inconsistent and lacks clear justification."
+    },
+    "4": {
+        "summary": "Limited analysis of failure cases, specifically ARC-C",
+        "verbatim": "While the paper acknowledges the failure case of ARC-C, a deeper analysis of why THRUST fails in such scenarios would be beneficial."
+    }
+}

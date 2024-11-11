@@ -1,0 +1,15 @@
+
+{
+    "1": {
+        "summary": "The novelty of the paper is limited because similar approaches like MCP have been used in other QA tasks.",
+        "verbatim": "The novelty of this paper is limited. Multiple choices prompting (MCP) has been used in other QA tasks, such as TruthfulQA and RACE."
+    },
+    "2": {
+        "summary": "The reasons why MCP methods outperform CP methods are unclear, and more analysis is needed to understand the improvements.",
+        "verbatim": "Although the experimental results prove that the proposed multiple choices prompting (MCP) methods can outperform existing cloze prompting (CP) methods, the reasons behind it are still unclear."
+    },
+    "3": {
+        "summary": "The review suggests including more analysis on whether MCP can solve or avoid the problems faced by CP methods.",
+        "verbatim": "It would be better to include more analysis on whether MCP can deal with these several problems that CP faces."
+    }
+}

@@ -1,0 +1,15 @@
+
+{
+    "1": {
+        "summary": "The paper lacks a novel viewpoint or conclusion.",
+        "verbatim": "I think its viewpoint is not new and its conclusion is not surprising."
+    },
+    "2": {
+        "summary": "The results of the study confirm existing beliefs rather than offering new insights.",
+        "verbatim": "While it is helpful to know that rehearsal works better than regularization in most datasets, this is not entirely a surprising result."
+    },
+    "3": {
+        "summary": "The finding about the last layer suffering from catastrophic forgetting is not novel.",
+        "verbatim": "The fact that the last layer suffers from catastrophic forgetting is also not a surprising result."
+    }
+}

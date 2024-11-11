@@ -1,0 +1,7 @@
+
+{
+    "A1-B2": {
+        "rationale": "A1 and B2 both critique the paper for its limited exploration of other objectives or tasks. A1 discusses the need to explore alternative pre-training objectives beyond MLM, such as ELECTRA, while B2 focuses on the need to explore more downstream tasks when studying the impact of architecture beyond MLM loss.",
+        "similarity": 7
+    }
+}

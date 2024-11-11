@@ -1,0 +1,11 @@
+
+{
+    "1": {
+        "summary": "The paper lacks a detailed discussion on limitations, broader impacts, and ethical considerations.",
+        "verbatim": "Limited Discussion on Limitations and Broader Impact: While the paper extensively discusses the technical aspects and benefits of SaMoE, it lacks a detailed discussion on potential limitations, broader impacts, and ethical considerations of deploying such models."
+    },
+    "2": {
+        "summary": "Reproducibility may be hindered by the lack of detailed hyperparameter settings.",
+        "verbatim": "Reproducibility Concerns: Though the paper states that the code will be open-sourced, the lack of detailed hyperparameter settings in the main text could hinder reproducibility. A dedicated section for reproducibility, including data preprocessing and model initialization details, would enhance the paper's value."
+    }
+}

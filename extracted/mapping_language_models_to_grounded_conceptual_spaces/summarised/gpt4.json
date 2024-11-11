@@ -1,0 +1,11 @@
+
+{
+    "1": {
+        "summary": "The paper's scope is limited to simple and easily text-representable concepts.",
+        "verbatim": "Limited Scope of Grounded Concepts: The paper focuses on relatively simple and easily text-representable concepts like colors and directions, which might not fully capture the complexity of grounding in more abstract or nuanced concepts."
+    },
+    "2": {
+        "summary": "The approach assumes textual representations can sufficiently capture grounded concepts.",
+        "verbatim": "Dependency on Textual Representations: The approach relies on the assumption that textual representations can sufficiently capture the essence of grounded concepts, which may not always be the case, especially for more complex sensory experiences."
+    }
+}

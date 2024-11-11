@@ -1,0 +1,15 @@
+
+{
+    "A1-B4": {
+        "rationale": "Both points express the concern about the lack of validation or testing on real-world datasets. A1 highlights the limitation regarding the evaluation on simplified datasets, while B4 mentions that validation on real data is desirable.",
+        "similarity": 6
+    },
+    "A2-B1": {
+        "rationale": "Both points question the practical applicability of the theoretical results or insights presented. A2 doubts the applicability of theoretical results due to assumptions, and B1 finds the practical implications unclear.",
+        "similarity": 7
+    },
+    "A2-B3": {
+        "rationale": "Both points are concerned with the absence of practical demonstration or benefits. A2 mentions theoretical assumptions may not hold in practice, while B3 calls out the lack of demonstration on real datasets.",
+        "similarity": 6
+    }
+}

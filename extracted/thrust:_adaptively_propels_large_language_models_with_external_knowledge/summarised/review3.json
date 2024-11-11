@@ -1,0 +1,39 @@
+
+{
+    "1": {
+        "summary": "The work is not reproducible due to unclear methods and datasets.",
+        "verbatim": "A main weakness is that the work is not reproducible, with respect to both the methods and datasets."
+    },
+    "2": {
+        "summary": "Clarity issues with undefined or late-defined important terms.",
+        "verbatim": "Clarity: some important terms are not defined at all or until later in the paper, including the key term of external knowledge."
+    },
+    "3": {
+        "summary": "Missing important baselines in experiments.",
+        "verbatim": "The experiments miss some important baselines."
+    },
+    "4": {
+        "summary": "Technical inaccuracies, such as incorrect definition of F1 measure.",
+        "verbatim": "There are some technical inaccuracies, e.g., the definition of the F1 measure is incorrect."
+    },
+    "5": {
+        "summary": "Lack of clarity on whether external knowledge used is published or obtainable.",
+        "verbatim": "It is not clear if the external knowledge used is published or not, and if and how it is possible to obtain it."
+    },
+    "6": {
+        "summary": "Methods and experiments are informally or obscurely described; specific choices are not motivated.",
+        "verbatim": "The methods (and experiments) are described informally, or obscurely, where the specific choices made are not motivated or compared to alternatives."
+    },
+    "7": {
+        "summary": "Related work section is late, lacking necessary context and comparison with existing literature.",
+        "verbatim": "The related work section comes at a late phase of the reading, and finally makes it clear... This leap is hardly discussed or motivated in comparison to the literature."
+    },
+    "8": {
+        "summary": "Efficiency and computation time are not evaluated.",
+        "verbatim": "While the motivation for identifying 'hard cases' is 'limited bandwidth or budget to retrieve external knowledge', efficiency and computation time is not evaluated."
+    },
+    "9": {
+        "summary": "Fixed portion expansion choice is not motivated; random baseline missing.",
+        "verbatim": "The choice or selecting some fixed portion of the queries (e.g., 25 percent) for expansion is not motivated... A baseline of selecting random instances rather the based on difficulty may be informative."
+    }
+}

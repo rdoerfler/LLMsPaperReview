@@ -1,0 +1,19 @@
+
+{
+    "1": {
+        "summary": "Lacks details on dataset splitting and analysis.",
+        "verbatim": "1.While the WebBrain-Raw dataset is very large, the paper lacks details on how the queries and articles are split/sampled to create the WebBrain-R and WebBrain-G datasets used for experiments. More dataset statistics and analysis would be helpful."
+    },
+    "2": {
+        "summary": "Needs more principled approach for evidence citation accuracy.",
+        "verbatim": "2.The generator in ReGen uses a simple reference mark correction strategy in decoding, but a more principled approach to improve the accuracy of citing evidence during generation is needed."
+    },
+    "3": {
+        "summary": "More discussion on challenges and roadmap to full article generation is needed.",
+        "verbatim": "3.Generating complete Wikipedia-style articles is extremely challenging. The current work focuses on generating the first section, which is an important first step but still quite far from the ultimate goal. More discussion on the gaps and potential roadmap would strengthen the motivation and impact."
+    },
+    "4": {
+        "summary": "Lacks detailed and rigorous human evaluation.",
+        "verbatim": "4.While the human evaluation results are encouraging, details are lacking on the specific criteria, annotation process, number of samples, and inter-annotator agreement. A larger-scale and more rigorous human evaluation would make the results more convincing."
+    }
+}

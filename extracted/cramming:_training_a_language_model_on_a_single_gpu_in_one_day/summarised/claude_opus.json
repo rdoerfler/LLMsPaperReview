@@ -1,0 +1,19 @@
+
+{
+    "1": {
+        "summary": "The paper lacks additional baselines with efficient models for comparison.",
+        "verbatim": "While the paper is very thorough, some additional baselines could have strengthened the evaluation, such as comparing to other efficient models like TinyBERT, MobileBERT etc."
+    },
+    "2": {
+        "summary": "The poor performance on the CoLA task is insufficiently analyzed.",
+        "verbatim": "The poor performance on the CoLA task is not sufficiently explained and requires more analysis to understand the limitations of the crammed models."
+    },
+    "3": {
+        "summary": "The evaluation is limited to the GLUE benchmark and lacks diversity in tasks.",
+        "verbatim": "Finetuning and evaluation is done only on the GLUE benchmark. Expanding to a wider range of tasks would provide a more comprehensive assessment of the crammed models' capabilities."
+    },
+    "4": {
+        "summary": "Findings lack discussion on future research guidance for efficient training.",
+        "verbatim": "More discussion on how the findings can guide future research on efficient training of large language models would be useful."
+    }
+}

@@ -1,0 +1,11 @@
+
+{
+    "1": {
+        "summary": "The paper lacks qualitative examples to illustrate the practical impact of the findings.",
+        "verbatim": "The paper primarily focuses on quantitative analysis and could benefit from more qualitative examples to illustrate the practical impact of the findings."
+    },
+    "2": {
+        "summary": "The study covers only a subset of available PLMs and CL methods, which may limit the generalizability of the conclusions.",
+        "verbatim": "While the study is extensive, it covers only a subset of available PLMs and CL methods, potentially limiting the generalizability of the conclusions."
+    }
+}

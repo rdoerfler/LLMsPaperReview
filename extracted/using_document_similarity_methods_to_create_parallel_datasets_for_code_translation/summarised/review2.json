@@ -1,0 +1,11 @@
+
+{
+    "1": {
+        "summary": "The use of different evaluation metrics for different experiments raises concerns about consistency and thoroughness.",
+        "verbatim": "The authors report CA@5 scores here but in the other place, BLEU/CodeBLEU/EM is used. So, what is the intuition that uses different metrics?"
+    },
+    "2": {
+        "summary": "The research is considered superficial as it only demonstrates model tolerance to noise without proposing methods to mitigate it.",
+        "verbatim": "The research is somewhat superficial. The authors only show the models can tolerate certain noises but do not propose any simple heuristics to alleviate the impact of noises."
+    }
+}

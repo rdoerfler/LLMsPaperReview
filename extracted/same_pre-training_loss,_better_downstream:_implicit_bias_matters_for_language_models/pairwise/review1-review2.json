@@ -1,0 +1,15 @@
+
+{
+    "A4-B2": {
+        "rationale": "Both points express concerns regarding the reliability of using pretraining metrics (loss or flatness) as indicators for downstream performance, suggesting the need for validation on downstream tasks.",
+        "similarity": 7
+    },
+    "A3-B3": {
+        "rationale": "Both points question the causality between flatness and downstream performance, with a focus on needing more evidence or validation to demonstrate the practical benefits or main reasons for the observed performance.",
+        "similarity": 6
+    },
+    "A4-B4": {
+        "rationale": "Both points highlight a desire for validation on real or downstream data due to theoretical or empirical motivations expressed in the reviews.",
+        "similarity": 5
+    }
+}

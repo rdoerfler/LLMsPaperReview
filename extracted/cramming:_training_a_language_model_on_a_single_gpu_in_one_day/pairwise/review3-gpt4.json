@@ -1,0 +1,11 @@
+
+{
+    "A1-B2": {
+        "rationale": "Both points discuss the lack of generalization across different tasks or contexts. Review A focuses on the limited experimental scope involving only one task, while Review B questions the applicability of findings to other datasets and tasks.",
+        "similarity": 7
+    },
+    "A2-B1": {
+        "rationale": "Both points address a limited focus. A2 discusses the narrow focus on MLM loss without downstream tasks, whereas B1 highlights the research's limitation to transformer and MLM objectives, suggesting a broader scope could be beneficial.",
+        "similarity": 6
+    }
+}

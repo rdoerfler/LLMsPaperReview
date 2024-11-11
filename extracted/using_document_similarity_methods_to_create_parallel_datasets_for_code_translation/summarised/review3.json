@@ -1,0 +1,31 @@
+
+{
+    "1": {
+        "summary": "The alignment algorithm is inefficient and may be infeasible with large data.",
+        "verbatim": "The entire alignment algorithm takes O(D*f(D')) where f(D') is the complexity of GetSimilarDocuments(). Unless any assumption this takes O(DD') meaning that it tends to be infeasible by increasing the data."
+    },
+    "2": {
+        "summary": "Simple greedy method is heavily affected by sampling order.",
+        "verbatim": "Also, the algorithm seems a simple greedy method and may be heavily affected by the sampling order."
+    },
+    "3": {
+        "summary": "Pseudo-match accuracy does not reflect real characteristics for code translation models.",
+        "verbatim": "According to Table 2 and 3, I observed that the pseudo-match accuracy introduced here does not reasonably reflect the real characteristics needed to be considered in code translation models since the BLEU of several systems compete with each other."
+    },
+    "4": {
+        "summary": "Conclusion about noise ratio and accuracy is not supported by experiments.",
+        "verbatim": "I recognized that Figure 1 shows every range of noise ratio, except around 100%, has certain gradient against the accuracy, and got the opposite conclusion \"the less noise the better\" against that the paper concluded \"we expect a certain amount of noise, we can expect the models to perform reasonably well.\""
+    },
+    "5": {
+        "summary": "Unnormalized data makes results hard to discuss.",
+        "verbatim": "As far as I saw the Figure 2 and 3, the accuracy is heavily reflected by the amount data available during training and some normalization should be needed to compare these metrics each other without biases."
+    },
+    "6": {
+        "summary": "Remarkable characteristics in translation to C++ are not addressed.",
+        "verbatim": "Figure 3 also show some remarkable characteristics in translating only into C++, but the paper did not mention about this point."
+    },
+    "7": {
+        "summary": "Experiments do not reflect the perspective of modernizing legacy applications.",
+        "verbatim": "The motivation of the paper includes \"modernizing legacy applications,\" but the experiments does not reflect this perspective. For example, the first section repeatedly referred to the COBOL applications, but we maybe not be able to reflect the experiments into this application due to large discrepancy between languages."
+    }
+}

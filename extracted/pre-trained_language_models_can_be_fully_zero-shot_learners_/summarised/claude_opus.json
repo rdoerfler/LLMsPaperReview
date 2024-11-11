@@ -1,0 +1,19 @@
+
+{
+    "1": {
+        "summary": "NPPrompt struggles with labels lacking semantic meaning, necessitating specific keywords.",
+        "verbatim": "For label names without semantic meanings, NPPrompt still requires some keywords to work well. How to extend it to arbitrary labels is unclear."
+    },
+    "2": {
+        "summary": "The method does not explore incorporating few-shot examples to enhance performance.",
+        "verbatim": "How to incorporate few-shot examples when available to further improve performance is not explored."
+    },
+    "3": {
+        "summary": "The technique is only tested on English tasks, leaving its generalizability to other languages unknown.",
+        "verbatim": "The paper only experiments with English language tasks. Whether the technique generalizes to other languages is unknown."
+    },
+    "4": {
+        "summary": "The code for NPPrompt is not provided, which may hinder full result reproducibility.",
+        "verbatim": "The code is not provided with the submission, so reproducing the full results may still take some effort."
+    }
+}

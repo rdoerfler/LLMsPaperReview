@@ -1,0 +1,19 @@
+
+{
+    "1": {
+        "summary": "The empirical evaluation is limited to simplified datasets, raising concerns about generalizability to more complex and real-world scenarios.",
+        "verbatim": "The main limitation is that the empirical evaluation focuses on simplified datasets due to computational constraints. It's unclear how well the results generalize to more complex real-world datasets and larger models."
+    },
+    "2": {
+        "summary": "The theoretical results may not be applicable in practice due to assumptions that might not hold.",
+        "verbatim": "The theoretical result in the synthetic language setting has limited applicability and the assumptions may not hold in practice."
+    },
+    "3": {
+        "summary": "The paper lacks experiments with flatness measures other than trace of Hessian.",
+        "verbatim": "The paper lacks experiments comparing flatness measures other than trace of Hessian."
+    },
+    "4": {
+        "summary": "Reproducibility is limited since the code for experiments is not provided.",
+        "verbatim": "However, the code for the experiments is not provided which somewhat limits reproducibility."
+    }
+}

@@ -1,0 +1,11 @@
+
+{
+    "A1-B2": {
+        "rationale": "A1 and B2 both discuss the limitations in retrieving high-quality evidence or references. While A1 focuses on improving retrieval quality to match gold references, B2 suggests improving the passage selection method with more advanced techniques.",
+        "similarity": 7
+    },
+    "A3-B1": {
+        "rationale": "A3 and B1 both address limitations in the scope of content generation, whether it's producing comprehensive Wikipedia pages or being restricted to the first passage of Wikipedia pages. Both highlight a limitation in the extent of content generated.",
+        "similarity": 8
+    }
+}

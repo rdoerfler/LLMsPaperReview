@@ -1,0 +1,11 @@
+
+{
+    "1": {
+        "summary": "The study may seem derivative due to similar previous studies on single nodes with more resources.",
+        "verbatim": "Similar studies were conducted on a single node with 8 GPUs as noted by the authors. Though that setup had considerably more computational resources the total volume of computation was still a fraction of the amount used by many large research institutions. In light of that work, the scenario presented in this paper may seem somewhat derivative and only marginally interesting."
+    },
+    "2": {
+        "summary": "It is unclear how observations from the cramming regime can inform the training process in normal settings.",
+        "verbatim": "It is not clear if or how the observations made in the cramming regime may be used to make more informed decisions regarding the training process in the normal training setting."
+    }
+}

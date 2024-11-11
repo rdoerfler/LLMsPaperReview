@@ -1,0 +1,19 @@
+
+{
+    "1": {
+        "summary": "More comprehensive experiments needed on additional benchmarks and knowledge sources.",
+        "verbatim": "- While the Thrust metric is evaluated on various tasks and datasets, it would be good to see even more comprehensive experiments, e.g. on additional benchmarks and knowledge sources."
+    },
+    "2": {
+        "summary": "Further explanation of Thrust details like hyperparameters and runtime cost.",
+        "verbatim": "- Some details on Thrust could be explained further, e.g. how hyperparameters like number of clusters are chosen, runtime cost of computing Thrust."
+    },
+    "3": {
+        "summary": "Qualitative examples needed to illustrate when Thrust seeks external knowledge.",
+        "verbatim": "- Qualitative examples illustrating when Thrust decides to seek external knowledge would provide additional insights."
+    },
+    "4": {
+        "summary": "Lack of theoretical analysis justifying Thrust as an effective scoring function.",
+        "verbatim": "- Theoretical analysis or justification of why Thrust is an effective scoring function would strengthen the work."
+    }
+}

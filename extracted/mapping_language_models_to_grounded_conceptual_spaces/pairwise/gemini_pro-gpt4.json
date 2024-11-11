@@ -1,0 +1,11 @@
+
+{
+    "A1-B1": {
+        "rationale": "Both points discuss the limited scope of the study, focusing on easily text-representable concepts and questioning the generalizability to more abstract or complex concepts.",
+        "similarity": 9
+    },
+    "A3-B2": {
+        "rationale": "Both points focus on the limitations of textual representations in capturing more complex concepts, raising concerns about how these can encompass more complex sensory experiences.",
+        "similarity": 8
+    }
+}

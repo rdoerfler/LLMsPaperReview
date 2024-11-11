@@ -1,0 +1,15 @@
+
+{
+    "1": {
+        "summary": "The scope of the experiments is narrow and lacks diversity.",
+        "verbatim": "The scope was fairly narrow and the experiments were not diverse enough to provide a sense of a thorough understanding of how LM's are forming this space, what possible confounds might be at play, or what other domains might have similar effects."
+    },
+    "2": {
+        "summary": "Concern about potential confounds influencing conceptual spaces from LM training data.",
+        "verbatim": "my biggest worry -- that confounds from the LM training data may be leaking in and influencing these conceptual spaces -- were strongly considered by the authors."
+    },
+    "3": {
+        "summary": "Arbitrariness in the selection of colors in the color experiment.",
+        "verbatim": "And why were 67 other colors inserted in the color prompts? It seemed arbitrary."
+    }
+}

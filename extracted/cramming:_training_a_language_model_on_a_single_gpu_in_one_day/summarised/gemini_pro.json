@@ -1,0 +1,19 @@
+
+{
+    "1": {
+        "summary": "Limited exploration of alternative pre-training objectives, focusing only on MLM while other objectives like ELECTRA might be beneficial.",
+        "verbatim": "Limited exploration of alternative objectives: While the paper focuses on MLM, other pre-training objectives like ELECTRA could potentially be more beneficial for cramming and warrant investigation."
+    },
+    "2": {
+        "summary": "Uncertainty about the impact of using downstream corpora for pre-training effects.",
+        "verbatim": "Uncertainty regarding the impact of downstream corpora: The paper primarily focuses on the effect of data processing and filtering, leaving the question of whether using downstream corpora for pre-training significantly contributes to the results."
+    },
+    "3": {
+        "summary": "Lack of zero/few-shot evaluations to assess knowledge transfer in low-resource settings.",
+        "verbatim": "Lack of zero/few-shot evaluation: Given the paper's focus on knowledge transfer in low-resource settings, evaluating the Crammed LM on zero/few-shot tasks would provide valuable insights."
+    },
+    "4": {
+        "summary": "Significant performance drop in CoLA suggests limitations in the model's hyperparameter sensitivity or linguistic capabilities.",
+        "verbatim": "CoLA performance: The significant drop in performance on CoLA suggests potential limitations of the Crammed LM, either in terms of hyperparameter sensitivity or the ability to capture linguistic acceptability with limited training data."
+    }
+}

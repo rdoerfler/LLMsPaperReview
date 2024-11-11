@@ -1,0 +1,15 @@
+
+{
+    "1": {
+        "summary": "The approach is not novel; it has been discussed and evaluated before.",
+        "verbatim": "Weaknesses: The approach is not new, just discussed and evaluated. However, it is not novel: it is a fairly obvious way to prompt and has been tried before."
+    },
+    "2": {
+        "summary": "The distinction between the authors' suggested prompting method and prompt engineering is not convincing.",
+        "verbatim": "The authors differentiate their suggested prompting from 'prompt engineering', which they seem to define as fine-tuning of prompts to increase model performance. However, I’m not convinced that these are fundamentally different, and would include research such as theirs in the general domain of prompt engineering."
+    },
+    "3": {
+        "summary": "The novelty of the approach is questioned due to previous use of the MCP approach.",
+        "verbatim": "Regarding novelty, I am less convinced. The authors mention others having used the MCP approach. So the main addition here is the systematic discussion and wide range of experiments."
+    }
+}

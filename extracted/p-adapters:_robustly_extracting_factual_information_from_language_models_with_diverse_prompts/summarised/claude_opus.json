@@ -1,0 +1,19 @@
+
+{
+    "1": {
+        "summary": "The overall precision of P-Adapters is still modest.",
+        "verbatim": "Overall precision is still modest, with the best models only correctly predicting 50% of facts"
+    },
+    "2": {
+        "summary": "The analysis of embeddings focuses narrowly on subject/object, potentially missing other important aspects.",
+        "verbatim": "Analysis of what embeddings to keep focuses on subject/object, overlooking other aspects of the prompt that could be important"
+    },
+    "3": {
+        "summary": "There is no human evaluation of the interpretability of the continuous prompts.",
+        "verbatim": "No human evaluation of the interpretability of the continuous prompts"
+    },
+    "4": {
+        "summary": "Complex tasks beyond factual extraction are not explored in the paper.",
+        "verbatim": "More complex tasks beyond factual extraction are not explored"
+    }
+}

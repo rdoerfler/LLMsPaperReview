@@ -1,0 +1,11 @@
+
+{
+    "A2-B3": {
+        "rationale": "Both points critique the experimental setup for being incomplete, particularly noting missing baseline comparisons that hinder full understanding of results.",
+        "similarity": 7
+    },
+    "A3-B3": {
+        "rationale": "Both points address inconsistencies in the experiments—the choice of datasets in A3 and the selective presentation of comparisons in B3—indicating insufficient experimental justification.",
+        "similarity": 6
+    }
+}

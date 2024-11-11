@@ -1,0 +1,7 @@
+
+{
+    "A2-B4": {
+        "rationale": "Both points express concerns about how the integration of certain techniques or data impacts the evaluation of the system. A2 focuses on potential information leakage affecting results, while B4 discusses uncertainty on how evaluation stands against competitive benchmarks.",
+        "similarity": "6"
+    }
+}

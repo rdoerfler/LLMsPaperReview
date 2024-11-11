@@ -1,0 +1,23 @@
+
+{
+    "1": {
+        "summary": "The paper lacks theoretical and empirical proof for the identified problems.", 
+        "verbatim": "Individual problematic ingredients are neither being theoretically-proven nor empirically-proven."
+    },
+    "2": {
+        "summary": "The paper doesn't introduce novel ideas.", 
+        "verbatim": "No novel/brand new ideas."
+    },
+    "3": {
+        "summary": "The analysis is primarily empirical and is based on OpenAI playground with weak support for major arguments.", 
+        "verbatim": "Mostly empirical analysis based on OpenAI playground. Some major arguments are less supported."
+    },
+    "4": {
+        "summary": "Lack of comparison to ensure Codex model's performance over Instruct model and statistical significance of PPA differences.", 
+        "verbatim": "How to make sure Codex model clearly outperforms Instruct model? Are the PPA difference between Codex and Instruct (in Figure 2) statistically significant?"
+    },
+    "5": {
+        "summary": "Results primarily involve Codex, with insufficient explanation for its superiority.", 
+        "verbatim": "More detailed experiments are necessary to convince how Codex achieve such higher accuracy."
+    }
+}

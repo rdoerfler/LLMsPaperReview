@@ -1,0 +1,11 @@
+
+{
+    "A2-B2": {
+        "rationale": "Both points discuss the concerns related to the implementation and potential limitations of the Thrust metric, highlighting issues such as bias and understanding.",
+        "similarity": 7
+    },
+    "A3-B1": {
+        "rationale": "While A3 focuses on incomplete experimental results and lack of comparison to full usage scenarios, B1 also addresses the lack of thorough comparison with existing methods, pointing to a shared concern over insufficient experimental comparisons.",
+        "similarity": 5
+    }
+}
