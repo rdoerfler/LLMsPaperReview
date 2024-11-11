@@ -2,7 +2,7 @@ import os
 import json
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
+from collections import defaultdict
 
 
 def load_data(bigger_parent_folder):
@@ -112,6 +112,117 @@ def combine_metrics(hit_rates, sso_coefficients, jaccard_indices, sd_coefficient
     return all_metrics
 
 
+def categorize_comparison(comparison):
+    """Categorize comparisons based on names."""
+    if "gpt4" in comparison and "review" in comparison:
+        return "gpt4-vs-human"
+    elif "gemini_pro" in comparison and "review" in comparison:
+        return "gemini-vs-human"
+    elif "review" in comparison and "review" in comparison.split('-'):
+        return "human-vs-human"
+    elif "gpt4" in comparison and "gemini_pro" in comparison:
+        return "llm-vs-llm"
+    return None
+
+
+def calculate_category_averages(all_metrics):
+    """
+    Average Metrics across all papers and all comparisons for:
+    - GPT vs. Human Reviews
+    - Gemini vs. Human Reviews
+    - Humans vs. Humans
+    - LLMs vs. LLMs
+
+    :param all_metrics: Dictionary containing metrics for each paper and comparison.
+    :return: Updated all_metrics with averages for each comparison category.
+    """
+
+    # Initialize separate dictionary to accumulate metrics across all comparisons
+    accumulative_metrics_by_category = defaultdict(lambda: defaultdict(list))
+
+    # Iterate over all papers and comparisons to accumulate metrics
+    for paper, comparisons in all_metrics.items():
+        for comparison, metrics in comparisons.items():
+            # Determine the category of the comparison
+            category = categorize_comparison(comparison)
+
+            if category is not None:
+                # Accumulate values for each metric in the category
+                for metric, value in metrics.items():
+                    accumulative_metrics_by_category[category][metric].append(value)
+
+    # Calculate averages and store them in a separate dictionary
+    average_metrics_by_category = {}
+    for category, metrics in accumulative_metrics_by_category.items():
+        # Compute the average for each metric in the category
+        average_metrics_by_category[category] = {metric: sum(values) / len(values) for metric, values in metrics.items()}
+
+    # Append average metrics to `all_metrics` under each paper with unique category keys
+    for paper in all_metrics.keys():
+        for category, average_metrics in average_metrics_by_category.items():
+            comparison_name = f"{category}-average"
+            all_metrics[paper][comparison_name] = average_metrics
+
+    return all_metrics
+
+
+def calculate_total_averages(all_comparisons):
+    """
+    Calculate the average metrics across all papers for each comparison category.
+
+    :param all_comparisons: Dictionary of pages, each containing comparisons with metrics and their values.
+    :return: Dictionary with average values of each metric, grouped by comparison category.
+    """
+
+    # Initialize a dictionary to store sums and counts for each category
+    category_totals = defaultdict(lambda: defaultdict(lambda: {'sum': 0.0, 'count': 0}))
+
+    # Accumulate sums and counts for each metric by category
+    for paper, comparisons in all_comparisons.items():
+        for comparison, metrics in comparisons.items():
+            # Determine the category of the comparison
+            category = categorize_comparison(comparison)
+            if category is None:
+                continue
+
+            # Accumulate metrics for the identified category
+            for metric, value in metrics.items():
+                category_totals[category][metric]['sum'] += value
+                category_totals[category][metric]['count'] += 1
+
+    # Calculate averages for each metric in each category
+    average_metrics_by_category = {
+        category: {metric: totals['sum'] / totals['count'] for metric, totals in metrics.items()}
+        for category, metrics in category_totals.items()
+    }
+
+    return average_metrics_by_category
+
+
+def save_metrics(data, file_path):
+    """Save metrics data to a JSON file, converting any non-JSON serializable types."""
+
+    # Convert any numpy data types to native Python types
+    def convert_types(obj):
+        if isinstance(obj, np.float32) or isinstance(obj, np.float64):
+            return float(obj)
+        if isinstance(obj, np.integer):
+            return int(obj)
+        if isinstance(obj, dict):
+            return {k: convert_types(v) for k, v in obj.items()}
+        if isinstance(obj, list):
+            return [convert_types(v) for v in obj]
+        return obj
+
+    # Convert the data
+    data = convert_types(data)
+
+    # Write to JSON file
+    with open(file_path, 'w') as f:
+        json.dump(data, f, indent=4)
+    print(f"Data saved to '{file_path}'")
+
+
 def main():
     bigger_parent_folder = "./extracted"
     extracted_data = load_data(bigger_parent_folder)
@@ -126,24 +237,17 @@ def main():
 
             all_metrics[paper] = combine_metrics(hit_rates, sso_coefficients, jaccard_indices, sd_coefficients)
 
-    print(all_metrics)  # Display combined metrics
+    print(all_metrics)
 
-    # Plotting (optional)
-    for paper, metrics in all_metrics.items():
-        plot_metrics(metrics, title=f"Metrics for {paper}")
+    # Compute average across Categories ('gpt4-vs-human', 'llm-vs-llm' ...)
+    metrics_data = calculate_category_averages(all_metrics)
+    average_data = calculate_total_averages(metrics_data)
 
+    # Write Metrics for Plotting
+    save_metrics(metrics_data, f'processed/all_metrics.json')
+    save_metrics(average_data, f'processed/average_metrics.json')
 
-def plot_metrics(metrics, title="Metrics Comparison"):
-    """
-    Plots the average values for each metric for a given paper.
-    """
-    metrics_df = pd.DataFrame(metrics).T
-    metrics_df.plot(kind='bar', figsize=(10, 6))
-    plt.title(title)
-    plt.ylabel('Average Values')
-    plt.xticks(rotation=45)
-    plt.tight_layout()
-    plt.show()
+    print(f"Comparisons evaluated and saved under '/processed'.")
 
 
 # Run the main function

@@ -1,0 +1,14 @@
+{
+    "gpt4-vs-human": {
+        "hit_rate": 0.5,
+        "sso_coefficient": 0.5,
+        "jaccard_index": 0.20000000298023224,
+        "sd_coefficient": 0.30158731341362
+    },
+    "gemini-vs-human": {
+        "hit_rate": 0.5555555721124014,
+        "sso_coefficient": 0.6111111243565878,
+        "jaccard_index": 0.32777778307596844,
+        "sd_coefficient": 0.49047620097796124
+    }
+}

@@ -1,0 +1,52 @@
+{
+    "exploring_extreme_parameter_compression_for_pre-trained_language_models": {
+        "review3-gpt4": {
+            "hit_rate": 1.0,
+            "sso_coefficient": 1.0,
+            "jaccard_index": 0.4000000059604645,
+            "sd_coefficient": 0.5714285969734192
+        },
+        "review1-gemini_pro": {
+            "hit_rate": 0.3333333432674408,
+            "sso_coefficient": 0.5,
+            "jaccard_index": 0.25,
+            "sd_coefficient": 0.4000000059604645
+        },
+        "review2-gpt4": {
+            "hit_rate": 0.5,
+            "sso_coefficient": 0.5,
+            "jaccard_index": 0.20000000298023224,
+            "sd_coefficient": 0.3333333432674408
+        },
+        "review1-gpt4": {
+            "hit_rate": 0.0,
+            "sso_coefficient": 0.0,
+            "jaccard_index": 0.0,
+            "sd_coefficient": 0.0
+        },
+        "review3-gemini_pro": {
+            "hit_rate": 0.6666666865348816,
+            "sso_coefficient": 0.6666666865348816,
+            "jaccard_index": 0.3333333432674408,
+            "sd_coefficient": 0.5
+        },
+        "review2-gemini_pro": {
+            "hit_rate": 0.6666666865348816,
+            "sso_coefficient": 0.6666666865348816,
+            "jaccard_index": 0.4000000059604645,
+            "sd_coefficient": 0.5714285969734192
+        },
+        "gpt4-vs-human-average": {
+            "hit_rate": 0.5,
+            "sso_coefficient": 0.5,
+            "jaccard_index": 0.20000000298023224,
+            "sd_coefficient": 0.30158731341362
+        },
+        "gemini-vs-human-average": {
+            "hit_rate": 0.5555555721124014,
+            "sso_coefficient": 0.6111111243565878,
+            "jaccard_index": 0.32777778307596844,
+            "sd_coefficient": 0.49047620097796124
+        }
+    }
+}
