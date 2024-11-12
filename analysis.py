@@ -170,7 +170,24 @@ def categorize_comparison(comparison):
     return None
 
 
-def calculate_category_averages(all_metrics):
+def check_llm_vs_human_category(comparison):
+    # Define the pairs to check for each model
+    models = ["gpt4", "gemini_pro", "claude_opus"]
+
+    # Check if "review" exists and at least one model is mentioned
+    if "review" in comparison and any(model in comparison for model in models):
+        return "llm-vs-human"
+    return None
+
+
+def check_averaged_category(comparison):
+    # Check if category is one of the averaged groups.
+    if "average" in comparison:
+        return comparison
+    return None
+
+
+def average_across_categories(all_metrics):
     """
     Average Metrics across all papers and all comparisons for:
     - GPT vs. Human Reviews
@@ -191,11 +208,16 @@ def calculate_category_averages(all_metrics):
         for comparison, metrics in comparisons.items():
             # Determine the category of the comparison
             category = categorize_comparison(comparison)
+            llm_vs_human = check_llm_vs_human_category(comparison)
 
             if category is not None:
                 # Accumulate values for each metric in the category
                 for metric, value in metrics.items():
                     accumulative_metrics_by_category[category][metric].append(value)
+            if llm_vs_human is not None:
+                # Accumulate values for each metric in the category
+                for metric, value in metrics.items():
+                    accumulative_metrics_by_category[llm_vs_human][metric].append(value)
 
     # Calculate averages and store them in a separate dictionary
     average_metrics_by_category = {}
@@ -213,7 +235,32 @@ def calculate_category_averages(all_metrics):
     return all_metrics
 
 
-def calculate_total_averages(all_comparisons):
+def sort_and_swap(dictionary, pos1=-2, pos2=-3):
+    """
+    Sorts the dictionary and swaps two specified items.
+
+    Parameters:
+        dictionary (dict): The dictionary to sort and swap.
+        pos1 (int): The position of the first item to swap (default is -2).
+        pos2 (int): The position of the second item to swap (default is -3).
+
+    Returns:
+        dict: A new dictionary with sorted items and specified items swapped.
+    """
+    # Sort the dictionary
+    sorted_dict = dict(sorted(dictionary.items()))
+
+    # Convert to a list to manipulate positions
+    sorted_list = list(sorted_dict.items())
+
+    # Swap the specified positions
+    sorted_list[pos1], sorted_list[pos2] = sorted_list[pos2], sorted_list[pos1]
+
+    # Convert back to dictionary and return
+    return dict(sorted_list)
+
+
+def average_across_papers(all_comparisons):
     """
     Calculate the average metrics across all papers for each comparison category.
 
@@ -229,7 +276,7 @@ def calculate_total_averages(all_comparisons):
         for comparison, metrics in comparisons.items():
 
             # Determine the category of the comparison
-            category = categorize_comparison(comparison)
+            category = check_averaged_category(comparison)
             if category is None:
                 continue
 
@@ -238,8 +285,8 @@ def calculate_total_averages(all_comparisons):
                 category_totals[category][metric]['sum'] += value
                 category_totals[category][metric]['count'] += 1
 
-    # Resort Categories
-    category_totals = dict(sorted(category_totals.items()))
+    # Sort Categories for nicer plots
+    category_totals = sort_and_swap(category_totals)
 
     # Calculate averages for each metric in each category
     average_metrics_by_category = {
@@ -292,8 +339,8 @@ def main():
     print(all_metrics)
 
     # Compute average across Categories ('gpt4-vs-human', 'llm-vs-llm' ...)
-    metrics_data = calculate_category_averages(all_metrics)
-    average_data = calculate_total_averages(metrics_data)
+    metrics_data = average_across_categories(all_metrics)
+    average_data = average_across_papers(metrics_data)
 
     # Write Metrics for Plotting
     save_metrics(metrics_data, f'processed/all_metrics.json')
