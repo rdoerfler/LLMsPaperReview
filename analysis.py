@@ -25,8 +25,9 @@ def load_data(bigger_parent_folder):
                         with open(os.path.join(pairwise_folder_path, filename)) as f:
                             data = json.load(f)
                             df = pd.DataFrame(data)
+                            similarities = [match['similarity'] for match in list(data.values())]
                             extracted_data[parent_folder]['pairwise'].append(
-                                (filename.replace('.json', ''), len(df.columns)))
+                                (filename.replace('.json', ''), len(df.columns), {'similarities': similarities}))
 
             # Load summarised data
             summarised_folder_path = os.path.join(parent_folder_path, 'summarised')
@@ -48,7 +49,7 @@ def calculate_hit_rates(summarised_data, pairwise_data):
     """
     model_dict = {model: value for model, value in summarised_data}
     model_pairs = [(model_pair, pairwise_count / model_dict.get(model_pair.split('-')[-1], 1))
-                   for model_pair, pairwise_count in pairwise_data]
+                   for model_pair, pairwise_count, _ in pairwise_data]
     return np.array(model_pairs, dtype=[('model_pair', 'U50'), ('hit_rate', 'f4')])
 
 
@@ -59,7 +60,7 @@ def calculate_sso_coefficients(summarised_data, pairwise_data):
     model_dict = {model: value for model, value in summarised_data}
     sso_coefficients = [
         (model_pair, pairwise_count / min(model_dict.get(model_name, 1), model_dict.get(reviewer_name, 1)))
-        for model_pair, pairwise_count in pairwise_data
+        for model_pair, pairwise_count, _ in pairwise_data
         if (model_name := model_pair.split('-')[-1]) and (reviewer_name := model_pair.split('-')[0])
     ]
     return np.array(sso_coefficients, dtype=[('model_pair', 'U50'), ('sso_coefficient', 'f4')])
@@ -73,7 +74,7 @@ def calculate_jaccard_indices(summarised_data, pairwise_data):
     jaccard_indices = [
         (model_pair,
          pairwise_count / (model_dict.get(model_name, 0) + model_dict.get(reviewer_name, 0) - pairwise_count))
-        for model_pair, pairwise_count in pairwise_data
+        for model_pair, pairwise_count, _ in pairwise_data
         if (model_name := model_pair.split('-')[-1]) and (reviewer_name := model_pair.split('-')[0])
     ]
     return np.array(jaccard_indices, dtype=[('model_pair', 'U50'), ('jaccard_index', 'f4')])
@@ -86,13 +87,42 @@ def calculate_sd_coefficient(summarised_data, pairwise_data):
     model_dict = {model: value for model, value in summarised_data}
     sd_coefficients = [
         (model_pair, 2 * pairwise_count / (model_dict.get(model_name, 0) + model_dict.get(reviewer_name, 0)))
-        for model_pair, pairwise_count in pairwise_data
+        for model_pair, pairwise_count, _ in pairwise_data
         if (model_name := model_pair.split('-')[-1]) and (reviewer_name := model_pair.split('-')[0])
     ]
     return np.array(sd_coefficients, dtype=[('model_pair', 'U50'), ('sd_coefficient', 'f4')])
 
 
-def combine_metrics(hit_rates, sso_coefficients, jaccard_indices, sd_coefficients):
+def calculate_recall(summarised_data, pairwise_data, similarity_threshold: int = 7):
+    """
+    Calculates recall as the ratio of relevant matches (above similarity threshold)
+    to the total points in the human review data.
+    """
+    # Create a dictionary from summarised_data where the model name is the key and the value is its total count
+    human_comments = {model: value for model, value in summarised_data if 'review' in model}
+
+    # Get amount of similarities where above similarity threshold
+    similar_overlaps = {
+        model_pair: sum(1 for value in similarities['similarities'] if int(value) >= similarity_threshold)
+        for model_pair, pairwise_count, similarities in pairwise_data
+    }
+
+    # Get similarity only for human
+    similar_overlaps_human = {pair: (count if 'review' in pair else 0) for pair, count in similar_overlaps.items()}
+
+    # The total number of points in human review data is equivalent to the total number of models (or reviewers)
+    human_comments_total = sum(human_comments.values())
+
+    # Relevant matches over total points in the human review data
+    recall_data = [
+        (pair, count / human_comments_total if human_comments_total > 0 else 0)
+        for pair, count in similar_overlaps_human.items()
+    ]
+
+    return np.array(recall_data, dtype=[('model_pair', 'U50'), ('recall', 'f4')])
+
+
+def combine_metrics(hit_rates, sso_coefficients, jaccard_indices, sd_coefficients, recall):
     """
     Combines calculated metrics into a single dictionary.
     """
@@ -108,6 +138,9 @@ def combine_metrics(hit_rates, sso_coefficients, jaccard_indices, sd_coefficient
 
     for model_pair, sd in sd_coefficients:
         all_metrics[model_pair]['sd_coefficient'] = sd
+
+    for model_pair, rc in recall:
+        all_metrics[model_pair]['recall'] = rc
 
     return all_metrics
 
@@ -131,7 +164,8 @@ def categorize_comparison(comparison):
     elif "review" in comparison_first and "review" in comparison_last:
         return "human-vs-human"
     # Get LLM Scores
-    elif (comparison_first in ["gpt4", "gemini_pro", "claude_opus"]) and (comparison_last in ["gpt4", "gemini_pro", "claude_opus"]):
+    elif (comparison_first in ["gpt4", "gemini_pro", "claude_opus"]) and (
+            comparison_last in ["gpt4", "gemini_pro", "claude_opus"]):
         return "llm-vs-llm"
     return None
 
@@ -167,7 +201,8 @@ def calculate_category_averages(all_metrics):
     average_metrics_by_category = {}
     for category, metrics in accumulative_metrics_by_category.items():
         # Compute the average for each metric in the category
-        average_metrics_by_category[category] = {metric: sum(values) / len(values) for metric, values in metrics.items()}
+        average_metrics_by_category[category] = {metric: sum(values) / len(values) for metric, values in
+                                                 metrics.items()}
 
     # Append average metrics to `all_metrics` under each paper with unique category keys
     for paper in all_metrics.keys():
@@ -250,8 +285,9 @@ def main():
             sso_coefficients = calculate_sso_coefficients(data['summarised'], data['pairwise'])
             jaccard_indices = calculate_jaccard_indices(data['summarised'], data['pairwise'])
             sd_coefficients = calculate_sd_coefficient(data['summarised'], data['pairwise'])
+            recall = calculate_recall(data['summarised'], data['pairwise'], similarity_threshold=7)
 
-            all_metrics[paper] = combine_metrics(hit_rates, sso_coefficients, jaccard_indices, sd_coefficients)
+            all_metrics[paper] = combine_metrics(hit_rates, sso_coefficients, jaccard_indices, sd_coefficients, recall)
 
     print(all_metrics)
 
