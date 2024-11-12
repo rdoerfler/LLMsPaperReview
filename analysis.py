@@ -5,11 +5,12 @@ import pandas as pd
 from collections import defaultdict
 
 
-def load_data(bigger_parent_folder):
+def load_data(bigger_parent_folder: str, shuffled: bool = False):
     """
     Loads pairwise and summarised data from JSON files in given folder structure.
     """
     extracted_data = {}
+    pairwise_id = 'pairwise' if not shuffled else 'pairwise-mismatched'
 
     for parent_folder in os.listdir(bigger_parent_folder):
         parent_folder_path = os.path.join(bigger_parent_folder, parent_folder)
@@ -18,7 +19,7 @@ def load_data(bigger_parent_folder):
             extracted_data[parent_folder] = {'pairwise': [], 'summarised': []}
 
             # Load pairwise data
-            pairwise_folder_path = os.path.join(parent_folder_path, 'pairwise')
+            pairwise_folder_path = os.path.join(parent_folder_path, pairwise_id)
             if os.path.isdir(pairwise_folder_path):
                 for filename in os.listdir(pairwise_folder_path):
                     if filename.endswith('.json'):
@@ -122,7 +123,7 @@ def calculate_recall(summarised_data, pairwise_data, similarity_threshold: int =
     return np.array(recall_data, dtype=[('model_pair', 'U50'), ('recall', 'f4')])
 
 
-def combine_metrics(hit_rates, sso_coefficients, jaccard_indices, sd_coefficients, recall):
+def combine_metrics(hit_rates, sso_coefficients, jaccard_indices, sd_coefficients):
     """
     Combines calculated metrics into a single dictionary.
     """
@@ -138,9 +139,6 @@ def combine_metrics(hit_rates, sso_coefficients, jaccard_indices, sd_coefficient
 
     for model_pair, sd in sd_coefficients:
         all_metrics[model_pair]['sd_coefficient'] = sd
-
-    for model_pair, rc in recall:
-        all_metrics[model_pair]['recall'] = rc
 
     return all_metrics
 
@@ -323,7 +321,7 @@ def save_metrics(data, file_path):
 
 def main():
     bigger_parent_folder = "./extracted"
-    extracted_data = load_data(bigger_parent_folder)
+    extracted_data = load_data(bigger_parent_folder, shuffled=False)
 
     all_metrics = {}
     for paper, data in extracted_data.items():
@@ -332,9 +330,8 @@ def main():
             sso_coefficients = calculate_sso_coefficients(data['summarised'], data['pairwise'])
             jaccard_indices = calculate_jaccard_indices(data['summarised'], data['pairwise'])
             sd_coefficients = calculate_sd_coefficient(data['summarised'], data['pairwise'])
-            recall = calculate_recall(data['summarised'], data['pairwise'], similarity_threshold=7)
 
-            all_metrics[paper] = combine_metrics(hit_rates, sso_coefficients, jaccard_indices, sd_coefficients, recall)
+            all_metrics[paper] = combine_metrics(hit_rates, sso_coefficients, jaccard_indices, sd_coefficients)
 
     print(all_metrics)
 

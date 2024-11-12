@@ -117,7 +117,7 @@ def plot_avg_of_all_metrics(data):
     )
 
     # Remove background grid lines but keep the border lines
-    sns.despine(left=False, bottom=False)  # Keeps left and bottom borders
+    sns.despine(left=False, bottom=False)
 
     # Formatting
     plt.ylim(0, Y_LIM, 0, 100)
@@ -126,9 +126,9 @@ def plot_avg_of_all_metrics(data):
     plt.ylabel('Metric Average (%)', fontsize=Y_LABEL_FONTSIZE)
     plt.xticks(rotation=45, ha='right', fontsize=X_LABEL_FONTSIZE)
 
-    # Tight layout to avoid overlap and save the plot
+    # Save the plot
     plt.tight_layout()
-    plt.savefig('figures/avg_metrics_clean.png', format='png', dpi=300)
+    plt.savefig('figures/avg_metrics.png', format='png', dpi=300)
     plt.show()
 
 
