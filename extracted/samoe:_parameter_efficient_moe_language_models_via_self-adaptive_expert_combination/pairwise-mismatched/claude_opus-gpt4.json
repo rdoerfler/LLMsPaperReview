@@ -1,0 +1,7 @@
+
+{
+    "A2-B1": {
+        "rationale": "Both points express concerns about the applicability and evaluation of methodologies across different model architectures or objectives. A2 suggests extending evaluation beyond autoregressive models to encoder-only models, while B1 notes a potential oversight by focusing primarily on transformer architectures and MLM objectives, implying a need to consider other models or objectives.",
+        "similarity": 7
+    }
+}

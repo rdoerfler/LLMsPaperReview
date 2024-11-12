@@ -1,0 +1,7 @@
+
+{
+    "A2-B1": {
+        "rationale": "Both points discuss limited novelty due to previously explored methods. A2 mentions tensor decomposition in neural network compression, while B1 refers to multiple choice prompting (MCP) in QA tasks.",
+        "similarity": 7
+    }
+}

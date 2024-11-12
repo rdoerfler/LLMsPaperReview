@@ -1,0 +1,19 @@
+
+{
+    "A2-B6": {
+        "rationale": "Both points express concerns over the lack of originality and novel contributions in the submissions.",
+        "similarity": "9"
+    },
+    "A1-B5": {
+        "rationale": "Review A1 notes the lack of theoretical support for identified problems, which aligns with Review B5's concern that the theorems don’t support arguments or observations.",
+        "similarity": "8"
+    },
+    "A3-B7": {
+        "rationale": "A3 and B7 both express concerns about weak support for empirical observations and well-known results.",
+        "similarity": "7"
+    },
+    "A4-B7": {
+        "rationale": "A4 questions the statistical significance of results, while B7 criticizes the lack of theoretical justification, both leading to a lack of strong recommendation for the papers.",
+        "similarity": "5"
+    }
+}

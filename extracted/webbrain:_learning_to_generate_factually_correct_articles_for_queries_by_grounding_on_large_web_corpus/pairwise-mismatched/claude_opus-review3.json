@@ -1,0 +1,11 @@
+
+{
+    "A1-B1": {
+        "rationale": "Both points emphasize issues with reproducibility and clarity regarding the methods and datasets used.",
+        "similarity": "8"
+    },
+    "A2-B6": {
+        "rationale": "Both points discuss the inadequacy of methods used, with A2 focusing on evidence citation accuracy and B6 on the informal description of methods and experiments.",
+        "similarity": "6"
+    }
+}

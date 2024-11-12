@@ -1,0 +1,7 @@
+
+{
+    "A2-B2": {
+        "rationale": "Both points discuss concerns related to the setting of hyperparameters and reproducibility. Review A focuses on the difficulty of setting hyperparameters for new datasets, while review B highlights the lack of detailed hyperparameter settings as a reproducibility issue.",
+        "similarity": "7"
+    }
+}

@@ -1,0 +1,11 @@
+
+{
+    "A3-B2": {
+        "rationale": "Both points raise concerns about the experimental aspect of the paper. A3 is concerned with incomplete comparisons in the experimental results, while B2 critiques the limited experiments specifically with larger models, suggesting a need for more comprehensive evaluation.",
+        "similarity": "6"
+    },
+    "A4-B5": {
+        "rationale": "Both points address the overall clarity of the paper. A4 directly states that the paper is unclear, while B5 notes that the presentation and rationale are unclear.",
+        "similarity": "8"
+    }
+}

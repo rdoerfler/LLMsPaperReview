@@ -1,0 +1,15 @@
+
+{
+    "A1-B6": {
+        "rationale": "Both points raise concerns about the evaluation method and lack of clarity or motivation in the choice of methods and experiments.",
+        "similarity": "6"
+    },
+    "A2-B1": {
+        "rationale": "Both points imply issues with data integrity and potential information leakage, leading to concerns about reproducibility.",
+        "similarity": "6"
+    },
+    "A5-B9": {
+        "rationale": "Both points discuss a lack of motivation for specific methodological choices and the absence of baseline comparisons or analysis.",
+        "similarity": "7"
+    }
+}

@@ -1,0 +1,7 @@
+
+{
+    "A3-B1": {
+        "rationale": "Both points mention the need for including additional baselines to strengthen the evaluation of their respective models. While A3 focuses on recent baselines for SaMoE, B1 mentions efficient models for comparison. The core concern in both is about having more comprehensive baseline comparisons.",
+        "similarity": 7
+    }
+}
