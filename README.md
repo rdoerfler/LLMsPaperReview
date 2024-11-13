@@ -33,13 +33,15 @@ The repository is organized as follows:
 1. Clone the repository:
    ```bash
    git clone https://github.com/ - anonymous - .git
-   cd your-repo-name
+   cd llms-for-paper-review
 
 2. Install the required packages:
    ```bash
    pip install -r requirements.txt
 
 ## Usage
+
+1. **Data Extraction**: Follow the comments and code in the `notebooks` to extract the relevant information of the subset of the dataset to the `extracted/` folder.
 
 1. **Data Analysis**: Run `analysis.py` to process review overlaps and output the metrics into JSON format within the `processed/` folder.
    ```bash
@@ -48,13 +50,6 @@ The repository is organized as follows:
 2. **Visualization**: Run `plotting.py` to generate figures from the processed data, saved in the `figures/` folder.
    ```bash
    python plotting.py
-
-## Results Summary
-
-- **LLM-LLM Consistency**: High consistency observed within LLM-generated reviews across different models, indicating reproducibility within LLM feedback.
-- **Human-LLM Divergence**: Human reviews show greater overlap with other human feedback compared to LLM reviews, suggesting that LLMs may complement but not replace human reviewers.
-  
-## License
 
 This project is licensed under the [MIT License](https://opensource.org/license/mit).
 
