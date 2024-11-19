@@ -32,7 +32,7 @@ The repository is organized as follows:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/ - anonymous - .git
+   git clone https://github.com/dhunstack/llms-for-paper-review.git
    cd llms-for-paper-review
 
 2. Install the required packages:
@@ -58,4 +58,4 @@ This project is licensed under the [MIT License](https://opensource.org/license/
 - **ReviewCritique Dataset**: Provided by Du et al. for peer review analysis.
 - **Methodology**: Based on peer review assessment methods from Liang et al.
 
-For questions or contributions, please contact [anonymous@estudiant.upf.edu].
+For questions or contributions, please contact [robin.doerfler01@estudiant.upf.edu](mailto:robin.doerfler01@estudiant.upf.edu).
