@@ -2,6 +2,8 @@
 
 This repository contains the code and data for the student project in the "Research Methods" course as part of the Sound and Music Computing program at Universitat Pompeu Fabra. The study investigates the potential role of Large Language Models (LLMs) in supporting the peer review process, using both human and LLM-generated reviews to assess consistency and overlap in feedback quality.
 
+Paper publication in [MERE Proceedings 2024](http://hdl.handle.net/10230/69777).
+
 ## Project Overview
 
 Peer review is crucial for maintaining publication quality standards, yet the increasing volume of research articles challenges traditional review systems. This project explores the feasibility of using LLM-generated reviews as a supportive tool to ease reviewer workload without compromising scientific rigor. Using the ReviewCritique dataset by Du et al., which contains human and LLM reviews for both accepted and rejected papers, we analyze the overlap and consistency between reviews provided by humans and LLMs.
